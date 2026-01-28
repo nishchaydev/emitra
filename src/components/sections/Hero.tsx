@@ -1,3 +1,5 @@
+'use client';
+
 import { ArrowRight, Layers, Zap } from 'lucide-react';
 import { Globe } from '@/components/ui/Globe';
 import { AnimatePresence, motion } from 'framer-motion';
