@@ -1,4 +1,5 @@
 import { ArrowRight, Layers, Zap } from 'lucide-react';
+import { Globe } from '@/components/ui/Globe';
 
 export function Hero() {
     return (
@@ -36,13 +37,9 @@ export function Hero() {
                 </div>
 
                 {/* Hero Visual */}
-                <div className="relative aspect-square lg:aspect-auto h-[500px] bg-slate-100 rounded-[2.5rem] border-2 border-dashed border-slate-200 flex items-center justify-center group">
-                    <div className="text-center space-y-4">
-                        <div className="w-24 h-24 mx-auto bg-white rounded-2xl shadow-xl flex items-center justify-center animate-bounce">
-                            <Layers className="h-10 w-10 text-primary" />
-                        </div>
-                        <p className="text-slate-400 font-medium">Interactive Institutional Map</p>
-                    </div>
+                <div className="relative aspect-square lg:aspect-auto h-[500px] flex items-center justify-center">
+                    <div className="absolute inset-0 bg-blue-500/5 blur-3xl rounded-full"></div>
+                    <Globe />
 
                     {/* Floating Card */}
                     <div className="absolute -bottom-6 -left-6 p-6 bg-white rounded-2xl shadow-xl border border-slate-100 max-w-[240px]">
