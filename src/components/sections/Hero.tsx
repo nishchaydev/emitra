@@ -1,7 +1,19 @@
 import { ArrowRight, Layers, Zap } from 'lucide-react';
 import { Globe } from '@/components/ui/Globe';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 export function Hero() {
+    const words = ["Universities", "Governments", "Enterprises"];
+    const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIndex((prev) => (prev + 1) % words.length);
+        }, 3000);
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <section className="relative min-h-[85vh] flex items-center overflow-hidden circuit-bg pt-20">
             <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -14,9 +26,25 @@ export function Hero() {
                     </div>
 
                     {/* Headline */}
+
+
+                    // In Render
                     <h1 className="text-5xl lg:text-7xl font-display font-bold leading-[1.1] text-slate-900">
                         Smart systems for <br />
-                        <span className="text-primary">complex institutions.</span>
+                        <span className="text-primary inline-block min-w-[300px]">
+                            <AnimatePresence mode="wait">
+                                <motion.span
+                                    key={index}
+                                    initial={{ y: 20, opacity: 0 }}
+                                    animate={{ y: 0, opacity: 1 }}
+                                    exit={{ y: -20, opacity: 0 }}
+                                    transition={{ duration: 0.5, ease: "easeOut" }}
+                                    className="block"
+                                >
+                                    {words[index]}.
+                                </motion.span>
+                            </AnimatePresence>
+                        </span>
                     </h1>
 
                     {/* Subheadline */}

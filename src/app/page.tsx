@@ -10,6 +10,7 @@ import { CTA } from '@/components/sections/CTA';
 import { Statistics } from '@/components/sections/Statistics';
 import { Testimonials } from '@/components/sections/Testimonials';
 import { ProductShowcase } from '@/components/sections/ProductShowcase';
+import { Insights } from '@/components/sections/Insights';
 import { FAQ } from '@/components/sections/FAQ';
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
         <ProductShowcase />
         <Education />
         <Testimonials />
+        <Insights />
         <FAQ />
         <CTA />
       </main>
