@@ -1,0 +1,48 @@
+/* Design Tokens - CSS Custom Properties */
+
+:root {
+  /* Primary - Navy */
+  --color-navy-50: #f0f4f8;
+  --color-navy-100: #d9e2ec;
+  --color-navy-200: #bcccdc;
+  --color-navy-300: #9fb3c8;
+  --color-navy-400: #829ab1;
+  --color-navy-500: #627d98;
+  --color-navy-600: #486581;
+  --color-navy-700: #334e68;
+  --color-navy-800: #243b53;
+  --color-navy-900: #102a43;
+  --color-navy-950: #0a1929;
+
+  /* Accent - Teal */
+  --color-teal-50: #f0fdfa;
+  --color-teal-100: #ccfbf1;
+  --color-teal-200: #99f6e4;
+  --color-teal-300: #5eead4;
+  --color-teal-400: #2dd4bf;
+  --color-teal-500: #14b8a6;
+  --color-teal-600: #0d9488;
+  --color-teal-700: #0f766e;
+  --color-teal-800: #115e59;
+  --color-teal-900: #134e4a;
+  --color-teal-950: #042f2e;
+
+  /* Semantic Colors */
+  --color-primary: var(--color-navy-900);
+  --color-accent: var(--color-teal-500);
+  --color-background: #ffffff;
+  --color-foreground: var(--color-navy-900);
+  --color-muted: var(--color-navy-100);
+  --color-muted-foreground: var(--color-navy-600);
+  --color-border: var(--color-navy-200);
+}
+
+.dark {
+  --color-primary: var(--color-navy-100);
+  --color-accent: var(--color-teal-400);
+  --color-background: var(--color-navy-950);
+  --color-foreground: var(--color-navy-100);
+  --color-muted: var(--color-navy-800);
+  --color-muted-foreground: var(--color-navy-400);
+  --color-border: var(--color-navy-700);
+}
