@@ -5,6 +5,10 @@ import { Plus, Minus } from 'lucide-react';
 
 const faqs = [
     {
+        question: 'What are your pricing tiers?',
+        answer: 'We offer transparent, modular pricing starting with a base platform fee. You only pay for the modules you need (e.g., Admissions, Finance, Exams). Contact us for a custom quote based on your institution size.'
+    },
+    {
         question: 'Can eMitra integrate with our existing legacy systems?',
         answer: 'Yes, we specialize in bridging the gap between legacy infrastructure and modern workflows. Our Unified Data Layer is designed to ingest and normalize data from various existing sources.'
     },

@@ -56,10 +56,10 @@ export function Hero() {
                     {/* CTA Buttons */}
                     <div className="flex flex-wrap gap-4 pt-4">
                         <button className="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-lg hover:shadow-primary/20 transition-all flex items-center gap-2">
-                            Request a Demo <ArrowRight className="h-5 w-5" />
+                            Schedule a Demo <ArrowRight className="h-5 w-5" />
                         </button>
                         <button className="bg-white border border-slate-200 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition-all">
-                            Our Portfolio
+                            Watch 2-Min Tour
                         </button>
                     </div>
                 </div>

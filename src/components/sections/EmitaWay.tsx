@@ -13,16 +13,16 @@ import {
 
 const pillars = [
     {
-        title: 'Unified Data Layer',
-        description: 'One source of truth for all institutional operations.',
+        title: 'See Everything in One Place',
+        description: 'Student records, finances, attendance—unified so you never dig through scattered spreadsheets.',
     },
     {
-        title: 'Institutional Intelligence',
-        description: 'Predictive modeling for student retention and financial planning.',
+        title: 'Predict Problems Early',
+        description: 'AI-powered alerts flag at-risk students and budget issues weeks before they become crises.',
     },
     {
-        title: 'Enterprise Resilience',
-        description: 'Secure, scalable, and built for 99.99% uptime.',
+        title: 'Never Worry About Downtime',
+        description: '99.99% uptime guarantee. Your data is always accessible when you need it.',
     },
 ];
 

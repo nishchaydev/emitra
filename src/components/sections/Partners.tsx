@@ -6,10 +6,12 @@ const clients = [
     {
         name: 'SIA School',
         logo: 'https://res.cloudinary.com/dkits80xk/image/upload/v1768840468/bv5hyatjmoo7ajtt06pn.webp',
+        context: 'Managing 500+ students',
     },
     {
         name: 'Tristar Fitness',
         logo: 'https://res.cloudinary.com/dkits80xk/image/upload/v1769611874/2a806af6-8b18-4252-85d1-69405d860797.png',
+        context: 'Reduced admin time by 70%',
     },
 ];
 
@@ -40,13 +42,20 @@ export function Partners() {
                             key={index}
                             className="flex-shrink-0 mx-12 relative h-20 w-48 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
                         >
-                            <Image
-                                src={client.logo}
-                                alt={client.name}
-                                fill
-                                className="object-contain"
-                                unoptimized
-                            />
+                            <div className="group/tooltip relative">
+                                <Image
+                                    src={client.logo}
+                                    alt={client.name}
+                                    fill
+                                    className="object-contain"
+                                    unoptimized
+                                />
+                                {client.context && (
+                                    <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover/tooltip:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                                        {client.context}
+                                    </div>
+                                )}
+                            </div>
                         </div>
                     ))}
                 </div>

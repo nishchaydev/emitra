@@ -55,8 +55,8 @@ export function Services() {
                             help you succeed.
                         </p>
                     </div>
-                    <a href="#" className="text-primary font-bold inline-flex items-center gap-2 hover:gap-3 transition-all">
-                        View all services <ChevronRight className="h-5 w-5" />
+                    <a href="/contact" className="text-primary font-bold inline-flex items-center gap-2 hover:gap-3 transition-all">
+                        Speak with an Expert <ChevronRight className="h-5 w-5" />
                     </a>
                 </div>
 
