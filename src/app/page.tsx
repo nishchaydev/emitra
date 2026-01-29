@@ -11,6 +11,8 @@ import { Statistics } from '@/components/sections/Statistics';
 import { ProductShowcase } from '@/components/sections/ProductShowcase';
 import { Insights } from '@/components/sections/Insights';
 import { FAQ } from '@/components/sections/FAQ';
+import { Testimonials } from '@/components/sections/Testimonials';
+import { TrustBadges } from '@/components/sections/TrustBadges';
 
 export default function Home() {
   return (
@@ -18,10 +20,12 @@ export default function Home() {
       <Header />
       <main className="pt-20">
         <Hero />
+        <TrustBadges />
         <Problems />
         <EmitaWay />
         <Services />
         <Partners />
+        <Testimonials />
         <Statistics />
         <ProductShowcase />
         <Education />

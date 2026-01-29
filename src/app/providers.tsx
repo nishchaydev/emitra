@@ -1,11 +1,21 @@
 'use client';
 
 import { ReactNode } from 'react';
+import { ScrollProgress } from '@/components/ui/ScrollProgress';
+import { BackToTop } from '@/components/ui/BackToTop';
+import { Preloader } from '@/components/ui/Preloader';
+import { FloatingContact } from '@/components/ui/FloatingContact';
+import { CookieConsent } from '@/components/ui/CookieConsent';
 
-interface ProvidersProps {
-    children: ReactNode;
-}
-
-export function Providers({ children }: ProvidersProps) {
-    return <>{children}</>;
+export function Providers({ children }: { children: ReactNode }) {
+    return (
+        <>
+            <Preloader />
+            <ScrollProgress />
+            {children}
+            <BackToTop />
+            <FloatingContact />
+            <CookieConsent />
+        </>
+    );
 }
