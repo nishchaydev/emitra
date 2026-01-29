@@ -36,14 +36,27 @@ export default function ExperiencePage() {
         }
     })
 
-    // Smooth scroll transformations for text
-    const y1 = useTransform(scrollYProgress, [0, 0.5], [0, -50]);
-    const opacity1 = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
+    // ADJUSTED SCROLL RANGES FOR 5 SECTIONS
+    // Ranges: 0-0.15 (1), 0.2-0.35 (2), 0.4-0.55 (3), 0.6-0.75 (4), 0.8-1.0 (5)
 
-    const opacity2 = useTransform(scrollYProgress, [0.3, 0.5, 0.8], [0, 1, 0]);
-    const y2 = useTransform(scrollYProgress, [0.3, 0.8], [50, -50]);
+    // Section 1: Intro
+    const y1 = useTransform(scrollYProgress, [0, 0.2], [0, -50]);
+    const opacity1 = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
 
-    const opacity3 = useTransform(scrollYProgress, [0.7, 1], [0, 1]);
+    // Section 2: Security (NEW)
+    const y2 = useTransform(scrollYProgress, [0.15, 0.35], [50, -50]);
+    const opacity2 = useTransform(scrollYProgress, [0.1, 0.25, 0.4], [0, 1, 0]);
+
+    // Section 3: Scale (Moved)
+    const y3 = useTransform(scrollYProgress, [0.35, 0.55], [50, -50]);
+    const opacity3 = useTransform(scrollYProgress, [0.3, 0.45, 0.6], [0, 1, 0]);
+
+    // Section 4: Analytics (NEW)
+    const y4 = useTransform(scrollYProgress, [0.55, 0.75], [50, -50]);
+    const opacity4 = useTransform(scrollYProgress, [0.5, 0.65, 0.8], [0, 1, 0]);
+
+    // Section 5: CTA
+    const opacity5 = useTransform(scrollYProgress, [0.75, 0.9], [0, 1]);
 
     useEffect(() => {
         let phi = 0;
@@ -105,13 +118,13 @@ export default function ExperiencePage() {
 
             {/* 2-Column Layout */}
             <div className="relative flex flex-col-reverse lg:flex-row">
-                {/* ... (Left Text Column Stays Same) ... */}
 
                 {/* Left: Scrollable Text Content */}
                 <div className="w-full lg:w-1/2 relative z-20 pointer-events-none">
-                    {/* Section 1 */}
+
+                    {/* Section 1: Vision */}
                     <div className="h-screen flex items-center p-12 lg:p-24 pointer-events-none">
-                        <motion.div style={{ opacity: opacity1 }} className="max-w-xl">
+                        <motion.div style={{ opacity: opacity1, y: y1 }} className="max-w-xl">
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-primary text-sm font-medium mb-6">
                                 Global Infrastructure
                             </div>
@@ -124,11 +137,26 @@ export default function ExperiencePage() {
                         </motion.div>
                     </div>
 
-                    {/* Section 2 */}
+                    {/* Section 2: Security (NEW) */}
                     <div className="h-screen flex items-center p-12 lg:p-24 pointer-events-none">
-                        <motion.div style={{ opacity: opacity2 }} className="max-w-xl">
+                        <motion.div style={{ opacity: opacity2, y: y2 }} className="max-w-xl">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-sm font-medium mb-6">
+                                Enterprise Security
+                            </div>
                             <h2 className="text-4xl lg:text-6xl font-display font-bold text-slate-900 mb-6">
-                                Seamless <br /> <span className="text-teal-600">Scale.</span>
+                                Bank-Grade <br /> <span className="text-emerald-600">Protection.</span>
+                            </h2>
+                            <p className="text-xl text-slate-600 leading-relaxed">
+                                Your data is sovereign. With end-to-end encryption and ISO 27001-compliant infrastructure, we ensure your institution's privacy is never compromised.
+                            </p>
+                        </motion.div>
+                    </div>
+
+                    {/* Section 3: Scale */}
+                    <div className="h-screen flex items-center p-12 lg:p-24 pointer-events-none">
+                        <motion.div style={{ opacity: opacity3, y: y3 }} className="max-w-xl">
+                            <h2 className="text-4xl lg:text-6xl font-display font-bold text-slate-900 mb-6">
+                                Seamless <br /> <span className="text-indigo-600">Scale.</span>
                             </h2>
                             <p className="text-xl text-slate-600 leading-relaxed">
                                 From a single campus in Mumbai to a multi-city network across India. Our architecture handles millions of requests with zero downtime.
@@ -136,9 +164,24 @@ export default function ExperiencePage() {
                         </motion.div>
                     </div>
 
-                    {/* Section 3 */}
+                    {/* Section 4: Analytics (NEW) */}
+                    <div className="h-screen flex items-center p-12 lg:p-24 pointer-events-none">
+                        <motion.div style={{ opacity: opacity4, y: y4 }} className="max-w-xl">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-purple-800 text-sm font-medium mb-6">
+                                Real-Time Intelligence
+                            </div>
+                            <h2 className="text-4xl lg:text-6xl font-display font-bold text-slate-900 mb-6">
+                                Data that <br /> <span className="text-purple-600">Delivers.</span>
+                            </h2>
+                            <p className="text-xl text-slate-600 leading-relaxed">
+                                Turn raw attendance and exam data into actionable insights. Identify at-risk students and optimize resource allocation instantly.
+                            </p>
+                        </motion.div>
+                    </div>
+
+                    {/* Section 5: CTA */}
                     <div className="h-screen flex items-center p-12 lg:p-24 pointer-events-auto">
-                        <motion.div style={{ opacity: opacity3 }} className="max-w-xl">
+                        <motion.div style={{ opacity: opacity5 }} className="max-w-xl">
                             <h2 className="text-4xl lg:text-6xl font-display font-bold text-slate-900 mb-6">
                                 Ready to <br /> <span className="text-blue-600">Connect?</span>
                             </h2>
