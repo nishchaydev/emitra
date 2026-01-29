@@ -48,7 +48,7 @@ export function CookieConsent() {
                                 <h4 className="font-bold text-slate-900 mb-1">We value your privacy</h4>
                                 <p className="text-sm text-slate-600">
                                     We use cookies to enhance your browsing experience and analyze our traffic.
-                                    By clicking "Accept", you consent to our use of cookies.
+                                    By clicking &quot;Accept&quot;, you consent to our use of cookies.
                                 </p>
                             </div>
                         </div>

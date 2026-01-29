@@ -6,10 +6,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 export function Preloader() {
     const [isVisible, setIsVisible] = useState(true);
 
+    const handleComplete = () => {
+        setIsVisible(false);
+        // Session storage set to prevent preloader showing again in this session
+        sessionStorage.setItem('hasSeenPreloader', 'true');
+    };
+
     useEffect(() => {
         // Check if preloader should be disabled (e.g. for 404 pages)
         if (typeof window !== 'undefined' && window.sessionStorage.getItem('disablePreloader') === 'true') {
-            setIsVisible(false);
+            setTimeout(() => setIsVisible(false), 0);
             window.sessionStorage.removeItem('disablePreloader'); // Reset for next valid navigation
             return;
         }
@@ -27,12 +33,6 @@ export function Preloader() {
 
         return () => clearTimeout(timer);
     }, []);
-
-    const handleComplete = () => {
-        setIsVisible(false);
-        // Session storage set to prevent preloader showing again in this session
-        sessionStorage.setItem('hasSeenPreloader', 'true');
-    };
 
     return (
         <AnimatePresence>

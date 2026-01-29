@@ -15,7 +15,6 @@ const initialState = {
 }
 
 export function ContactForm() {
-    // @ts-ignore - Types for useActionState might not be fully inferred in some setups yet
     const [state, formAction, isPending] = useActionState(sendEmail, initialState);
     const [isSubmitted, setIsSubmitted] = useState(false);
 

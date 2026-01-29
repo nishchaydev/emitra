@@ -72,19 +72,19 @@ export function Globe({ className }: { className?: string }) {
                     aspectRatio: '1',
                 }}
                 onPointerDown={(e) => {
-                    // @ts-ignore
+                    // @ts-expect-error - Event types for cobe are not fully typed
                     pointerInteracting.current = e.clientX - pointerInteractionMovement.current;
-                    // @ts-ignore
+                    // @ts-expect-error - Canvas ref style modification
                     canvasRef.current.style.cursor = 'grabbing';
                 }}
                 onPointerUp={() => {
                     pointerInteracting.current = null;
-                    // @ts-ignore
+                    // @ts-expect-error - Canvas ref style modification
                     canvasRef.current.style.cursor = 'grab';
                 }}
                 onPointerOut={() => {
                     pointerInteracting.current = null;
-                    // @ts-ignore
+                    // @ts-expect-error - Canvas ref style modification
                     canvasRef.current.style.cursor = 'grab';
                 }}
                 onMouseMove={(e) => {
@@ -95,7 +95,6 @@ export function Globe({ className }: { className?: string }) {
                 }}
                 onTouchMove={(e) => {
                     if (pointerInteracting.current !== null && e.touches[0]) {
-                        // @ts-ignore
                         const delta = e.touches[0].clientX - pointerInteracting.current;
                         pointerInteractionMovement.current = delta * 0.01;
                     }

@@ -147,7 +147,7 @@ export default function ExperiencePage() {
                                 Bank-Grade <br /> <span className="text-emerald-600">Protection.</span>
                             </h2>
                             <p className="text-xl text-slate-600 leading-relaxed">
-                                Your data is sovereign. With end-to-end encryption and ISO 27001-compliant infrastructure, we ensure your institution's privacy is never compromised.
+                                Your data is sovereign. With end-to-end encryption and ISO 27001-compliant infrastructure, we ensure your institution&apos;s privacy is never compromised.
                             </p>
                         </motion.div>
                     </div>

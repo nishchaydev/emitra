@@ -4,7 +4,7 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function sendEmail(prevState: any, formData: FormData) {
+export async function sendEmail(prevState: unknown, formData: FormData) {
     const name = formData.get('fullName') as string;
     const email = formData.get('email') as string;
     const institution = formData.get('institution') as string;
@@ -74,7 +74,7 @@ export async function sendEmail(prevState: any, formData: FormData) {
 
         console.log('Email sent successfully:', data);
         return { success: true };
-    } catch (err: any) {
+    } catch (err: unknown) {
         console.error('Unexpected Server Error sending email:', err);
         return { success: false, error: 'Failed to send email. Please try again later.' };
     }
