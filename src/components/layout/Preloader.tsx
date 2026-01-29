@@ -48,7 +48,7 @@ export function Preloader() {
                         muted
                         playsInline
                         loop
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain md:object-cover"
                         src="https://res.cloudinary.com/dkits80xk/video/upload/Animated_Logo_Video_Generation_slzzql.mp4"
                     >
                         Your browser does not support the video tag.
