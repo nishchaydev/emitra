@@ -34,8 +34,8 @@ export const FOOTER_LINKS = {
         { label: 'Support', href: '/services/support' },
     ],
     legal: [
-        { label: 'Privacy Policy', href: '/privacy' },
-        { label: 'Terms of Service', href: '/terms' },
+        { label: 'Privacy Policy', href: '/privacy-policy' },
+        { label: 'Terms of Service', href: '/terms-of-service' },
     ],
 } as const;
 

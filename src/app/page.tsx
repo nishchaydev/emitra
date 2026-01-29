@@ -11,7 +11,7 @@ import { Statistics } from '@/components/sections/Statistics';
 import { ProductShowcase } from '@/components/sections/ProductShowcase';
 import { Insights } from '@/components/sections/Insights';
 import { FAQ } from '@/components/sections/FAQ';
-import { Testimonials } from '@/components/sections/Testimonials';
+import { FoundingPartner } from '@/components/sections/FoundingPartner';
 import { TrustBadges } from '@/components/sections/TrustBadges';
 
 export default function Home() {
@@ -25,7 +25,7 @@ export default function Home() {
         <EmitaWay />
         <Services />
         <Partners />
-        <Testimonials />
+        <FoundingPartner />
         <Statistics />
         <ProductShowcase />
         <Education />

@@ -1,31 +1,31 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Shield, Award, Lock, CheckCircle } from 'lucide-react';
+import { Shield, Clock, Lock, FileCheck } from 'lucide-react';
 
-const badges = [
+const practices = [
     {
         icon: Shield,
-        title: 'ISO 27001',
-        subtitle: 'Certified',
+        title: 'Enterprise Security',
+        subtitle: 'Best Practices',
         color: 'bg-blue-50 text-blue-600',
     },
     {
-        icon: Lock,
-        title: 'GDPR',
-        subtitle: 'Compliant',
+        icon: Clock,
+        title: '24/7',
+        subtitle: 'Uptime Monitoring',
         color: 'bg-green-50 text-green-600',
     },
     {
-        icon: Award,
-        title: '99.9%',
-        subtitle: 'Uptime SLA',
+        icon: Lock,
+        title: 'Encrypted',
+        subtitle: 'Data Storage',
         color: 'bg-purple-50 text-purple-600',
     },
     {
-        icon: CheckCircle,
-        title: 'SOC 2',
-        subtitle: 'Type II',
+        icon: FileCheck,
+        title: 'Compliance',
+        subtitle: 'Roadmap Available',
         color: 'bg-teal-50 text-teal-600',
     },
 ];
@@ -42,11 +42,11 @@ export function TrustBadges() {
                     transition={{ duration: 0.6 }}
                 >
                     <p className="text-sm text-slate-500 mb-8 text-center">
-                        Trusted by enterprises worldwide with industry-leading compliance
+                        Built with enterprise-grade security practices and infrastructure
                     </p>
 
                     <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12">
-                        {badges.map((badge, index) => (
+                        {practices.map((practice, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, scale: 0.9 }}
@@ -56,12 +56,12 @@ export function TrustBadges() {
                                 whileHover={{ scale: 1.05, y: -2 }}
                                 className="flex items-center gap-3 px-6 py-4 bg-white rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-all cursor-default"
                             >
-                                <div className={`h-10 w-10 rounded-lg ${badge.color} flex items-center justify-center`}>
-                                    <badge.icon className="h-5 w-5" />
+                                <div className={`h-10 w-10 rounded-lg ${practice.color} flex items-center justify-center`}>
+                                    <practice.icon className="h-5 w-5" />
                                 </div>
                                 <div>
-                                    <p className="font-bold text-slate-900 text-sm">{badge.title}</p>
-                                    <p className="text-xs text-slate-500">{badge.subtitle}</p>
+                                    <p className="font-bold text-slate-900 text-sm">{practice.title}</p>
+                                    <p className="text-xs text-slate-500">{practice.subtitle}</p>
                                 </div>
                             </motion.div>
                         ))}

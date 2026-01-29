@@ -76,7 +76,7 @@ export function Footer() {
                     {/* Brand */}
                     <div className="lg:col-span-2 space-y-6">
                         <Link href="/" className="inline-block">
-                            <div className="relative h-12 w-48">
+                            <div className="relative h-36 w-[30rem]">
                                 <Image
                                     src="https://res.cloudinary.com/dkits80xk/image/upload/v1769612105/0ed66ac0-9d39-4eb0-a4f9-b82da198b557.png"
                                     alt="eMitra Technologies"
@@ -90,16 +90,18 @@ export function Footer() {
                             Where technology meets trust. Providing enterprise-grade solutions for institutions worldwide.
                         </p>
                         <div className="flex gap-3">
-                            <a href="#" className="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white transition-all">
+                            {/* Social links hidden until profiles are live
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white transition-all">
                                 <Linkedin className="h-5 w-5" />
                             </a>
-                            <a href="#" className="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white transition-all">
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white transition-all">
                                 <Twitter className="h-5 w-5" />
                             </a>
-                            <a href="#" className="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white transition-all">
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white transition-all">
                                 <Instagram className="h-5 w-5" />
                             </a>
-                            <a href="#" className="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white transition-all">
+                             */}
+                            <a href="mailto:hello@emitra.tech" className="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white transition-all">
                                 <Mail className="h-5 w-5" />
                             </a>
                         </div>
@@ -109,10 +111,10 @@ export function Footer() {
                     <div>
                         <h4 className="font-bold text-slate-900 mb-6">Solutions</h4>
                         <ul className="space-y-4 text-sm text-slate-500">
-                            <li><a href="#" className="hover:text-primary transition-colors">Enterprise ERP</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Education Suite</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Data Analytics</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Custom Workflow</a></li>
+                            <li><Link href="/solutions" className="hover:text-primary transition-colors">Enterprise ERP</Link></li>
+                            <li><Link href="/solutions" className="hover:text-primary transition-colors">Education Suite</Link></li>
+                            <li><Link href="/solutions" className="hover:text-primary transition-colors">Data Analytics</Link></li>
+                            <li><Link href="/contact" className="hover:text-primary transition-colors">Custom Solutions</Link></li>
                         </ul>
                     </div>
 
@@ -121,9 +123,9 @@ export function Footer() {
                         <h4 className="font-bold text-slate-900 mb-6">Company</h4>
                         <ul className="space-y-4 text-sm text-slate-500">
                             <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Careers</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Partner Program</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Press Kit</a></li>
+                            <li><Link href="/contact" className="hover:text-primary transition-colors">Careers</Link></li>
+                            <li><Link href="/contact" className="hover:text-primary transition-colors">Partner Program</Link></li>
+                            <li><Link href="/contact" className="hover:text-primary transition-colors">Contact Us</Link></li>
                         </ul>
                     </div>
 
@@ -131,9 +133,9 @@ export function Footer() {
                     <div>
                         <h4 className="font-bold text-slate-900 mb-6">Support</h4>
                         <ul className="space-y-4 text-sm text-slate-500">
-                            <li><a href="#" className="hover:text-primary transition-colors">Help Center</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Documentation</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">System Status</a></li>
+                            <li><Link href="/contact" className="hover:text-primary transition-colors">Help Center</Link></li>
+                            <li><Link href="/contact" className="hover:text-primary transition-colors">Documentation</Link></li>
+                            <li><Link href="/security" className="hover:text-primary transition-colors">Security</Link></li>
                             <li><Link href="/contact" className="hover:text-primary transition-colors">Contact Sales</Link></li>
                         </ul>
                     </div>
@@ -143,9 +145,9 @@ export function Footer() {
                 <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
                     <p>© 2025 eMitra Technologies. All rights reserved.</p>
                     <div className="flex gap-8">
-                        <a href="#" className="hover:text-slate-600 transition-colors">Privacy Policy</a>
-                        <a href="#" className="hover:text-slate-600 transition-colors">Terms of Service</a>
-                        <a href="#" className="hover:text-slate-600 transition-colors">Security</a>
+                        <Link href="/privacy-policy" className="hover:text-slate-600 transition-colors">Privacy Policy</Link>
+                        <Link href="/terms-of-service" className="hover:text-slate-600 transition-colors">Terms of Service</Link>
+                        <Link href="/security" className="hover:text-slate-600 transition-colors">Security</Link>
                     </div>
                 </div>
             </div>

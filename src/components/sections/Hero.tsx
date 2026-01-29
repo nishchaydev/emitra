@@ -1,9 +1,11 @@
 'use client';
 
-import { ArrowRight, Zap, Play } from 'lucide-react';
+import { ArrowRight, Zap, Play, Clock } from 'lucide-react';
 import { Globe } from '@/components/ui/Globe';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 // Floating particle component
 function Particle({ delay, duration, x, y }: { delay: number; duration: number; x: string; y: string }) {
@@ -28,6 +30,8 @@ function Particle({ delay, duration, x, y }: { delay: number; duration: number; 
 export function Hero() {
     const words = ["Universities", "Governments", "Enterprises"];
     const [index, setIndex] = useState(0);
+    const [showMockup, setShowMockup] = useState(false);
+    const [imageLoadError, setImageLoadError] = useState(false);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -70,7 +74,7 @@ export function Hero() {
                 <Particle delay={2.5} duration={5} x="90%" y="50%" />
             </div>
 
-            <div className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center relative z-10">
                 {/* Left Content */}
                 <motion.div
                     className="space-y-8"
@@ -127,21 +131,24 @@ export function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6, duration: 0.5 }}
                     >
+                        <Link href="/contact">
+                            <motion.div
+                                className="group bg-gradient-to-r from-primary to-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all flex items-center gap-2 cursor-pointer"
+                                whileHover={{ scale: 1.02, y: -2 }}
+                                whileTap={{ scale: 0.98 }}
+                            >
+                                Schedule a Demo
+                                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                            </motion.div>
+                        </Link>
                         <motion.button
-                            className="group bg-gradient-to-r from-primary to-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all flex items-center gap-2"
-                            whileHover={{ scale: 1.02, y: -2 }}
-                            whileTap={{ scale: 0.98 }}
-                        >
-                            Schedule a Demo
-                            <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                        </motion.button>
-                        <motion.button
+                            onClick={() => setShowMockup(true)}
                             className="group bg-white border border-slate-200 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all shadow-sm flex items-center gap-2"
                             whileHover={{ scale: 1.02, y: -2 }}
                             whileTap={{ scale: 0.98 }}
                         >
                             <Play className="h-5 w-5 text-primary" />
-                            Watch 2-Min Tour
+                            See the Dashboard
                         </motion.button>
                     </motion.div>
 
@@ -163,15 +170,15 @@ export function Hero() {
                             ))}
                         </div>
                         <div>
-                            <p className="text-sm font-medium text-slate-900">Trusted by 50+ institutions</p>
-                            <p className="text-xs text-slate-500">Join leading organizations worldwide</p>
+                            <p className="text-sm font-medium text-slate-900">Trusted by leading institutions</p>
+                            <p className="text-xs text-slate-500">Join organizations transforming operations</p>
                         </div>
                     </motion.div>
                 </motion.div>
 
                 {/* Right: Hero Visual */}
                 <motion.div
-                    className="relative aspect-square lg:aspect-auto h-[500px] flex items-center justify-center"
+                    className="relative aspect-square lg:aspect-auto h-[600px] flex items-center justify-center"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
@@ -186,7 +193,7 @@ export function Hero() {
                     {/* Globe */}
                     <Globe />
 
-                    {/* Floating Card */}
+                    {/* Floating Card - Analytics */}
                     <motion.div
                         className="absolute -bottom-4 -left-4 lg:-bottom-6 lg:-left-6 p-5 lg:p-6 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-slate-100/80 max-w-[220px] lg:max-w-[240px]"
                         initial={{ opacity: 0, y: 20, x: -20 }}
@@ -205,7 +212,7 @@ export function Hero() {
                         </div>
                     </motion.div>
 
-                    {/* Second Floating Card - Top Right */}
+                    {/* Floating Card - Uptime */}
                     <motion.div
                         className="absolute -top-4 -right-4 lg:-top-6 lg:right-0 p-4 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg border border-slate-100/80"
                         initial={{ opacity: 0, y: -20, x: 20 }}
@@ -215,17 +222,74 @@ export function Hero() {
                     >
                         <div className="flex items-center gap-2">
                             <div className="h-8 w-8 rounded-full bg-green-100 flex items-center justify-center">
-                                <span className="text-green-600 text-sm">✓</span>
+                                <Clock className="h-4 w-4 text-green-600" />
                             </div>
                             <div>
-                                <p className="text-xs font-bold text-slate-900">99.9% Uptime</p>
-                                <p className="text-[10px] text-slate-500">SLA Guaranteed</p>
+                                <p className="text-xs font-bold text-slate-900">24/7 Available</p>
+                                <p className="text-[10px] text-slate-500">Always online</p>
                             </div>
                         </div>
                     </motion.div>
                 </motion.div>
             </div>
+
+            {/* Dashboard Mockup Modal */}
+            <AnimatePresence>
+                {showMockup && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-6"
+                        onClick={() => setShowMockup(false)}
+                        role="dialog"
+                        aria-modal="true"
+                        aria-labelledby="modal-title"
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.9, opacity: 0 }}
+                            className="relative max-w-4xl w-full bg-white rounded-2xl overflow-hidden shadow-2xl"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <div className="p-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+                                <div>
+                                    <h3 id="modal-title" className="font-bold text-slate-900">Dashboard Preview</h3>
+                                    <p className="text-xs text-slate-500">Conceptual UI — final implementation may vary</p>
+                                </div>
+                                <button
+                                    onClick={() => setShowMockup(false)}
+                                    className="text-slate-400 hover:text-slate-600 p-2 rounded-full hover:bg-slate-100 transition-colors"
+                                    aria-label="Close modal"
+                                >
+                                    ✕
+                                </button>
+                            </div>
+                            <div className="relative w-full h-[500px] bg-slate-100 flex items-center justify-center">
+                                {!imageLoadError ? (
+                                    <Image
+                                        src="/dashboard-mockup.png"
+                                        alt="eMitra Dashboard - Conceptual UI showing analytics and management tools"
+                                        fill
+                                        className="object-contain"
+                                        onError={() => setImageLoadError(true)}
+                                    />
+                                ) : (
+                                    <div className="text-center p-8">
+                                        <p className="text-slate-400">Preview currently unavailable</p>
+                                    </div>
+                                )}
+                            </div>
+                            <div className="p-4 bg-slate-50 border-t border-slate-200 text-center">
+                                <p className="text-sm text-slate-600">
+                                    <span className="font-medium">Illustrative / conceptual UI</span> — final implementation may vary
+                                </p>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </section>
     );
 }
-

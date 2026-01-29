@@ -3,14 +3,14 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X, ChevronRight } from 'lucide-react';
+import { Menu, X, ChevronRight, Shield } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
     { href: '/solutions', label: 'Solutions' },
-    { href: '/#services', label: 'Services' },
-    { href: '/#education', label: 'Education' },
+    { href: '/services', label: 'Services' },
+    { href: '/education', label: 'Education' },
     { href: '/about', label: 'About' },
 ];
 
@@ -20,14 +20,14 @@ export function Header() {
     return (
         <header className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/80">
             <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-                {/* Logo - Using full brand logo like footer */}
-                <Link href="/" className="flex items-center">
+                {/* Logo */}
+                <Link href="/">
                     <motion.div
-                        className="relative h-12 w-40"
+                        className="relative h-12 w-32 sm:h-16 sm:w-48 md:h-20 md:w-64 lg:w-[300px]"
                         whileHover={{ scale: 1.02 }}
                     >
                         <Image
-                            src="https://res.cloudinary.com/dkits80xk/image/upload/v1769612105/0ed66ac0-9d39-4eb0-a4f9-b82da198b557.png"
+                            src="https://res.cloudinary.com/dkits80xk/image/upload/v1769698397/0b4d78b6-32e7-43b3-b12b-5bbf0746a22b.png"
                             alt="eMitra Technologies"
                             fill
                             className="object-contain object-left"

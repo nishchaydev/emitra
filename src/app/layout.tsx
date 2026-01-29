@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import { Inter, Outfit } from 'next/font/google';
 import { Analytics } from "@vercel/analytics/react"
 import { Providers } from './providers';
+import { StickyMobileCTA } from '@/components/layout/StickyMobileCTA';
+import { Preloader } from '@/components/layout/Preloader';
+// Global styles
 import './globals.css';
 
 const inter = Inter({
@@ -44,7 +47,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} ${outfit.variable} bg-white text-slate-900 font-sans antialiased`}>
+        <Preloader />
         <Providers>{children}</Providers>
+        <StickyMobileCTA />
         <Analytics />
       </body>
     </html>

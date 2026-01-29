@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight, Mail } from 'lucide-react';
+import Link from 'next/link';
 
 export function CTA() {
     return (
@@ -25,22 +26,25 @@ export function CTA() {
                         the future.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                        <motion.button
-                            className="group w-full sm:w-auto bg-primary text-white px-10 py-5 rounded-2xl font-bold text-xl shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-3"
-                            whileHover={{ scale: 1.02 }}
-                            whileTap={{ scale: 0.98 }}
-                        >
-                            Talk to Us
-                            <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                        </motion.button>
-                        <motion.button
-                            className="group w-full sm:w-auto bg-white border border-slate-200 px-10 py-5 rounded-2xl font-bold text-xl hover:bg-slate-50 hover:border-slate-300 transition-all shadow-sm flex items-center justify-center gap-3"
+                        <Link href="/contact" className="w-full sm:w-auto">
+                            <motion.div
+                                className="group w-full bg-primary text-white px-10 py-5 rounded-2xl font-bold text-xl shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-3 cursor-pointer"
+                                whileHover={{ scale: 1.02 }}
+                                whileTap={{ scale: 0.98 }}
+                            >
+                                Talk to Us
+                                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                            </motion.div>
+                        </Link>
+                        <motion.a
+                            href="mailto:hello@emitra.tech"
+                            className="w-full sm:w-auto group bg-white border border-slate-200 px-10 py-5 rounded-2xl font-bold text-xl hover:bg-slate-50 hover:border-slate-300 transition-all shadow-sm flex items-center justify-center gap-3"
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
                         >
                             <Mail className="h-5 w-5 text-slate-500" />
                             Email Support
-                        </motion.button>
+                        </motion.a>
                     </div>
                 </motion.div>
             </div>
