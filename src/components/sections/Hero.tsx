@@ -18,7 +18,7 @@ export function Hero() {
                 />
             </div>
 
-            <div className="max-w-7xl mx-auto px-6 py-20 lg:py-32 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div className="max-w-7xl mx-auto px-6 pt-32 pb-20 lg:pt-48 lg:pb-32 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                 {/* Left Content */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
