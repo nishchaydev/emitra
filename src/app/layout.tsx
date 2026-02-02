@@ -4,7 +4,6 @@ import { Analytics } from "@vercel/analytics/react"
 import { Providers } from './providers';
 import { StickyMobileCTA } from '@/components/layout/StickyMobileCTA';
 import { Preloader } from '@/components/layout/Preloader';
-import { CustomCursor } from '@/components/ui/CustomCursor';
 // Global styles
 import './globals.css';
 
@@ -48,7 +47,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} ${outfit.variable} bg-white text-slate-900 font-sans antialiased`}>
-        <CustomCursor />
         <Preloader />
         <Providers>{children}</Providers>
         <StickyMobileCTA />

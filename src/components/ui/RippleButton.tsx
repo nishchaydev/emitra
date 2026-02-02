@@ -68,18 +68,6 @@ export function RippleButton({ children, className, as: Component = 'button', on
                     }}
                 />
             ))}
-            {children}
-            <style jsx>{`
-                @keyframes ripple {
-                    to {
-                        transform: scale(4);
-                        opacity: 0;
-                    }
-                }
-                .animate-ripple {
-                    animation: ripple 0.6s ease-out;
-                }
-            `}</style>
         </Component>
     );
 }
