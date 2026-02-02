@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 
 const contactInfo = [
-    { icon: Mail, label: 'Email', value: 'contact@emitra.tech', href: 'mailto:contact@emitra.tech' },
-    { icon: Phone, label: 'Phone', value: '+91 98765 43210', href: 'tel:+919876543210' },
-    { icon: MapPin, label: 'Location', value: 'India', href: null },
+    { icon: Mail, label: 'Email', value: 'emitratechnologies@gmail.com', href: 'mailto:emitratechnologies@gmail.com' },
+    { icon: Phone, label: 'Phone', value: '+91 86021 75892', href: 'tel:+918602175892' },
+    { icon: MapPin, label: 'Location', value: 'Mumbai, India', href: null },
     { icon: Clock, label: 'Response Time', value: 'Within 24 hours', href: null },
 ];
 

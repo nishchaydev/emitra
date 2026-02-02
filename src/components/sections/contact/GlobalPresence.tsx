@@ -1,10 +1,9 @@
 import { MapPin } from 'lucide-react';
 
 const locations = [
-    { city: 'North America', location: 'San Francisco, CA', color: 'bg-primary' },
-    { city: 'Europe', location: 'London, UK', color: 'bg-accent' },
-    { city: 'Asia Pacific', location: 'Singapore', color: 'bg-warning' },
-    { city: 'India', location: 'Mumbai, India', color: 'bg-primary' },
+    { city: 'India', location: 'Mumbai, Maharashtra', color: 'bg-primary' },
+    { city: 'India', location: 'Indore, Madhya Pradesh', color: 'bg-primary' },
+    { city: 'India', location: 'Serving Pan-India', color: 'bg-primary' },
 ];
 
 export function GlobalPresence() {

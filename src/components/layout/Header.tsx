@@ -140,7 +140,7 @@ export function Header() {
                                     Request a Demo
                                 </Link>
                                 <p className="mt-6 text-center text-sm text-slate-500">
-                                    Or call us at <a href="tel:+919876543210" className="text-primary font-medium">+91 98765 43210</a>
+                                    Or call us at <a href="tel:+918602175892" className="text-primary font-medium">+91 86021 75892</a>
                                 </p>
                             </motion.div>
                         </div>
