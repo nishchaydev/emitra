@@ -8,10 +8,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
-    { href: '/solutions', label: 'Solutions' },
-    { href: '/services', label: 'Services' },
-    { href: '/education', label: 'Education' },
-    { href: '/about', label: 'About' },
+    { href: '/schoolmitra', label: 'SchoolMitra' },
+    { href: '/gymmitra', label: 'GymMitra' },
+    { href: '/flatmitra', label: 'FlatMitra' },
+    { href: '/contact', label: 'Contact' },
 ];
 
 export function Header() {

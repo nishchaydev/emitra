@@ -109,11 +109,11 @@ export function Footer() {
 
                     {/* Solutions */}
                     <div>
-                        <h4 className="font-bold text-slate-900 mb-6">Solutions</h4>
+                        <h4 className="font-bold text-slate-900 mb-6">Products</h4>
                         <ul className="space-y-4 text-sm text-slate-500">
-                            <li><Link href="/solutions" className="hover:text-primary transition-colors">Enterprise ERP</Link></li>
-                            <li><Link href="/solutions" className="hover:text-primary transition-colors">Education Suite</Link></li>
-                            <li><Link href="/solutions" className="hover:text-primary transition-colors">Data Analytics</Link></li>
+                            <li><Link href="/schoolmitra" className="hover:text-primary transition-colors">SchoolMitra</Link></li>
+                            <li><Link href="/gymmitra" className="hover:text-primary transition-colors">GymMitra</Link></li>
+                            <li><Link href="/flatmitra" className="hover:text-primary transition-colors">FlatMitra</Link></li>
                             <li><Link href="/contact" className="hover:text-primary transition-colors">Custom Solutions</Link></li>
                         </ul>
                     </div>
@@ -124,7 +124,6 @@ export function Footer() {
                         <ul className="space-y-4 text-sm text-slate-500">
                             <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
                             <li><Link href="/contact" className="hover:text-primary transition-colors">Careers</Link></li>
-                            <li><Link href="/contact" className="hover:text-primary transition-colors">Partner Program</Link></li>
                             <li><Link href="/contact" className="hover:text-primary transition-colors">Contact Us</Link></li>
                         </ul>
                     </div>
@@ -134,9 +133,8 @@ export function Footer() {
                         <h4 className="font-bold text-slate-900 mb-6">Support</h4>
                         <ul className="space-y-4 text-sm text-slate-500">
                             <li><Link href="/contact" className="hover:text-primary transition-colors">Help Center</Link></li>
-                            <li><Link href="/contact" className="hover:text-primary transition-colors">Documentation</Link></li>
-                            <li><Link href="/security" className="hover:text-primary transition-colors">Security</Link></li>
-                            <li><Link href="/contact" className="hover:text-primary transition-colors">Contact Sales</Link></li>
+                            <li><Link href="/contact" className="hover:text-primary transition-colors">Sales</Link></li>
+                            <li><Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy</Link></li>
                         </ul>
                     </div>
                 </div>
