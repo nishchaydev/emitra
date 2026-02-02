@@ -3,6 +3,7 @@
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { CTA } from '@/components/sections/CTA';
+import { PricingSection } from '@/components/sections/PricingSection';
 import { motion } from 'framer-motion';
 import { ArrowRight, Check, Bot, Globe, Smartphone, BarChart3, Clock, Lock } from 'lucide-react';
 import Link from 'next/link';
@@ -131,35 +132,66 @@ export function SchoolMitraTemplate() {
                 </section>
 
                 {/* Pricing */}
-                <section className="py-20 bg-white">
-                    <div className="max-w-7xl mx-auto px-6">
-                        <div className="text-center mb-16">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-4">Transparent Pricing</h2>
-                            <p className="text-slate-500">No hidden fees. Pay based on your institution size.</p>
-                        </div>
-
-                        <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
-                            <div className="w-full max-w-md bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
-                                <h3 className="text-xl font-bold text-slate-900">Standard License</h3>
-                                <div className="mt-4 mb-6">
-                                    <span className="text-4xl font-bold text-slate-900">₹50k - 2L</span>
-                                    <span className="text-slate-500">/year</span>
-                                </div>
-                                <p className="text-sm text-slate-500 mb-6">Based on student count (200 - 2000 students)</p>
-                                <ul className="space-y-3 mb-8">
-                                    <li className="flex items-center gap-2 text-sm text-slate-600"><Check className="h-4 w-4 text-green-500" /> Core ERP Features</li>
-                                    <li className="flex items-center gap-2 text-sm text-slate-600"><Check className="h-4 w-4 text-green-500" /> Mobile App for Parents</li>
-                                    <li className="flex items-center gap-2 text-sm text-slate-600"><Check className="h-4 w-4 text-green-500" /> Email & SMS Support</li>
-                                </ul>
-                                <Link href="/contact" className="block w-full">
-                                    <div className="w-full py-3 bg-slate-100 hover:bg-slate-200 text-slate-900 font-bold rounded-xl transition-colors text-center cursor-pointer">
-                                        Get Quote
-                                    </div>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                {/* Pricing */}
+                <PricingSection
+                    title="SchoolMitra"
+                    subtitle="Transparent Pricing"
+                    color="blue"
+                    tiers={[
+                        {
+                            name: "Starter",
+                            price: "₹50,000",
+                            period: "/year",
+                            highlight: false,
+                            description: "Up to 500 students",
+                            features: [
+                                "Student & staff management",
+                                "Fee collection & receipts",
+                                "Attendance tracking",
+                                "Exam & result processing",
+                                "Parent mobile app",
+                                "SMS notifications (5,000/month)",
+                                "Email support"
+                            ],
+                            cta: "Start Free Trial"
+                        },
+                        {
+                            name: "Growth",
+                            price: "₹1,00,000",
+                            period: "/year",
+                            highlight: true,
+                            description: "501-1,000 students",
+                            features: [
+                                "Everything in Starter, plus:",
+                                "Biometric attendance integration",
+                                "AI chatbot for parent queries",
+                                "Advanced reports & analytics",
+                                "Multi-user roles & permissions",
+                                "SMS notifications (15,000/month)",
+                                "Phone + email support"
+                            ],
+                            cta: "Start Free Trial"
+                        },
+                        {
+                            name: "Scale",
+                            price: "₹2,00,000",
+                            period: "/year",
+                            highlight: false,
+                            description: "1,001-2,000 students",
+                            features: [
+                                "Everything in Growth, plus:",
+                                "Multi-campus support",
+                                "API access for integrations",
+                                "Custom reports builder",
+                                "Priority support (4-hour SLA)",
+                                "On-premise deployment option",
+                                "Unlimited SMS notifications",
+                                "Dedicated account manager"
+                            ],
+                            cta: "Start Free Trial"
+                        }
+                    ]}
+                />
 
                 <CTA />
             </main>

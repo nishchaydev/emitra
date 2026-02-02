@@ -3,6 +3,7 @@
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { CTA } from '@/components/sections/CTA';
+import { PricingSection } from '@/components/sections/PricingSection';
 import { motion } from 'framer-motion';
 import { ArrowRight, Check, Building2, Key, IndianRupee, FileText, UserCheck, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
@@ -131,35 +132,63 @@ export function FlatMitraTemplate() {
                 </section>
 
                 {/* Pricing */}
-                <section className="py-20 bg-white">
-                    <div className="max-w-7xl mx-auto px-6">
-                        <div className="text-center mb-16">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-4">Flexible Pricing</h2>
-                            <p className="text-slate-500">Pay as you grow. No setup fees.</p>
-                        </div>
-
-                        <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
-                            <div className="w-full max-w-md bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
-                                <h3 className="text-xl font-bold text-slate-900">Property License</h3>
-                                <div className="mt-4 mb-6">
-                                    <span className="text-4xl font-bold text-slate-900">₹15k - 75k</span>
-                                    <span className="text-slate-500">/year</span>
-                                </div>
-                                <p className="text-sm text-slate-500 mb-6">Based on property size / number of beds</p>
-                                <ul className="space-y-3 mb-8">
-                                    <li className="flex items-center gap-2 text-sm text-slate-600"><Check className="h-4 w-4 text-purple-500" /> Full Dashboard Access</li>
-                                    <li className="flex items-center gap-2 text-sm text-slate-600"><Check className="h-4 w-4 text-purple-500" /> Tenant App Included</li>
-                                    <li className="flex items-center gap-2 text-sm text-slate-600"><Check className="h-4 w-4 text-purple-500" /> Automated Reminders</li>
-                                </ul>
-                                <Link href="/contact" className="block w-full">
-                                    <div className="w-full py-3 bg-purple-50 hover:bg-purple-100 text-purple-700 font-bold rounded-xl transition-colors text-center cursor-pointer">
-                                        Get Quote
-                                    </div>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                {/* Pricing */}
+                <PricingSection
+                    title="FlatMitra"
+                    subtitle="Student Housing Management"
+                    color="purple"
+                    tiers={[
+                        {
+                            name: "Solo",
+                            price: "₹15,000",
+                            period: "/year",
+                            highlight: false,
+                            description: "1 property, up to 20 rooms",
+                            features: [
+                                "Room availability tracking",
+                                "Tenant management portal",
+                                "Automated rent collection",
+                                "Maintenance request tracking",
+                                "Basic reports",
+                                "Email support"
+                            ],
+                            cta: "Start Free Trial"
+                        },
+                        {
+                            name: "Multi",
+                            price: "₹40,000",
+                            period: "/year",
+                            highlight: true,
+                            description: "2-5 properties, up to 100 rooms",
+                            features: [
+                                "Everything in Solo, plus:",
+                                "Multi-property dashboard",
+                                "Tenant mobile app",
+                                "Automated renewal reminders",
+                                "Payment gateway integration",
+                                "Advanced analytics",
+                                "Phone + email support"
+                            ],
+                            cta: "Start Free Trial"
+                        },
+                        {
+                            name: "Premium",
+                            price: "₹75,000",
+                            period: "/year",
+                            highlight: false,
+                            description: "6+ properties, unlimited rooms",
+                            features: [
+                                "Everything in Multi, plus:",
+                                "White-label platform option",
+                                "API access for integrations",
+                                "Custom features",
+                                "Priority support",
+                                "Dedicated account manager"
+                            ],
+                            cta: "Start Free Trial"
+                        }
+                    ]}
+                />
 
                 <CTA />
             </main>

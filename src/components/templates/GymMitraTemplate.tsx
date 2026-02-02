@@ -3,6 +3,7 @@
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { CTA } from '@/components/sections/CTA';
+import { PricingSection } from '@/components/sections/PricingSection';
 import { motion } from 'framer-motion';
 import { ArrowRight, Check, Dumbbell, Smartphone, Calendar, CreditCard, Activity, Users } from 'lucide-react';
 import Link from 'next/link';
@@ -131,35 +132,65 @@ export function GymMitraTemplate() {
                 </section>
 
                 {/* Pricing */}
-                <section className="py-20 bg-white">
-                    <div className="max-w-7xl mx-auto px-6">
-                        <div className="text-center mb-16">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-4">Simple Pricing</h2>
-                            <p className="text-slate-500">Grow your gym without breaking the bank.</p>
-                        </div>
-
-                        <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
-                            <div className="w-full max-w-md bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
-                                <h3 className="text-xl font-bold text-slate-900">Growth Plan</h3>
-                                <div className="mt-4 mb-6">
-                                    <span className="text-4xl font-bold text-slate-900">₹25k - 1L</span>
-                                    <span className="text-slate-500">/year</span>
-                                </div>
-                                <p className="text-sm text-slate-500 mb-6">Based on member count (100 - 1000 members)</p>
-                                <ul className="space-y-3 mb-8">
-                                    <li className="flex items-center gap-2 text-sm text-slate-600"><Check className="h-4 w-4 text-emerald-500" /> All Management Features</li>
-                                    <li className="flex items-center gap-2 text-sm text-slate-600"><Check className="h-4 w-4 text-emerald-500" /> Member App Included</li>
-                                    <li className="flex items-center gap-2 text-sm text-slate-600"><Check className="h-4 w-4 text-emerald-500" /> Priority Support</li>
-                                </ul>
-                                <Link href="/contact" className="block w-full">
-                                    <div className="w-full py-3 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-bold rounded-xl transition-colors text-center cursor-pointer">
-                                        Get Quote
-                                    </div>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                {/* Pricing */}
+                <PricingSection
+                    title="GymMitra"
+                    subtitle="Intelligent Gym Management"
+                    color="emerald"
+                    tiers={[
+                        {
+                            name: "Basic",
+                            price: "₹25,000",
+                            period: "/year",
+                            highlight: false,
+                            description: "Up to 200 members",
+                            features: [
+                                "Member management",
+                                "Billing & invoicing",
+                                "Attendance tracking",
+                                "Automated renewal reminders",
+                                "SMS notifications (2,000/month)",
+                                "Email support"
+                            ],
+                            cta: "Start Free Trial"
+                        },
+                        {
+                            name: "Pro",
+                            price: "₹50,000",
+                            period: "/year",
+                            highlight: true,
+                            description: "201-500 members",
+                            features: [
+                                "Everything in Basic, plus:",
+                                "Member mobile app",
+                                "Workout plans & scheduling",
+                                "PT Management",
+                                "Inventory management",
+                                "Nutrition tracking",
+                                "SMS notifications (5,000/month)",
+                                "Phone + email support"
+                            ],
+                            cta: "Start Free Trial"
+                        },
+                        {
+                            name: "Elite",
+                            price: "₹1,00,000",
+                            period: "/year",
+                            highlight: false,
+                            description: "501-1,000 members",
+                            features: [
+                                "Everything in Pro, plus:",
+                                "Multi-branch support",
+                                "Advanced analytics & insights",
+                                "Custom integrations",
+                                "Priority support",
+                                "White-label mobile app option",
+                                "Unlimited SMS notifications"
+                            ],
+                            cta: "Start Free Trial"
+                        }
+                    ]}
+                />
 
                 <CTA />
             </main>
