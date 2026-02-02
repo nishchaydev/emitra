@@ -41,15 +41,15 @@ export function Hero() {
                         AI-Powered Management Systems
                     </motion.div>
 
-                    <h1 className="text-5xl lg:text-7xl font-display font-bold leading-[1.1] tracking-tight text-slate-900">
-                        AI-Powered Management Systems for <br />
+                    <h1 className="text-4xl lg:text-6xl font-display font-bold leading-[1.1] tracking-tight text-slate-900">
+                        We help schools and institutions run operations flawlessly — <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
-                            Indian Institutions
+                            so leadership can focus on growth, not admin.
                         </span>
                     </h1>
 
                     <p className="text-xl text-slate-600 max-w-lg leading-relaxed">
-                        We build intelligent software that runs institutions—schools, gyms, housing, and beyond—so you can focus on growth, not paperwork.
+                        Intelligent management systems that eliminate chaos and streamline workflows for modern Indian institutions.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 pt-2">

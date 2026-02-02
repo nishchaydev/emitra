@@ -41,9 +41,7 @@ export function CustomSolutions() {
                         Need Something Custom?
                     </h2>
                     <p className="text-slate-300 text-lg mb-8 leading-relaxed max-w-xl">
-                        Beyond our core solutions, we build custom management systems for institutions, enterprises, and government bodies.
-                        <br /><br />
-                        From healthcare to retail, education to governance—if you need intelligent software, we can build it.
+                        Custom software for institutions that need workflows optimized — education first, then adjacent sectors.
                     </p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">

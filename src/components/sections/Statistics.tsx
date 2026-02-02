@@ -47,31 +47,31 @@ function StatCard({ stat, index }: { stat: typeof stats[0], index: number }) {
 
 const stats = [
     {
+        icon: Clock,
+        value: '20+',
+        label: 'Hours Saved',
+        description: 'Hours saved per staff member, every single week.',
+        animated: true,
+    },
+    {
         icon: Server,
-        value: '99.9%',
-        label: 'Uptime Guarantee',
-        description: 'Reliable infrastructure designed for zero downtime.',
+        value: '40%',
+        label: 'Faster Collection',
+        description: 'Reduction in fee collection cycles and delays.',
+        animated: true,
+    },
+    {
+        icon: ShieldCheck,
+        value: '100%',
+        label: 'Compliant',
+        description: 'Fully compliant digital records and audit trails.',
         animated: true,
     },
     {
         icon: Headphones,
         value: '24/7',
-        label: 'Dedicated Support',
-        description: 'Round-the-clock technical assistance for critical issues.',
-        animated: false,
-    },
-    {
-        icon: ShieldCheck,
-        value: 'ISO 27001',
-        label: 'Certified Security',
-        description: 'Built following international security best practices.',
-        animated: false,
-    },
-    {
-        icon: Clock,
-        value: '<100ms',
-        label: 'Response Time',
-        description: 'Lightning-fast sync across all your institutional nodes.',
+        label: 'Support',
+        description: 'Real humans ready to help you solve problems.',
         animated: false,
     },
 ];
@@ -93,10 +93,10 @@ export function Statistics() {
                     transition={{ duration: 0.6 }}
                 >
                     <span className="text-primary text-sm font-semibold tracking-wide uppercase mb-3 block">
-                        By The Numbers
+                        Real Impact
                     </span>
                     <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900">
-                        Built for enterprise scale.
+                        Built for results, not just features.
                     </h2>
                 </motion.div>
 

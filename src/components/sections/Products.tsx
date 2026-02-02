@@ -8,15 +8,15 @@ const products = [
     {
         id: 'schoolmitra',
         title: 'SchoolMitra',
-        subtitle: 'Complete School Management System',
+        subtitle: 'Reduce admin workload by 50% in 60 days',
         icon: GraduationCap,
         features: [
+            'Attendance, fees, exams, parent engagement',
+            'All in one place',
             'Admissions & student records',
-            'Fee management & receipts',
-            'Attendance & exam management',
             'Parent app & AI chatbot'
         ],
-        target: 'For schools with 200-2000 students',
+        target: 'For schools scaling up',
         color: 'bg-blue-50 text-blue-600',
         borderColor: 'border-blue-100',
         href: '/schoolmitra'
@@ -24,15 +24,15 @@ const products = [
     {
         id: 'gymmitra',
         title: 'GymMitra',
-        subtitle: 'Intelligent Gym Management',
+        subtitle: 'Increase member retention by 30%',
         icon: Dumbbell,
         features: [
-            'Member management & billing',
-            'Attendance tracking',
+            'Billing & attendance in one app',
+            'Automated renewals & reminders',
             'PT scheduling & workout plans',
-            'Automated renewals & reminders'
+            'Member engagement tools'
         ],
-        target: 'For gyms with 100-1000 members',
+        target: 'For growth-focused gyms',
         color: 'bg-emerald-50 text-emerald-600',
         borderColor: 'border-emerald-100',
         href: '/gymmitra'
@@ -40,15 +40,15 @@ const products = [
     {
         id: 'flatmitra',
         title: 'FlatMitra',
-        subtitle: 'Student Housing Management',
+        subtitle: 'Eliminate rent collection headaches',
         icon: Building2,
         features: [
-            'Room availability tracking',
-            'Tenant & landlord portal',
             'Automated rent collection',
+            'Tenant & landlord portal',
+            'Room availability tracking',
             'Maintenance request management'
         ],
-        target: 'For PGs and student accommodations',
+        target: 'For modern student housing',
         color: 'bg-purple-50 text-purple-600',
         borderColor: 'border-purple-100',
         href: '/flatmitra'
