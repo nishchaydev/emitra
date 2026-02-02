@@ -11,6 +11,7 @@ const navLinks = [
     { href: '/schoolmitra', label: 'SchoolMitra' },
     { href: '/gymmitra', label: 'GymMitra' },
     { href: '/flatmitra', label: 'FlatMitra' },
+    { href: '/pricing', label: 'Pricing' },
     { href: '/contact', label: 'Contact' },
 ];
 
@@ -23,16 +24,17 @@ export function Header() {
                 {/* Logo */}
                 <Link href="/">
                     <motion.div
-                        className="relative h-12 w-32 sm:h-16 sm:w-48 md:h-20 md:w-64 lg:w-[300px]"
+                        className="relative flex items-center"
                         whileHover={{ scale: 1.02 }}
                     >
                         <Image
-                            src="https://res.cloudinary.com/dkits80xk/image/upload/v1769698397/0b4d78b6-32e7-43b3-b12b-5bbf0746a22b.png"
+                            src="https://res.cloudinary.com/dkits80xk/image/upload/f_auto,q_auto/v1769698397/0b4d78b6-32e7-43b3-b12b-5bbf0746a22b.png"
                             alt="eMitra Technologies"
-                            fill
-                            className="object-contain object-left"
-                            unoptimized
+                            width={200}
+                            height={45}
                             priority
+                            className="w-[140px] md:w-[180px] lg:w-[200px] h-auto object-contain"
+                            unoptimized={false}
                         />
                     </motion.div>
                 </Link>

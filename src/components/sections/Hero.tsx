@@ -40,20 +40,20 @@ export function Hero() {
                     </motion.div>
 
                     <h1 className="text-5xl lg:text-7xl font-display font-bold leading-[1.1] tracking-tight text-slate-900">
-                        Intelligent software for <br />
+                        AI-Powered Management Systems for <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
                             Indian Institutions
                         </span>
                     </h1>
 
                     <p className="text-xl text-slate-600 max-w-lg leading-relaxed">
-                        We build intelligent software that runs schools, gyms, and student housing — so you can focus on growth, not paperwork.
+                        We build intelligent software that runs institutions—schools, gyms, housing, and beyond—so you can focus on growth, not paperwork.
                     </p>
 
-                    <div className="flex flex-wrap gap-4 pt-2">
+                    <div className="flex flex-col sm:flex-row gap-4 pt-2">
                         <Link href="#products">
                             <motion.div
-                                className="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all flex items-center gap-2 cursor-pointer"
+                                className="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all flex items-center justify-center gap-2 cursor-pointer w-full sm:w-auto"
                                 whileHover={{ scale: 1.02, y: -2 }}
                                 whileTap={{ scale: 0.98 }}
                             >
@@ -63,11 +63,11 @@ export function Hero() {
                         </Link>
                         <Link href="/contact">
                             <motion.div
-                                className="bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition-all flex items-center gap-2 cursor-pointer"
+                                className="bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition-all flex items-center justify-center gap-2 cursor-pointer w-full sm:w-auto"
                                 whileHover={{ scale: 1.02, y: -2 }}
                                 whileTap={{ scale: 0.98 }}
                             >
-                                Talk to Us
+                                Talk to Sales
                                 <ArrowRight className="h-4 w-4 text-slate-400 group-hover:text-slate-600" />
                             </motion.div>
                         </Link>

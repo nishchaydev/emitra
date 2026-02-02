@@ -101,7 +101,7 @@ export function Footer() {
                                 <Instagram className="h-5 w-5" />
                             </a>
                              */}
-                            <a href="mailto:hello@emitra.tech" className="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white transition-all">
+                            <a href="mailto:contact@emitra.tech" className="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white transition-all">
                                 <Mail className="h-5 w-5" />
                             </a>
                         </div>

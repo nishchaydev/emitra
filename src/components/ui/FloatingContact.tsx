@@ -45,7 +45,7 @@ export function FloatingContact() {
                                 </div>
                             </a>
                             <a
-                                href="mailto:hello@emitra.tech"
+                                href="mailto:contact@emitra.tech"
                                 className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors"
                             >
                                 <div className="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
@@ -53,7 +53,7 @@ export function FloatingContact() {
                                 </div>
                                 <div>
                                     <p className="font-medium text-slate-900 text-sm">Email Us</p>
-                                    <p className="text-xs text-slate-500">hello@emitra.tech</p>
+                                    <p className="text-xs text-slate-500">contact@emitra.tech</p>
                                 </div>
                             </a>
                         </div>
@@ -66,8 +66,8 @@ export function FloatingContact() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className={`h-14 w-14 rounded-full shadow-lg flex items-center justify-center transition-all ${isOpen
-                        ? 'bg-slate-800 text-white'
-                        : 'bg-accent text-white shadow-accent/30'
+                    ? 'bg-slate-800 text-white'
+                    : 'bg-accent text-white shadow-accent/30'
                     }`}
                 aria-label="Contact options"
             >

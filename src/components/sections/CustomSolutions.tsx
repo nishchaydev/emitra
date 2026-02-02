@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Code, Settings, ShieldCheck, Layers } from 'lucide-react';
+import { ArrowRight, Code, Settings, ShieldCheck, Layers, Check } from 'lucide-react';
 import Link from 'next/link';
 
 const services = [
@@ -41,16 +41,24 @@ export function CustomSolutions() {
                         Need Something Custom?
                     </h2>
                     <p className="text-slate-300 text-lg mb-8 leading-relaxed max-w-xl">
-                        Beyond our core products, we build bespoke management systems for institutions, enterprises, and government bodies. We handle the complexity so you don't have to.
+                        Beyond our core solutions, we build custom management systems for institutions, enterprises, and government bodies.
+                        <br /><br />
+                        From healthcare to retail, education to governance—if you need intelligent software, we can build it.
                     </p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
-                        {services.map((service, index) => (
+                        {[
+                            "Custom workflow automation",
+                            "Legacy system modernization",
+                            "Government tender solutions",
+                            "White-label platforms",
+                            "Industry-specific solutions"
+                        ].map((item, index) => (
                             <div key={index} className="flex items-center gap-3">
                                 <div className="h-8 w-8 rounded-full bg-white/10 flex items-center justify-center text-blue-400">
-                                    <service.icon className="h-4 w-4" />
+                                    <Check className="h-4 w-4" />
                                 </div>
-                                <span className="font-medium text-slate-200">{service.text}</span>
+                                <span className="font-medium text-slate-200">{item}</span>
                             </div>
                         ))}
                     </div>

@@ -61,11 +61,10 @@ export function Products() {
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center max-w-2xl mx-auto mb-16">
                     <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-4">
-                        Our Products
+                        Our Solutions
                     </h2>
                     <p className="text-slate-500 text-lg">
-                        Specialized management solutions for specific industries.
-                        Built to solve real problems, not just check boxes.
+                        Specialized management systems for institutions. Built to solve real problems, not just check boxes.
                     </p>
                 </div>
 
