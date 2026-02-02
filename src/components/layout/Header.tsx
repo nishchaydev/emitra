@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Menu, X, ChevronRight, Shield } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { RippleButton } from '@/components/ui/RippleButton';
 
 const navLinks = [
     { href: '/schoolmitra', label: 'SchoolMitra' },
@@ -52,13 +53,12 @@ export function Header() {
                         </Link>
                     ))}
                     <Link href="/contact">
-                        <motion.button
-                            className="bg-primary hover:bg-blue-800 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all shadow-sm hover:shadow-md"
-                            whileHover={{ scale: 1.02 }}
-                            whileTap={{ scale: 0.98 }}
+                        <RippleButton
+                            as="div"
+                            className="bg-primary hover:bg-blue-800 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all shadow-sm hover:shadow-md active:scale-95 transform duration-100"
                         >
                             Request a Demo
-                        </motion.button>
+                        </RippleButton>
                     </Link>
                 </nav>
 

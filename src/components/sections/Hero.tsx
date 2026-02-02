@@ -4,6 +4,8 @@ import { ArrowRight, Play, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
+import { DashboardMockup } from '../ui/DashboardMockup';
+import { RippleButton } from '../ui/RippleButton';
 
 export function Hero() {
     return (
@@ -52,24 +54,22 @@ export function Hero() {
 
                     <div className="flex flex-col sm:flex-row gap-4 pt-2">
                         <Link href="#products" className="group">
-                            <motion.div
-                                className="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all flex items-center justify-center gap-2 cursor-pointer w-full sm:w-auto"
-                                whileHover={{ scale: 1.02, y: -2 }}
-                                whileTap={{ scale: 0.98 }}
+                            <RippleButton
+                                as="div"
+                                className="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all flex items-center justify-center gap-2 cursor-pointer w-full sm:w-auto hover:-translate-y-0.5 active:scale-95 duration-200"
                             >
                                 Explore Products
                                 <ArrowRight className="h-5 w-5" />
-                            </motion.div>
+                            </RippleButton>
                         </Link>
                         <Link href="/contact" className="group">
-                            <motion.div
-                                className="bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition-all flex items-center justify-center gap-2 cursor-pointer w-full sm:w-auto"
-                                whileHover={{ scale: 1.02, y: -2 }}
-                                whileTap={{ scale: 0.98 }}
+                            <RippleButton
+                                as="div"
+                                className="bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition-all flex items-center justify-center gap-2 cursor-pointer w-full sm:w-auto hover:-translate-y-0.5 active:scale-95 duration-200"
                             >
                                 Talk to Sales
                                 <ArrowRight className="h-4 w-4 text-slate-400 group-hover:text-slate-600" />
-                            </motion.div>
+                            </RippleButton>
                         </Link>
                     </div>
 
@@ -102,74 +102,8 @@ export function Hero() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.3, duration: 0.8 }}
                 >
-                    {/* Abstract clean UI representation */}
-                    <div className="relative w-full max-w-[600px] aspect-[4/3] bg-white rounded-2xl shadow-2xl border border-slate-100 p-2 lg:p-4 overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-tr from-slate-50 to-white z-0" />
-
-                        {/* Browser Bar */}
-                        <div className="relative z-10 flex items-center gap-2 mb-4 px-2">
-                            <div className="w-3 h-3 rounded-full bg-red-400/80" />
-                            <div className="w-3 h-3 rounded-full bg-amber-400/80" />
-                            <div className="w-3 h-3 rounded-full bg-green-400/80" />
-                            <div className="ml-4 h-6 w-2/3 bg-slate-100 rounded-md" />
-                        </div>
-
-                        {/* Mock UI Content */}
-                        <div className="relative z-10 grid grid-cols-12 gap-4 h-full pb-8">
-                            {/* Sidebar */}
-                            <div className="hidden sm:block col-span-3 h-full bg-slate-50 rounded-xl border border-slate-100/50 p-3 space-y-2">
-                                {[1, 2, 3, 4, 5].map(i => (
-                                    <div key={i} className="h-8 w-full bg-white rounded-lg shadow-sm" />
-                                ))}
-                            </div>
-                            {/* Main Content */}
-                            <div className="col-span-12 sm:col-span-9 h-full space-y-4">
-                                <div className="grid grid-cols-3 gap-4">
-                                    <div className="h-24 bg-blue-50/50 rounded-xl border border-blue-100/50 p-4">
-                                        <div className="h-8 w-8 rounded-full bg-blue-100 mb-2" />
-                                        <div className="h-2 w-16 bg-blue-200/50 rounded" />
-                                    </div>
-                                    <div className="h-24 bg-indigo-50/50 rounded-xl border border-indigo-100/50 p-4">
-                                        <div className="h-8 w-8 rounded-full bg-indigo-100 mb-2" />
-                                        <div className="h-2 w-16 bg-indigo-200/50 rounded" />
-                                    </div>
-                                    <div className="h-24 bg-emerald-50/50 rounded-xl border border-emerald-100/50 p-4">
-                                        <div className="h-8 w-8 rounded-full bg-emerald-100 mb-2" />
-                                        <div className="h-2 w-16 bg-emerald-200/50 rounded" />
-                                    </div>
-                                </div>
-                                <div className="h-48 bg-white rounded-xl border border-slate-100 shadow-sm p-4">
-                                    <div className="flex items-end justify-between h-full gap-2 px-2 pb-2">
-                                        {[40, 65, 45, 80, 55, 90, 70].map((h, i) => (
-                                            <div key={i} className="w-full bg-slate-100 rounded-t-sm relative group overflow-hidden">
-                                                <div className="absolute bottom-0 w-full bg-primary/80 transition-all duration-1000 ease-out" style={{ height: `${h}%` }} />
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Floating Element 1 - Parent App */}
-                        <motion.div
-                            className="absolute -right-4 bottom-10 w-48 bg-white rounded-xl shadow-xl border border-slate-200 p-3 z-20"
-                            animate={{ y: [0, -10, 0] }}
-                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                        >
-                            <div className="flex items-center gap-3 mb-2">
-                                <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
-                                    <div className="w-4 h-4 bg-green-500 rounded-full" />
-                                </div>
-                                <div>
-                                    <div className="w-20 h-2 bg-slate-200 rounded mb-1" />
-                                    <div className="w-12 h-2 bg-slate-100 rounded" />
-                                </div>
-                            </div>
-                            <div className="w-full h-16 bg-slate-50 rounded-lg p-2">
-                                <div className="w-full h-full bg-slate-200/50 rounded-md" />
-                            </div>
-                        </motion.div>
-                    </div>
+                    {/* 3D Dashboard Mockup */}
+                    <DashboardMockup />
                 </motion.div>
             </div>
         </section>
