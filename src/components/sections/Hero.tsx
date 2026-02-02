@@ -51,7 +51,7 @@ export function Hero() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                        <Link href="#products">
+                        <Link href="#products" className="group">
                             <motion.div
                                 className="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all flex items-center justify-center gap-2 cursor-pointer w-full sm:w-auto"
                                 whileHover={{ scale: 1.02, y: -2 }}
@@ -61,7 +61,7 @@ export function Hero() {
                                 <ArrowRight className="h-5 w-5" />
                             </motion.div>
                         </Link>
-                        <Link href="/contact">
+                        <Link href="/contact" className="group">
                             <motion.div
                                 className="bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition-all flex items-center justify-center gap-2 cursor-pointer w-full sm:w-auto"
                                 whileHover={{ scale: 1.02, y: -2 }}

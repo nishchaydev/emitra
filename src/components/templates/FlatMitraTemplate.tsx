@@ -31,14 +31,16 @@ export function FlatMitraTemplate() {
                             </p>
                             <div className="flex flex-wrap justify-center gap-4">
                                 <Link href="/contact">
-                                    <button className="bg-primary hover:bg-blue-800 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg flex items-center gap-2 transition-all">
+                                    <div className="bg-primary hover:bg-blue-800 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg flex items-center gap-2 transition-all cursor-pointer">
                                         Schedule Demo
                                         <ArrowRight className="h-5 w-5" />
-                                    </button>
+                                    </div>
                                 </Link>
-                                <button className="bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 px-8 py-4 rounded-xl font-bold text-lg flex items-center gap-2 transition-all">
-                                    View Pricing
-                                </button>
+                                <Link href="/pricing">
+                                    <div className="bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 px-8 py-4 rounded-xl font-bold text-lg flex items-center gap-2 transition-all cursor-pointer">
+                                        View Pricing
+                                    </div>
+                                </Link>
                             </div>
                         </motion.div>
                     </div>
@@ -149,9 +151,11 @@ export function FlatMitraTemplate() {
                                     <li className="flex items-center gap-2 text-sm text-slate-600"><Check className="h-4 w-4 text-purple-500" /> Tenant App Included</li>
                                     <li className="flex items-center gap-2 text-sm text-slate-600"><Check className="h-4 w-4 text-purple-500" /> Automated Reminders</li>
                                 </ul>
-                                <button className="w-full py-3 bg-purple-50 hover:bg-purple-100 text-purple-700 font-bold rounded-xl transition-colors">
-                                    Get Quote
-                                </button>
+                                <Link href="/contact" className="block w-full">
+                                    <div className="w-full py-3 bg-purple-50 hover:bg-purple-100 text-purple-700 font-bold rounded-xl transition-colors text-center cursor-pointer">
+                                        Get Quote
+                                    </div>
+                                </Link>
                             </div>
                         </div>
                     </div>

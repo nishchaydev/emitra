@@ -99,11 +99,11 @@ export function Products() {
                                 <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">
                                     {product.target}
                                 </p>
-                                <Link href={product.href}>
-                                    <button className="w-full py-3 px-4 bg-slate-50 hover:bg-slate-100 text-slate-900 font-bold rounded-xl transition-colors flex items-center justify-center gap-2 group">
+                                <Link href={product.href} className="block w-full">
+                                    <div className="w-full py-3 px-4 bg-slate-50 hover:bg-slate-100 text-slate-900 font-bold rounded-xl transition-colors flex items-center justify-center gap-2 group cursor-pointer">
                                         Learn More
                                         <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                                    </button>
+                                    </div>
                                 </Link>
                             </div>
                         </motion.div>

@@ -64,10 +64,10 @@ export function CustomSolutions() {
                     </div>
 
                     <Link href="/contact">
-                        <button className="bg-white text-slate-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-all flex items-center gap-2 group">
+                        <div className="bg-white text-slate-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-all flex items-center gap-2 group cursor-pointer w-fit">
                             Discuss Your Project
                             <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                        </button>
+                        </div>
                     </Link>
                 </div>
 
