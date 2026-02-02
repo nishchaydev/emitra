@@ -7,45 +7,25 @@ import { PricingSection } from '@/components/sections/PricingSection';
 import { motion } from 'framer-motion';
 import { ArrowRight, Check, Bot, Globe, Smartphone, BarChart3, Clock, Lock } from 'lucide-react';
 import Link from 'next/link';
+import { ProductHero } from '@/components/sections/products/ProductHero';
+import { GraduationCap } from 'lucide-react';
 
 export function SchoolMitraTemplate() {
     return (
         <>
             <Header />
-            <main className="pt-20">
+            <main>
                 {/* Hero */}
-                <section className="py-20 bg-slate-50 border-b border-slate-200">
-                    <div className="max-w-7xl mx-auto px-6 text-center">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6 }}
-                        >
-                            <span className="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-6">
-                                Education Solutions
-                            </span>
-                            <h1 className="text-4xl md:text-6xl font-display font-bold text-slate-900 mb-6">
-                                SchoolMitra
-                            </h1>
-                            <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-10">
-                                Complete School Management System for modern Indian institutions.
-                            </p>
-                            <div className="flex flex-wrap justify-center gap-4">
-                                <Link href="/contact">
-                                    <div className="bg-primary hover:bg-blue-800 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg flex items-center gap-2 transition-all cursor-pointer">
-                                        Schedule Demo
-                                        <ArrowRight className="h-5 w-5" />
-                                    </div>
-                                </Link>
-                                <Link href="/pricing">
-                                    <div className="bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 px-8 py-4 rounded-xl font-bold text-lg flex items-center gap-2 transition-all cursor-pointer">
-                                        View Pricing
-                                    </div>
-                                </Link>
-                            </div>
-                        </motion.div>
-                    </div>
-                </section>
+                {/* Hero */}
+                <ProductHero
+                    title="SchoolMitra"
+                    subtitle="Complete School Management System for modern Indian institutions."
+                    badge="Education Solutions"
+                    color="blue"
+                    ctaPrimary={{ text: "Schedule Demo", href: "/contact" }}
+                    ctaSecondary={{ text: "View Pricing", href: "/pricing" }}
+                    visualIcon={GraduationCap}
+                />
 
                 {/* Problem/Solution */}
                 <section className="py-20 bg-white">
@@ -189,6 +169,22 @@ export function SchoolMitraTemplate() {
                                 "Dedicated account manager"
                             ],
                             cta: "Start Free Trial"
+                        },
+                        {
+                            name: "Enterprise",
+                            price: "Custom",
+                            period: "",
+                            highlight: false,
+                            description: "Large institutional groups",
+                            features: [
+                                "Everything in Scale, plus:",
+                                "Custom ERP customization",
+                                "Dedicated server infrastructure",
+                                "Third-party hardware integration",
+                                "24/7 Priority support manager",
+                                "White-label parent app"
+                            ],
+                            cta: "Contact Sales"
                         }
                     ]}
                 />

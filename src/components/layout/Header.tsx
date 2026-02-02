@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X, ChevronRight, Shield } from 'lucide-react';
+import { Menu, X, ChevronRight, Shield, ChevronDown, GraduationCap, Dumbbell, Building2, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { RippleButton } from '@/components/ui/RippleButton';
@@ -18,6 +18,7 @@ const navLinks = [
 
 export function Header() {
     const [isOpen, setIsOpen] = useState(false);
+    const [isHovering, setIsHovering] = useState(false);
 
     return (
         <header className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/80">
@@ -42,16 +43,67 @@ export function Header() {
 
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex items-center gap-8">
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.href}
-                            href={link.href}
-                            className="text-sm font-medium text-slate-600 hover:text-primary transition-colors relative group"
-                        >
-                            {link.label}
-                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
-                        </Link>
-                    ))}
+                    {/* Products Mega Menu Trigger */}
+                    <div className="relative group" onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
+                        <button className="flex items-center gap-1 text-sm font-medium text-slate-600 hover:text-primary transition-colors py-4">
+                            Products
+                            <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
+                        </button>
+
+                        {/* Mega Menu Dropdown */}
+                        <div className="absolute top-full left-1/2 -translate-x-1/2 w-[540px] bg-white rounded-2xl shadow-xl border border-slate-100 p-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top translate-y-2 group-hover:translate-y-0">
+                            <div className="grid grid-cols-2 gap-6">
+                                <div className="space-y-4">
+                                    <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest pl-2">Education</h4>
+                                    <Link href="/schoolmitra" className="block group/item p-3 hover:bg-slate-50 rounded-xl transition-colors">
+                                        <div className="flex items-center gap-3 mb-1">
+                                            <div className="h-8 w-8 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600 group-hover/item:bg-blue-600 group-hover/item:text-white transition-colors">
+                                                <GraduationCap className="h-4 w-4" />
+                                            </div>
+                                            <span className="font-bold text-slate-900">SchoolMitra</span>
+                                        </div>
+                                        <p className="text-xs text-slate-500 pl-11">Complete ERP for schools & colleges.</p>
+                                    </Link>
+                                </div>
+
+                                <div className="space-y-4">
+                                    <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest pl-2">Fitness & Lifestyle</h4>
+                                    <Link href="/gymmitra" className="block group/item p-3 hover:bg-slate-50 rounded-xl transition-colors">
+                                        <div className="flex items-center gap-3 mb-1">
+                                            <div className="h-8 w-8 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-600 group-hover/item:bg-emerald-600 group-hover/item:text-white transition-colors">
+                                                <Dumbbell className="h-4 w-4" />
+                                            </div>
+                                            <span className="font-bold text-slate-900">GymMitra</span>
+                                        </div>
+                                        <p className="text-xs text-slate-500 pl-11">Management software for modern gyms.</p>
+                                    </Link>
+                                    <Link href="/flatmitra" className="block group/item p-3 hover:bg-slate-50 rounded-xl transition-colors">
+                                        <div className="flex items-center gap-3 mb-1">
+                                            <div className="h-8 w-8 rounded-lg bg-purple-100 flex items-center justify-center text-purple-600 group-hover/item:bg-purple-600 group-hover/item:text-white transition-colors">
+                                                <Building2 className="h-4 w-4" />
+                                            </div>
+                                            <span className="font-bold text-slate-900">FlatMitra</span>
+                                        </div>
+                                        <p className="text-xs text-slate-500 pl-11">Smart society & apartment management.</p>
+                                    </Link>
+                                </div>
+                            </div>
+
+                            {/* Callout */}
+                            <div className="mt-6 pt-6 border-t border-slate-100 bg-slate-50/50 -mx-6 -mb-6 p-6 rounded-b-2xl flex items-center justify-between">
+                                <div>
+                                    <h5 className="font-bold text-slate-900 text-sm">Need a custom solution?</h5>
+                                    <p className="text-xs text-slate-500">We build tailored software for large enterprises.</p>
+                                </div>
+                                <Link href="/contact" className="text-sm font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+                                    Contact Sales <ArrowRight className="h-4 w-4" />
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+
+                    <Link href="/pricing" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Pricing</Link>
+                    <Link href="/contact" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Company</Link>
                     <Link href="/contact">
                         <RippleButton
                             as="div"
@@ -140,7 +192,7 @@ export function Header() {
                                     Request a Demo
                                 </Link>
                                 <p className="mt-6 text-center text-sm text-slate-500">
-                                    Or call us at <a href="tel:+918602175892" className="text-primary font-medium">+91 86021 75892</a>
+                                    Or call us at <a href="tel:+918602175892" className="text-primary font-medium">+91 86021 75892</a> / <a href="tel:+916261854014" className="text-primary font-medium">+91 62618 54014</a>
                                 </p>
                             </motion.div>
                         </div>

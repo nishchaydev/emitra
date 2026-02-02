@@ -9,7 +9,7 @@ export default function ContactPage() {
     return (
         <>
             <Header />
-            <main className="pt-20">
+            <main>
                 <ContactHero />
                 <ContactForm />
                 <ContactTypes />

@@ -29,7 +29,7 @@ export function Preloader() {
 
         const timer = setTimeout(() => {
             handleComplete();
-        }, 3000);
+        }, 2200);
 
         return () => clearTimeout(timer);
     }, []);

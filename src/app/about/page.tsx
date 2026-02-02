@@ -10,7 +10,7 @@ export default function AboutPage() {
     return (
         <>
             <Header />
-            <main className="pt-20">
+            <main>
                 <AboutHero />
                 <VisionMission />
                 <LeadershipTeam />

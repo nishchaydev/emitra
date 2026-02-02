@@ -4,6 +4,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { CTA } from '@/components/sections/CTA';
 import { PricingSection } from '@/components/sections/PricingSection';
+import { PricingHero } from '@/components/sections/pricing/PricingHero';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
@@ -12,47 +13,10 @@ export default function PricingPage() {
     return (
         <>
             <Header />
-            <main className="pt-20">
+            <main>
                 {/* Hero */}
-                <section className="py-20 bg-slate-50 border-b border-slate-200">
-                    <div className="max-w-7xl mx-auto px-6 text-center">
-                        <motion.h1
-                            className="text-4xl md:text-6xl font-display font-bold text-slate-900 mb-6"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6 }}
-                        >
-                            Simple, Transparent Pricing
-                        </motion.h1>
-                        <motion.p
-                            className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-10"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.1 }}
-                        >
-                            No hidden fees. No surprises. No vendor lock-in.
-                            <br className="hidden md:block" />
-                            Choose the plan that fits your institution.
-                        </motion.p>
-                        <motion.div
-                            className="flex flex-wrap justify-center gap-4"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.2 }}
-                        >
-                            <Link href="/contact">
-                                <button className="bg-primary hover:bg-blue-800 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg flex items-center gap-2 transition-all">
-                                    Schedule Demo
-                                </button>
-                            </Link>
-                            <Link href="/contact">
-                                <button className="bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 px-8 py-4 rounded-xl font-bold text-lg flex items-center gap-2 transition-all">
-                                    Talk to Sales
-                                </button>
-                            </Link>
-                        </motion.div>
-                    </div>
-                </section>
+                {/* Hero */}
+                <PricingHero />
 
                 {/* SchoolMitra Pricing */}
                 <PricingSection
@@ -190,6 +154,22 @@ export default function PricingPage() {
                                 "Unlimited SMS notifications"
                             ],
                             cta: "Start Free Trial"
+                        },
+                        {
+                            name: "Enterprise",
+                            price: "Custom",
+                            period: "",
+                            highlight: false,
+                            description: "Franchises & chains",
+                            features: [
+                                "Everything in Elite, plus:",
+                                "Global headquarters dashboard",
+                                "Custom branding & white-label",
+                                "API access via dedicated gateway",
+                                "Dedicated server infrastructure",
+                                "24/7 Priority support manager"
+                            ],
+                            cta: "Contact Sales"
                         }
                     ]}
                 />
@@ -248,6 +228,22 @@ export default function PricingPage() {
                                 "Dedicated account manager"
                             ],
                             cta: "Start Free Trial"
+                        },
+                        {
+                            name: "Enterprise",
+                            price: "Custom",
+                            period: "",
+                            highlight: false,
+                            description: "Large co-living & property firms",
+                            features: [
+                                "Everything in Premium, plus:",
+                                "Custom mobile app development",
+                                "ERP integration (SAP/Oracle)",
+                                "Dedicated database instance",
+                                "SLA with uptime guarantee",
+                                "On-premise deployment option"
+                            ],
+                            cta: "Contact Sales"
                         }
                     ]}
                 />

@@ -15,6 +15,7 @@ import {
     ArrowRight,
     ArrowLeft
 } from 'lucide-react';
+import { ServicesHero } from '@/components/sections/services/ServicesHero';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -312,158 +313,10 @@ export default function ServicesPage() {
     return (
         <>
             <Header />
-            <main className="pt-20">
+            <main>
                 {/* Hero Section */}
-                <section className="py-20 bg-gradient-to-br from-slate-50 via-white to-blue-50/30">
-                    <div className="max-w-7xl mx-auto px-6">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                            <motion.div
-                                initial={{ opacity: 0, y: 30 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6 }}
-                            >
-                                <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 leading-tight mb-6">
-                                    Enterprise Solutions<br />
-                                    <span className="text-primary">Built for Scale</span>
-                                </h1>
-                                <p className="text-xl text-slate-600 leading-relaxed">
-                                    From custom ERP development to AI-powered analytics, we provide
-                                    end-to-end <span className="bg-primary/10 px-2 py-1 rounded text-primary font-medium">solutions</span> that transform how institutions operate.
-                                </p>
-                            </motion.div>
-
-                            {/* 3D Isometric Stack Visual */}
-                            <motion.div
-                                className="relative flex justify-center items-center"
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.6, delay: 0.2 }}
-                            >
-                                <div className="relative w-72 h-72 lg:w-96 lg:h-96">
-                                    {/* Background glow */}
-                                    <motion.div
-                                        className="absolute inset-0 bg-gradient-to-br from-primary/20 via-blue-400/10 to-accent/10 rounded-full blur-3xl"
-                                        animate={{
-                                            scale: [1, 1.1, 1],
-                                            opacity: [0.4, 0.6, 0.4]
-                                        }}
-                                        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                                    />
-
-                                    {/* Floating stack wrapper */}
-                                    <motion.div
-                                        className="absolute inset-0 flex items-center justify-center"
-                                        animate={{ y: [0, -12, 0] }}
-                                        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                                    >
-                                        {/* Isometric Container */}
-                                        <div className="relative" style={{ transform: 'perspective(1000px) rotateX(10deg) rotateY(-10deg)' }}>
-
-                                            {/* Bottom layer - Shadow */}
-                                            <div className="absolute top-16 left-4 w-56 h-40 bg-slate-900/10 rounded-2xl blur-xl" />
-
-                                            {/* Bottom layer - Database */}
-                                            <motion.div
-                                                className="absolute top-12 left-2 w-56 h-36 bg-gradient-to-br from-slate-100 to-slate-200 rounded-2xl border border-slate-300 shadow-lg flex items-center justify-center"
-                                                animate={{ y: [0, 3, 0] }}
-                                                transition={{ duration: 3, repeat: Infinity, delay: 0.6 }}
-                                            >
-                                                <Database className="h-12 w-12 text-slate-400" />
-                                            </motion.div>
-
-                                            {/* Middle layer - Cloud */}
-                                            <motion.div
-                                                className="absolute top-6 left-1 w-56 h-36 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl border border-blue-200 shadow-xl flex items-center justify-center"
-                                                animate={{ y: [0, 2, 0] }}
-                                                transition={{ duration: 3, repeat: Infinity, delay: 0.3 }}
-                                            >
-                                                <Cloud className="h-12 w-12 text-blue-400" />
-                                            </motion.div>
-
-                                            {/* Top layer - Card with cycling text */}
-                                            <motion.div
-                                                className="relative w-56 h-36 bg-gradient-to-br from-primary to-blue-700 rounded-2xl shadow-2xl overflow-hidden"
-                                                whileHover={{ scale: 1.02 }}
-                                            >
-                                                {/* Grid pattern overlay */}
-                                                <div className="absolute inset-0 opacity-10">
-                                                    <div className="grid grid-cols-6 grid-rows-4 h-full">
-                                                        {[...Array(24)].map((_, i) => (
-                                                            <div key={i} className="border border-white/20" />
-                                                        ))}
-                                                    </div>
-                                                </div>
-
-                                                {/* Content with icons */}
-                                                <div className="relative h-full flex flex-col items-center justify-center text-white">
-                                                    <div className="flex gap-3 mb-3">
-                                                        <motion.div
-                                                            className="h-10 w-10 bg-white/20 rounded-lg flex items-center justify-center"
-                                                            animate={{ scale: [1, 1.1, 1] }}
-                                                            transition={{ duration: 2, repeat: Infinity }}
-                                                        >
-                                                            <Code2 className="h-5 w-5" />
-                                                        </motion.div>
-                                                        <motion.div
-                                                            className="h-10 w-10 bg-white/20 rounded-lg flex items-center justify-center"
-                                                            animate={{ scale: [1, 1.1, 1] }}
-                                                            transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
-                                                        >
-                                                            <Brain className="h-5 w-5" />
-                                                        </motion.div>
-                                                        <motion.div
-                                                            className="h-10 w-10 bg-white/20 rounded-lg flex items-center justify-center"
-                                                            animate={{ scale: [1, 1.1, 1] }}
-                                                            transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
-                                                        >
-                                                            <Plug className="h-5 w-5" />
-                                                        </motion.div>
-                                                    </div>
-
-                                                    {/* Cycling text labels */}
-                                                    <div className="relative h-6 overflow-hidden">
-                                                        <motion.div
-                                                            className="flex flex-col"
-                                                            animate={{ y: [0, -24, -24, -48, -48, -72, -72, 0] }}
-                                                            transition={{
-                                                                duration: 12,
-                                                                repeat: Infinity,
-                                                                ease: "easeInOut",
-                                                                times: [0, 0.12, 0.25, 0.37, 0.5, 0.62, 0.87, 1]
-                                                            }}
-                                                        >
-                                                            <p className="text-sm font-bold text-white/90 h-6 flex items-center">Enterprise Suite</p>
-                                                            <p className="text-sm font-bold text-white/90 h-6 flex items-center">ERP Suite</p>
-                                                            <p className="text-sm font-bold text-white/90 h-6 flex items-center">Analytics Suite</p>
-                                                            <p className="text-sm font-bold text-white/90 h-6 flex items-center">Integration Suite</p>
-                                                        </motion.div>
-                                                    </div>
-                                                </div>
-                                            </motion.div>
-
-                                            {/* Floating accent dots */}
-                                            <motion.div
-                                                className="absolute -top-4 -right-4 w-4 h-4 bg-accent rounded-full shadow-lg"
-                                                animate={{ y: [0, -8, 0], scale: [1, 1.2, 1] }}
-                                                transition={{ duration: 2.5, repeat: Infinity }}
-                                            />
-                                            <motion.div
-                                                className="absolute -bottom-2 -left-4 w-3 h-3 bg-primary/60 rounded-full"
-                                                animate={{ y: [0, -6, 0] }}
-                                                transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
-                                            />
-                                            <motion.div
-                                                className="absolute top-1/2 -right-6 w-2 h-2 bg-blue-400 rounded-full"
-                                                animate={{ x: [0, 4, 0], opacity: [0.5, 1, 0.5] }}
-                                                transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-                                            />
-                                        </div>
-                                    </motion.div>
-                                </div>
-                            </motion.div>
-                        </div>
-                    </div>
-                </section>
+                {/* Hero Section */}
+                <ServicesHero />
 
                 {/* Services Grid */}
                 <section className="py-20 bg-white">

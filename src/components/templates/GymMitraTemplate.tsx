@@ -7,45 +7,24 @@ import { PricingSection } from '@/components/sections/PricingSection';
 import { motion } from 'framer-motion';
 import { ArrowRight, Check, Dumbbell, Smartphone, Calendar, CreditCard, Activity, Users } from 'lucide-react';
 import Link from 'next/link';
+import { ProductHero } from '@/components/sections/products/ProductHero';
 
 export function GymMitraTemplate() {
     return (
         <>
             <Header />
-            <main className="pt-20">
+            <main>
                 {/* Hero */}
-                <section className="py-20 bg-slate-50 border-b border-slate-200">
-                    <div className="max-w-7xl mx-auto px-6 text-center">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6 }}
-                        >
-                            <span className="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-sm font-medium mb-6">
-                                Fitness Solutions
-                            </span>
-                            <h1 className="text-4xl md:text-6xl font-display font-bold text-slate-900 mb-6">
-                                GymMitra
-                            </h1>
-                            <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-10">
-                                Intelligent Gym Management. Focus on your members, not the paperwork.
-                            </p>
-                            <div className="flex flex-wrap justify-center gap-4">
-                                <Link href="/contact">
-                                    <div className="bg-primary hover:bg-blue-800 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg flex items-center gap-2 transition-all cursor-pointer">
-                                        Schedule Demo
-                                        <ArrowRight className="h-5 w-5" />
-                                    </div>
-                                </Link>
-                                <Link href="/pricing">
-                                    <div className="bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 px-8 py-4 rounded-xl font-bold text-lg flex items-center gap-2 transition-all cursor-pointer">
-                                        View Pricing
-                                    </div>
-                                </Link>
-                            </div>
-                        </motion.div>
-                    </div>
-                </section>
+                {/* Hero */}
+                <ProductHero
+                    title="GymMitra"
+                    subtitle="Intelligent Gym Management. Focus on your members, not the paperwork."
+                    badge="Fitness Solutions"
+                    color="emerald"
+                    ctaPrimary={{ text: "Schedule Demo", href: "/contact" }}
+                    ctaSecondary={{ text: "View Pricing", href: "/pricing" }}
+                    visualIcon={Dumbbell}
+                />
 
                 {/* Problem/Solution */}
                 <section className="py-20 bg-white">
@@ -188,6 +167,22 @@ export function GymMitraTemplate() {
                                 "Unlimited SMS notifications"
                             ],
                             cta: "Start Free Trial"
+                        },
+                        {
+                            name: "Enterprise",
+                            price: "Custom",
+                            period: "",
+                            highlight: false,
+                            description: "Franchises & chains",
+                            features: [
+                                "Everything in Elite, plus:",
+                                "Global headquarters dashboard",
+                                "Custom branding & white-label",
+                                "API access via dedicated gateway",
+                                "Dedicated server infrastructure",
+                                "24/7 Priority support manager"
+                            ],
+                            cta: "Contact Sales"
                         }
                     ]}
                 />

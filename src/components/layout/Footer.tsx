@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Globe, Mail, Linkedin, Twitter, Instagram, ArrowRight } from 'lucide-react';
+import { Globe, Mail, Linkedin, Twitter, Instagram, ArrowRight, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
@@ -89,7 +89,18 @@ export function Footer() {
                         <p className="text-slate-500 leading-relaxed max-w-sm">
                             Where technology meets trust. Providing enterprise-grade solutions for institutions worldwide.
                         </p>
-                        <div className="flex gap-3">
+                        <div className="space-y-2 text-sm text-slate-500">
+                            <p className="flex items-center gap-2">
+                                <span className="font-semibold text-slate-700">Phone:</span>
+                                <a href="tel:+918602175892" className="hover:text-primary transition-colors">+91 86021 75892</a>,
+                                <a href="tel:+916261854014" className="hover:text-primary transition-colors">+91 62618 54014</a>
+                            </p>
+                            <p className="flex items-center gap-2">
+                                <span className="font-semibold text-slate-700">Email:</span>
+                                <a href="mailto:emitratechnologies@gmail.com" className="hover:text-primary transition-colors">emitratechnologies@gmail.com</a>
+                            </p>
+                        </div>
+                        <div className="flex gap-3 pt-2">
                             {/* Social links hidden until profiles are live
                             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white transition-all">
                                 <Linkedin className="h-5 w-5" />
@@ -101,7 +112,7 @@ export function Footer() {
                                 <Instagram className="h-5 w-5" />
                             </a>
                              */}
-                            <a href="mailto:contact@emitra.tech" className="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white transition-all">
+                            <a href="mailto:emitratechnologies@gmail.com" className="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white transition-all">
                                 <Mail className="h-5 w-5" />
                             </a>
                         </div>
@@ -136,6 +147,17 @@ export function Footer() {
                             <li><Link href="/contact" className="hover:text-primary transition-colors">Sales</Link></li>
                             <li><Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy</Link></li>
                         </ul>
+                    </div>
+
+                </div>
+
+                {/* Trust & Compliance Badges */}
+                <div className="border-t border-slate-100 py-8 mb-8">
+                    <div className="flex flex-wrap justify-center items-center opacity-80">
+                        <div className="flex items-center gap-2">
+                            <div className="h-6 w-6 rounded-full bg-orange-50 flex items-center justify-center text-xs">🇮🇳</div>
+                            <span className="text-sm font-bold text-slate-600 uppercase tracking-widest">Made in India, Made for India</span>
+                        </div>
                     </div>
                 </div>
 

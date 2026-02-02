@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter, Outfit } from 'next/font/google';
 import { Analytics } from "@vercel/analytics/react"
 import { Providers } from './providers';
@@ -37,6 +37,13 @@ export const metadata: Metadata = {
     icon: 'https://res.cloudinary.com/dkits80xk/image/upload/v1769612138/e21fcb20-e06e-49e6-bc0b-b14e4557c36b.png',
     apple: 'https://res.cloudinary.com/dkits80xk/image/upload/v1769612138/e21fcb20-e06e-49e6-bc0b-b14e4557c36b.png',
   },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({

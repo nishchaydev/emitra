@@ -33,7 +33,7 @@ export function FloatingContact() {
                                 </div>
                             </Link>
                             <a
-                                href="tel:+919876543210"
+                                href="tel:+918602175892"
                                 className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors"
                             >
                                 <div className="h-10 w-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
@@ -41,11 +41,11 @@ export function FloatingContact() {
                                 </div>
                                 <div>
                                     <p className="font-medium text-slate-900 text-sm">Call Us</p>
-                                    <p className="text-xs text-slate-500">+91 98765 43210</p>
+                                    <p className="text-xs text-slate-500">+91 86021 75892</p>
                                 </div>
                             </a>
                             <a
-                                href="mailto:contact@emitra.tech"
+                                href="mailto:emitratechnologies@gmail.com"
                                 className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors"
                             >
                                 <div className="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
@@ -53,7 +53,7 @@ export function FloatingContact() {
                                 </div>
                                 <div>
                                     <p className="font-medium text-slate-900 text-sm">Email Us</p>
-                                    <p className="text-xs text-slate-500">contact@emitra.tech</p>
+                                    <p className="text-xs text-slate-500">emitratechnologies@gmail.com</p>
                                 </div>
                             </a>
                         </div>

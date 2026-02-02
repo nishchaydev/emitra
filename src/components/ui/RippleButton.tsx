@@ -68,6 +68,7 @@ export function RippleButton({ children, className, as: Component = 'button', on
                     }}
                 />
             ))}
+            <span className="relative z-10 flex items-center justify-center gap-2">{children}</span>
         </Component>
     );
 }
