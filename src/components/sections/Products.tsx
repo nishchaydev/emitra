@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { GraduationCap, Dumbbell, Building2, ArrowRight, Check } from 'lucide-react';
 import Link from 'next/link';
 
@@ -55,9 +55,31 @@ const products = [
     }
 ];
 
+const container: Variants = {
+    hidden: { opacity: 0 },
+    show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.15
+        }
+    }
+};
+
+const item: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.6, ease: 'easeOut' }
+    }
+};
+
 export function Products() {
     return (
-        <section id="products" className="py-24 bg-white">
+        <section id="products" className="py-24 bg-white/50 relative">
+            {/* Optional background blob for glass effect visibility */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-100/30 rounded-full blur-3xl -z-10" />
+
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center max-w-2xl mx-auto mb-16">
                     <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-4">
@@ -68,16 +90,18 @@ export function Products() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <motion.div
+                    variants={container}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, margin: "-100px" }}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
                     {products.map((product, index) => (
                         <motion.div
                             key={product.id}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1, duration: 0.5 }}
-                            whileHover={{ y: -5 }}
-                            className={`flex flex-col h-full bg-white rounded-2xl border ${product.borderColor} p-8 hover:shadow-xl transition-all shadow-sm`}
+                            variants={item}
+                            className="product-card flex flex-col h-full p-8"
                         >
                             <div className={`h-14 w-14 rounded-xl ${product.color} flex items-center justify-center mb-6`}>
                                 <product.icon className="h-7 w-7" />
@@ -95,7 +119,7 @@ export function Products() {
                                 ))}
                             </ul>
 
-                            <div className="pt-6 border-t border-slate-100">
+                            <div className="pt-6 border-t border-slate-100/50">
                                 <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">
                                     {product.target}
                                 </p>
@@ -108,7 +132,7 @@ export function Products() {
                             </div>
                         </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     );

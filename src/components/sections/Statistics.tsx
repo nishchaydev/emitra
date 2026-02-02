@@ -1,49 +1,17 @@
 'use client';
 
 import { Server, ShieldCheck, Clock, Headphones } from 'lucide-react';
-import { motion, useInView } from 'framer-motion';
-import { useRef, useEffect, useState } from 'react';
-
-// Animated counter hook
-function useCountUp(end: number, duration: number = 2000, start: boolean = false) {
-    const [count, setCount] = useState(0);
-
-    useEffect(() => {
-        if (!start) return;
-
-        let startTime: number | null = null;
-        const animate = (timestamp: number) => {
-            if (!startTime) startTime = timestamp;
-            const progress = Math.min((timestamp - startTime) / duration, 1);
-            setCount(Math.floor(progress * end));
-            if (progress < 1) {
-                requestAnimationFrame(animate);
-            }
-        };
-        requestAnimationFrame(animate);
-    }, [end, duration, start]);
-
-    return count;
-}
+import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import CountUp from 'react-countup';
 
 function StatCard({ stat, index }: { stat: typeof stats[0], index: number }) {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-    // Parse numeric value for animation
     const numericValue = parseFloat(stat.value.replace(/[^0-9.]/g, ''));
-    const animatedValue = useCountUp(numericValue, 2000, isInView);
-
-    // Format the display value
-    const displayValue = stat.value.includes('%')
-        ? `${animatedValue.toFixed(1)}%`
-        : stat.value.includes('/')
-            ? stat.value // Keep 24/7 as is
-            : stat.value;
+    const decimals = stat.value.includes('.') ? 1 : 0;
+    const suffix = stat.value.includes('%') ? '%' : '';
 
     return (
         <motion.div
-            ref={ref}
             className="flex flex-col items-center text-center space-y-3 group"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -58,7 +26,18 @@ function StatCard({ stat, index }: { stat: typeof stats[0], index: number }) {
                 <stat.icon className="h-7 w-7" />
             </motion.div>
             <h3 className="text-5xl font-display font-bold text-slate-900 group-hover:text-primary transition-colors">
-                {stat.animated ? (isInView ? displayValue : '0') : stat.value}
+                {stat.animated ? (
+                    <CountUp
+                        end={numericValue}
+                        duration={2.5}
+                        decimals={decimals}
+                        suffix={suffix}
+                        enableScrollSpy
+                        scrollSpyOnce
+                    />
+                ) : (
+                    stat.value
+                )}
             </h3>
             <p className="font-bold text-slate-700 text-lg">{stat.label}</p>
             <p className="text-sm text-slate-500 max-w-[220px] leading-relaxed">{stat.description}</p>

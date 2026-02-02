@@ -10,7 +10,7 @@ export function Hero() {
         <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-slate-50">
             {/* Background Gradients */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-blue-100/50 via-gray-50 to-gray-50" />
+                <div className="gradient-bg absolute inset-0 z-0" />
                 <motion.div
                     className="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] bg-gradient-to-br from-primary/5 via-blue-200/5 to-transparent rounded-full blur-3xl opacity-60"
                     animate={{ scale: [1, 1.1, 1], opacity: [0.4, 0.6, 0.4] }}
