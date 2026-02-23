@@ -49,7 +49,7 @@ export function Preloader() {
                         playsInline
                         loop
                         className="w-full h-full object-contain md:object-cover"
-                        src="https://res.cloudinary.com/dkits80xk/video/upload/Animated_Logo_Video_Generation_slzzql.mp4"
+                        src="https://res.cloudinary.com/dkits80xk/video/upload/v1771840206/Video_Generation_Feedback_and_Link_pofxnu.mp4"
                     >
                         Your browser does not support the video tag.
                     </video>

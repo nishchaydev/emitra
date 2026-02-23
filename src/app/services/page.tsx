@@ -435,6 +435,201 @@ export default function ServicesPage() {
                         </div>
                     </div>
                 </section>
+
+                {/* How We Work - Scrollytelling Process */}
+                <section className="py-24 bg-white overflow-hidden">
+                    <div className="max-w-7xl mx-auto px-6">
+                        {/* Section Header */}
+                        <div className="text-center max-w-2xl mx-auto mb-20">
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                            >
+                                <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full bg-blue-50 border border-blue-100 text-[#0066FF] text-xs font-bold uppercase tracking-widest">
+                                    Our Process
+                                </div>
+                                <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-4 tracking-tight">
+                                    From Discovery to Delivery
+                                </h2>
+                                <p className="text-slate-500 text-lg">
+                                    A proven 4-phase methodology that ensures your system is built right, on time, and within budget.
+                                </p>
+                            </motion.div>
+                        </div>
+
+                        {/* Scrollytelling Timeline */}
+                        <div className="relative">
+                            {/* Vertical Line */}
+                            <div className="absolute left-6 lg:left-1/2 top-0 bottom-0 w-[2px] bg-slate-200 lg:-translate-x-[1px]" />
+
+                            {[
+                                {
+                                    step: '01',
+                                    title: 'Discovery & Audit',
+                                    subtitle: 'Understanding your world',
+                                    desc: 'We study your current workflows, pain points, and institutional goals to build a comprehensive requirements map.',
+                                    details: [
+                                        'Stakeholder interviews & site visits',
+                                        'Existing system audit & gap analysis',
+                                        'Requirements documentation & sign-off'
+                                    ],
+                                    duration: '1-2 Weeks',
+                                    accent: 'bg-[#0066FF]',
+                                    accentLight: 'bg-blue-50 border-blue-100',
+                                    accentText: 'text-[#0066FF]'
+                                },
+                                {
+                                    step: '02',
+                                    title: 'Architecture & Design',
+                                    subtitle: 'Blueprinting the solution',
+                                    desc: 'Our architects design a scalable, modular system tailored to your institution\'s unique needs.',
+                                    details: [
+                                        'System architecture & database design',
+                                        'UI/UX wireframes & prototyping',
+                                        'Technical specification & approval'
+                                    ],
+                                    duration: '2-3 Weeks',
+                                    accent: 'bg-slate-900',
+                                    accentLight: 'bg-slate-50 border-slate-200',
+                                    accentText: 'text-slate-900'
+                                },
+                                {
+                                    step: '03',
+                                    title: 'Build & Iterate',
+                                    subtitle: 'Agile development in action',
+                                    desc: 'We build in 2-week sprints with regular demos. You see progress, give feedback, and steer direction continuously.',
+                                    details: [
+                                        'Sprint-based development with demos',
+                                        'Continuous integration & testing',
+                                        'Real-time feedback and iteration'
+                                    ],
+                                    duration: '6-12 Weeks',
+                                    accent: 'bg-[#0066FF]',
+                                    accentLight: 'bg-blue-50 border-blue-100',
+                                    accentText: 'text-[#0066FF]'
+                                },
+                                {
+                                    step: '04',
+                                    title: 'Deploy & Support',
+                                    subtitle: 'Launch with confidence',
+                                    desc: 'Zero-downtime deployment with on-site training, data migration, and a dedicated support team by your side.',
+                                    details: [
+                                        'Staged rollout & data migration',
+                                        'On-site training for all user roles',
+                                        'Dedicated account manager & SLA'
+                                    ],
+                                    duration: 'Ongoing',
+                                    accent: 'bg-slate-900',
+                                    accentLight: 'bg-slate-50 border-slate-200',
+                                    accentText: 'text-slate-900'
+                                },
+                            ].map((phase, index) => (
+                                <motion.div
+                                    key={index}
+                                    className={`relative flex flex-col lg:flex-row items-start gap-8 lg:gap-16 mb-20 last:mb-0 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
+                                    initial={{ opacity: 0, y: 60 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, margin: "-100px" }}
+                                    transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
+                                >
+                                    {/* Timeline Dot */}
+                                    <div className="absolute left-6 lg:left-1/2 -translate-x-1/2 z-10">
+                                        <motion.div
+                                            className={`h-12 w-12 rounded-full ${phase.accent} flex items-center justify-center text-white font-black text-sm shadow-lg`}
+                                            initial={{ scale: 0 }}
+                                            whileInView={{ scale: 1 }}
+                                            viewport={{ once: true }}
+                                            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+                                        >
+                                            {phase.step}
+                                        </motion.div>
+                                    </div>
+
+                                    {/* Content Card */}
+                                    <div className={`ml-20 lg:ml-0 lg:w-[calc(50%-3rem)] ${index % 2 === 0 ? 'lg:pr-0' : 'lg:pl-0'}`}>
+                                        <motion.div
+                                            className={`p-8 rounded-2xl border ${phase.accentLight} hover:shadow-xl transition-shadow duration-500`}
+                                            whileHover={{ y: -4 }}
+                                        >
+                                            {/* Duration Badge */}
+                                            <div className="flex items-center gap-3 mb-4">
+                                                <span className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest ${phase.accentText} bg-white border border-current/10`}>
+                                                    {phase.duration}
+                                                </span>
+                                            </div>
+
+                                            {/* Title */}
+                                            <h3 className={`text-2xl font-bold text-slate-900 mb-1`}>{phase.title}</h3>
+                                            <p className="text-sm text-slate-400 font-medium mb-4">{phase.subtitle}</p>
+
+                                            {/* Description */}
+                                            <p className="text-slate-600 leading-relaxed mb-6">{phase.desc}</p>
+
+                                            {/* Detail List */}
+                                            <ul className="space-y-3">
+                                                {phase.details.map((detail, i) => (
+                                                    <motion.li
+                                                        key={i}
+                                                        className="flex items-start gap-3 text-sm text-slate-600"
+                                                        initial={{ opacity: 0, x: -10 }}
+                                                        whileInView={{ opacity: 1, x: 0 }}
+                                                        viewport={{ once: true }}
+                                                        transition={{ delay: 0.3 + i * 0.1 }}
+                                                    >
+                                                        <CheckCircle className={`h-4 w-4 mt-0.5 flex-shrink-0 ${phase.accentText}`} />
+                                                        {detail}
+                                                    </motion.li>
+                                                ))}
+                                            </ul>
+                                        </motion.div>
+                                    </div>
+
+                                    {/* Spacer for alternating layout */}
+                                    <div className="hidden lg:block lg:w-[calc(50%-3rem)]" />
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* CTA Section */}
+                <section className="py-20 bg-gradient-to-br from-[#0F172A] to-[#1E293B]">
+                    <div className="max-w-4xl mx-auto px-6 text-center">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                        >
+                            <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6 tracking-tight">
+                                Ready to modernize your operations?
+                            </h2>
+                            <p className="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+                                Book a free consultation with our solutions architect. No pressure, just clarity.
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                                <Link href="/contact">
+                                    <motion.button
+                                        className="bg-[#0066FF] text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-lg shadow-blue-500/20 hover:shadow-xl hover:shadow-blue-500/30 transition-all flex items-center gap-3 cursor-pointer"
+                                        whileHover={{ scale: 1.02 }}
+                                        whileTap={{ scale: 0.98 }}
+                                    >
+                                        Book Free Consultation <ArrowRight className="h-5 w-5" />
+                                    </motion.button>
+                                </Link>
+                                <Link href="/about">
+                                    <motion.button
+                                        className="bg-white/10 text-white border border-white/20 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/20 transition-all cursor-pointer"
+                                        whileHover={{ scale: 1.02 }}
+                                        whileTap={{ scale: 0.98 }}
+                                    >
+                                        Learn About Us
+                                    </motion.button>
+                                </Link>
+                            </div>
+                        </motion.div>
+                    </div>
+                </section>
             </main>
             <Footer />
         </>

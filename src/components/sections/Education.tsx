@@ -3,10 +3,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { CheckCircle, ArrowRight, Settings, Users, BarChart3, Shield } from 'lucide-react';
+import { CheckCircle, ArrowRight, Settings, Users, BarChart3, Shield, Sparkles } from 'lucide-react';
 
 const erpFeatures = [
-    { icon: Settings, text: 'Fully Customizable Modules' },
+    { icon: Settings, text: 'Customizable Modules' },
     { icon: Users, text: 'Multi-Campus Support' },
     { icon: BarChart3, text: 'Real-time Analytics' },
     { icon: Shield, text: 'Enterprise Security' },
@@ -14,91 +14,94 @@ const erpFeatures = [
 
 export function Education() {
     return (
-        <section className="py-24 overflow-hidden" id="education">
-            <div className="max-w-7xl mx-auto px-6">
-                <motion.div
-                    className="bg-gradient-to-br from-primary via-primary to-blue-900 rounded-[3rem] p-12 lg:p-20 text-white relative overflow-hidden shadow-2xl shadow-primary/20"
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.7 }}
-                >
-                    {/* Background pattern */}
-                    <div className="absolute inset-0 opacity-10 circuit-bg pointer-events-none"></div>
+        <section className="py-32 relative overflow-hidden bg-white" id="education">
+            {/* Atmospheric Background Accents */}
+            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-50/50 rounded-full blur-[120px] -z-0 translate-x-1/3 -translate-y-1/3" />
 
-                    {/* Decorative gradient orbs */}
-                    <div className="absolute -top-20 -left-20 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
-                    <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
+            {/* High-tech grid accent */}
+            <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }} />
 
-                    <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="max-w-7xl mx-auto px-6 relative z-10">
+                <div className="bg-white border border-slate-100 rounded-[3rem] p-12 lg:p-20 relative overflow-hidden shadow-[0_40px_100px_-20px_rgba(0,102,255,0.08)]">
+                    {/* Inner glowing accent */}
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
+
+                    <div className="flex flex-col lg:flex-row items-center gap-16">
                         {/* Content */}
                         <motion.div
-                            className="flex-1 space-y-8 z-10 text-center lg:text-left"
+                            className="flex-1 space-y-8 text-center lg:text-left"
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: 0.2, duration: 0.6 }}
+                            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                         >
-                            <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-white/90 text-sm font-medium backdrop-blur-sm border border-white/10">
+                            <motion.div
+                                initial={{ opacity: 0, y: 10 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold uppercase tracking-widest"
+                            >
+                                <Sparkles className="h-3 w-3" />
                                 Education ERP
-                            </span>
-                            <h2 className="text-4xl lg:text-5xl font-display font-bold leading-tight">
-                                Built for education. <br />
-                                Engineered for scale.
+                            </motion.div>
+
+                            <h2 className="text-4xl lg:text-6xl font-display font-bold text-slate-900 leading-tight tracking-tight">
+                                Built for learning. <br />
+                                <span className="text-blue-600">Engineered for scale.</span>
                             </h2>
-                            <p className="text-blue-100 text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
-                                Our Customizable Education ERP combines pedagogical needs with technological precision.
-                                From K-12 to Higher Ed, we build systems that adapt to YOUR workflows—not the other way around.
+
+                            <p className="text-slate-500 text-xl leading-relaxed max-w-xl mx-auto lg:mx-0 font-medium">
+                                Our industry-leading ERP platform combines pedagogical needs with deep technological precision.
+                                We build systems that adapt to YOUR institution&apos;s unique DNA.
                             </p>
 
-                            {/* ERP Features Grid */}
+                            {/* Features Grid */}
                             <div className="grid grid-cols-2 gap-4 pt-4">
                                 {erpFeatures.map((feature, index) => (
-                                    <motion.div
+                                    <div
                                         key={index}
-                                        className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3 border border-white/10"
-                                        initial={{ opacity: 0, y: 20 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ delay: 0.3 + index * 0.1 }}
+                                        className="flex items-center gap-4 bg-slate-50/50 rounded-2xl px-5 py-4 border border-slate-100/50 group hover:border-blue-200 hover:bg-white hover:shadow-lg hover:shadow-blue-500/5 transition-all duration-300"
                                     >
-                                        <feature.icon className="h-5 w-5 text-accent" />
-                                        <span className="text-sm font-medium text-white">{feature.text}</span>
-                                    </motion.div>
+                                        <div className="h-10 w-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover:scale-110 transition-transform">
+                                            <feature.icon className="h-5 w-5" />
+                                        </div>
+                                        <span className="text-sm font-bold text-slate-700">{feature.text}</span>
+                                    </div>
                                 ))}
                             </div>
 
-                            {/* Custom ERP Benefits */}
-                            <ul className="space-y-3 pt-4">
+                            <ul className="space-y-4 pt-4">
                                 {[
-                                    'Student & Staff Management tailored to your institution',
-                                    'Fee collection with custom payment plans',
-                                    'Attendance, Exams, and Result processing',
-                                    'Parent & Alumni portals included'
+                                    'Customized student & staff management modules',
+                                    'Automated fee collection & revenue planning',
+                                    'Unified examination & result processing OS',
+                                    'White-labeled Parent & Alumni engagement portals'
                                 ].map((item, i) => (
-                                    <li key={i} className="flex items-center gap-3 text-blue-100">
-                                        <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
-                                        {item}
+                                    <li key={i} className="flex items-center gap-4 text-slate-600 group">
+                                        <div className="h-6 w-6 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-100 transition-colors">
+                                            <CheckCircle className="h-4 w-4 text-blue-600" />
+                                        </div>
+                                        <span className="font-medium text-base">{item}</span>
                                     </li>
                                 ))}
                             </ul>
 
-                            <div className="pt-4 flex flex-wrap gap-4 justify-center lg:justify-start">
+                            <div className="pt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
                                 <Link href="/services">
                                     <motion.div
-                                        className="bg-white text-primary px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center gap-2 cursor-pointer"
-                                        whileHover={{ scale: 1.02 }}
-                                        whileTap={{ scale: 0.98 }}
+                                        className="bg-[#0F172A] text-white px-10 py-5 rounded-[20px] font-bold text-lg shadow-[0_20px_40px_-15px_rgba(15,23,42,0.3)] hover:bg-slate-800 transition-all flex items-center gap-2 cursor-pointer"
+                                        whileHover={{ scale: 1.05, y: -2 }}
+                                        whileTap={{ scale: 0.95 }}
                                     >
-                                        Explore Services
+                                        Explore Solutions
                                         <ArrowRight className="h-5 w-5" />
                                     </motion.div>
                                 </Link>
                                 <Link href="/contact">
                                     <motion.div
-                                        className="bg-transparent border-2 border-white/30 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-all cursor-pointer"
-                                        whileHover={{ scale: 1.02 }}
-                                        whileTap={{ scale: 0.98 }}
+                                        className="bg-white border-2 border-slate-100 text-slate-900 px-10 py-5 rounded-[20px] font-bold text-lg hover:border-blue-200 hover:bg-blue-50/30 transition-all cursor-pointer"
+                                        whileHover={{ scale: 1.05 }}
+                                        whileTap={{ scale: 0.95 }}
                                     >
                                         Request Custom Demo
                                     </motion.div>
@@ -106,33 +109,41 @@ export function Education() {
                             </div>
                         </motion.div>
 
-                        {/* Book Image - With white background card */}
+                        {/* Interactive Visual Element */}
                         <motion.div
                             className="flex-1 relative z-10 flex items-center justify-center"
-                            initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            transition={{ delay: 0.4, duration: 0.6 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
                         >
-                            <motion.div
-                                className="relative bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/20"
-                                whileHover={{ scale: 1.03 }}
-                                transition={{ type: "spring", stiffness: 300 }}
-                            >
-                                <div className="relative w-64 h-64 lg:w-80 lg:h-80">
-                                    <Image
-                                        src="https://res.cloudinary.com/dkits80xk/image/upload/v1769612213/5b4b7f9b-d51e-4287-9206-a70d69f51a94.png"
-                                        alt="Education ERP dashboard showing student metrics and analytics"
-                                        fill
-                                        className="object-contain"
-                                        unoptimized
-                                        priority
-                                    />
+                            <div className="relative group">
+                                {/* Glowing halo behind image */}
+                                <div className="absolute inset-0 bg-blue-500/20 blur-[100px] rounded-full scale-75 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+                                <div className="relative bg-white/40 backdrop-blur-xl p-12 lg:p-16 rounded-[48px] border border-white/50 shadow-2xl overflow-hidden">
+                                    {/* Background visual cues */}
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full -translate-y-1/2 translate-x-1/2" />
+
+                                    <motion.div
+                                        className="relative w-64 h-64 lg:w-[400px] lg:h-[400px]"
+                                        animate={{ y: [0, -10, 0] }}
+                                        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                                    >
+                                        <Image
+                                            src="https://res.cloudinary.com/dkits80xk/image/upload/v1769612213/5b4b7f9b-d51e-4287-9206-a70d69f51a94.png"
+                                            alt="Education ERP dashboard visualization"
+                                            fill
+                                            className="object-contain drop-shadow-[0_20px_50px_rgba(0,102,255,0.15)]"
+                                            unoptimized
+                                            priority
+                                        />
+                                    </motion.div>
                                 </div>
-                            </motion.div>
+                            </div>
                         </motion.div>
                     </div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

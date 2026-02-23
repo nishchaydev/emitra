@@ -34,8 +34,8 @@ export const metadata: Metadata = {
     description: 'Unifying disconnected workflows with enterprise-grade automation.',
   },
   icons: {
-    icon: 'https://res.cloudinary.com/dkits80xk/image/upload/v1769612138/e21fcb20-e06e-49e6-bc0b-b14e4557c36b.png',
-    apple: 'https://res.cloudinary.com/dkits80xk/image/upload/v1769612138/e21fcb20-e06e-49e6-bc0b-b14e4557c36b.png',
+    icon: 'https://res.cloudinary.com/dkits80xk/image/upload/v1771839836/ChatGPT_Image_Feb_23_2026_03_13_03_PM_foi1so.png',
+    apple: 'https://res.cloudinary.com/dkits80xk/image/upload/v1771839836/ChatGPT_Image_Feb_23_2026_03_13_03_PM_foi1so.png',
   },
 };
 

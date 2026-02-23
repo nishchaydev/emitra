@@ -8,6 +8,8 @@
   --color-primary: #1E3A8A;
   --color-accent: #0D9488;
   --color-warning: #F59E0B;
+  --color-ion-blue: #0066FF;
+  --color-drift-silver: #E2E8F0;
 }
 
 html {
@@ -78,11 +80,9 @@ body {
 
 .gradient-bg {
   background: linear-gradient(135deg,
-      rgba(102, 126, 234, 0.05) 0%,
-      rgba(118, 75, 162, 0.05) 25%,
-      rgba(240, 147, 251, 0.05) 50%,
-      rgba(79, 172, 254, 0.05) 75%,
-      rgba(0, 242, 254, 0.05) 100%);
+      rgba(0, 102, 255, 0.03) 0%,
+      rgba(226, 232, 240, 0.03) 50%,
+      rgba(0, 102, 255, 0.03) 100%);
   background-size: 400% 400%;
   animation: gradient-shift 15s ease infinite;
 }

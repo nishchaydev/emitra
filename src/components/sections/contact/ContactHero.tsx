@@ -87,7 +87,7 @@ export function ContactHero() {
                     >
                         {/* Abstract Header */}
                         <div className="space-y-4">
-                            <div className="h-16 w-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-500/20">
+                            <div className="h-16 w-16 bg-gradient-to-br from-[#0066FF] to-blue-700 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-500/20">
                                 <MessageSquare className="h-8 w-8 text-white" />
                             </div>
                             <h3 className="text-2xl font-bold text-slate-900">How can we help?</h3>
@@ -125,7 +125,7 @@ export function ContactHero() {
 
                     {/* Decor Elements */}
                     <motion.div
-                        className="absolute -top-6 -right-6 h-24 w-24 bg-gradient-to-br from-purple-400 to-pink-400 rounded-2xl rotate-12 blur-xl opacity-30 -z-10"
+                        className="absolute -top-6 -right-6 h-24 w-24 bg-gradient-to-br from-[#0066FF] to-blue-400 rounded-2xl rotate-12 blur-xl opacity-20 -z-10"
                         animate={{ scale: [1, 1.2, 1], rotate: [12, 24, 12] }}
                         transition={{ duration: 4, repeat: Infinity }}
                     />

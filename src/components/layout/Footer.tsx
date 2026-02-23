@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Globe, Mail, Linkedin, Twitter, Instagram, ArrowRight, Shield } from 'lucide-react';
+import { Globe, Mail, Linkedin, Twitter, Instagram, ArrowRight, Shield, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
@@ -19,35 +19,46 @@ export function Footer() {
     };
 
     return (
-        <footer className="bg-gradient-to-b from-white to-slate-50 border-t border-slate-200 pt-20 pb-8">
+        <footer className="bg-white border-t border-slate-200 pt-32 pb-12 relative overflow-hidden">
+            {/* Background elements */}
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1200px] h-[400px] bg-blue-50/30 rounded-full blur-[120px] -z-10" />
+
             <div className="max-w-7xl mx-auto px-6">
-                {/* Newsletter Section */}
+                {/* Elite Newsletter Module */}
                 <motion.div
-                    className="bg-gradient-to-br from-primary to-blue-800 rounded-3xl p-8 md:p-12 mb-16 relative overflow-hidden"
+                    className="bg-[#0F172A] rounded-[48px] p-10 md:p-16 mb-24 relative overflow-hidden shadow-2xl shadow-blue-500/10"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 0.8 }}
                 >
-                    <div className="absolute inset-0 opacity-10 circuit-bg pointer-events-none" />
-                    <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
-                        <div className="text-center md:text-left">
-                            <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-2">
-                                Stay ahead of the curve
+                    {/* Atmospheric noise backdrop */}
+                    <div className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }} />
+                    <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
+
+                    <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
+                        <div className="text-center lg:text-left max-w-xl">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-black uppercase tracking-[0.2em] mb-6">
+                                <Sparkles className="h-3 w-3" />
+                                Knowledge Hub
+                            </div>
+                            <h3 className="text-3xl md:text-4xl font-display font-bold text-white mb-4 tracking-tight leading-tight">
+                                Stay at the forefront of <span className="text-blue-500">innovation.</span>
                             </h3>
-                            <p className="text-blue-100">
-                                Get the latest insights on institutional technology delivered to your inbox.
+                            <p className="text-slate-400 text-lg font-medium leading-relaxed">
+                                Join 500+ institutions receiving our weekly deep-dive into digital transformation and institutional AI.
                             </p>
                         </div>
-                        <form onSubmit={handleSubscribe} className="flex w-full md:w-auto gap-3">
+
+                        <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row w-full lg:w-auto gap-4">
                             {subscribed ? (
                                 <motion.div
                                     initial={{ scale: 0.8, opacity: 0 }}
                                     animate={{ scale: 1, opacity: 1 }}
-                                    className="flex items-center gap-2 text-white font-medium"
+                                    className="flex items-center gap-3 text-white font-bold bg-blue-600/20 border border-blue-600/30 px-8 py-5 rounded-2xl"
                                 >
-                                    <span className="h-6 w-6 rounded-full bg-accent flex items-center justify-center text-white">✓</span>
-                                    Thanks for subscribing!
+                                    <div className="h-6 w-6 rounded-full bg-blue-500 flex items-center justify-center text-white">✓</div>
+                                    Subscription Active
                                 </motion.div>
                             ) : (
                                 <>
@@ -55,15 +66,15 @@ export function Footer() {
                                         type="email"
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
-                                        placeholder="Enter your email"
-                                        className="flex-1 md:w-64 px-5 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-blue-200 focus:outline-none focus:ring-2 focus:ring-white/30"
+                                        placeholder="Enter your professional email"
+                                        className="flex-1 lg:w-80 px-6 py-5 rounded-2xl bg-white/5 border border-white/10 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all font-medium"
                                         required
                                     />
                                     <button
                                         type="submit"
-                                        className="bg-white text-primary px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-all flex items-center gap-2 whitespace-nowrap"
+                                        className="bg-[#0066FF] text-white px-10 py-5 rounded-2xl font-black text-base hover:bg-blue-600 transition-all shadow-[0_20px_40px_-10px_rgba(0,102,255,0.4)] flex items-center justify-center gap-3 group"
                                     >
-                                        Subscribe <ArrowRight className="h-4 w-4" />
+                                        Subscribe <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                                     </button>
                                 </>
                             )}
@@ -72,47 +83,29 @@ export function Footer() {
                 </motion.div>
 
                 {/* Main Footer Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-16 mb-24">
                     {/* Brand */}
-                    <div className="lg:col-span-2 space-y-6">
-                        <Link href="/" className="inline-block">
-                            <div className="relative h-36 w-[30rem]">
+                    <div className="lg:col-span-2 space-y-8">
+                        <Link href="/" className="inline-block group">
+                            <div className="relative h-12 w-48 mb-2">
                                 <Image
-                                    src="https://res.cloudinary.com/dkits80xk/image/upload/v1769612105/0ed66ac0-9d39-4eb0-a4f9-b82da198b557.png"
+                                    src="https://res.cloudinary.com/dkits80xk/image/upload/v1771839762/ChatGPT_Image_Feb_23_2026_02_59_40_PM_ciop2v.png"
                                     alt="eMitra Technologies"
-                                    fill
-                                    className="object-contain object-left"
-                                    unoptimized
+                                    width={180}
+                                    height={50}
+                                    className="w-[140px] md:w-[180px] h-auto object-contain transition-all group-hover:drop-shadow-[0_0_8px_rgba(0,102,255,0.3)]"
                                 />
                             </div>
                         </Link>
-                        <p className="text-slate-500 leading-relaxed max-w-sm">
-                            Where technology meets trust. Providing enterprise-grade solutions for institutions worldwide.
+                        <p className="text-slate-500 text-base font-medium leading-relaxed max-w-sm">
+                            Where technology meets trust. Building the architectural bedrock for tomorrow&apos;s digital-native institutions.
                         </p>
-                        <div className="space-y-2 text-sm text-slate-500">
-                            <p className="flex items-center gap-2">
-                                <span className="font-semibold text-slate-700">Phone:</span>
-                                <a href="tel:+918602175892" className="hover:text-primary transition-colors">+91 86021 75892</a>,
-                                <a href="tel:+916261854014" className="hover:text-primary transition-colors">+91 62618 54014</a>
-                            </p>
-                            <p className="flex items-center gap-2">
-                                <span className="font-semibold text-slate-700">Email:</span>
-                                <a href="mailto:emitratechnologies@gmail.com" className="hover:text-primary transition-colors">emitratechnologies@gmail.com</a>
-                            </p>
-                        </div>
-                        <div className="flex gap-3 pt-2">
-                            {/* Social links hidden until profiles are live
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white transition-all">
+
+                        <div className="flex gap-4">
+                            <a href="https://linkedin.com/company/emitra" target="_blank" rel="noopener noreferrer" className="h-12 w-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-100 transition-all duration-300">
                                 <Linkedin className="h-5 w-5" />
                             </a>
-                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white transition-all">
-                                <Twitter className="h-5 w-5" />
-                            </a>
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white transition-all">
-                                <Instagram className="h-5 w-5" />
-                            </a>
-                             */}
-                            <a href="mailto:emitratechnologies@gmail.com" className="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white transition-all">
+                            <a href="mailto:emitratechnologies@gmail.com" className="h-12 w-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-100 transition-all duration-300">
                                 <Mail className="h-5 w-5" />
                             </a>
                         </div>
@@ -120,57 +113,68 @@ export function Footer() {
 
                     {/* Solutions */}
                     <div>
-                        <h4 className="font-bold text-slate-900 mb-6">Products</h4>
-                        <ul className="space-y-4 text-sm text-slate-500">
-                            <li><Link href="/schoolmitra" className="hover:text-primary transition-colors">SchoolMitra</Link></li>
-                            <li><Link href="/gymmitra" className="hover:text-primary transition-colors">GymMitra</Link></li>
-                            <li><Link href="/flatmitra" className="hover:text-primary transition-colors">FlatMitra</Link></li>
-                            <li><Link href="/contact" className="hover:text-primary transition-colors">Custom Solutions</Link></li>
+                        <h4 className="text-[10px] font-black text-slate-900 uppercase tracking-[0.2em] mb-8">Infrastructure</h4>
+                        <ul className="space-y-4 text-sm font-bold text-slate-500">
+                            <li><a href="https://school.emitra.dev" className="hover:text-blue-600 transition-colors">EduMitra ERP</a></li>
+                            <li><a href="https://gym.emitra.dev" className="hover:text-blue-600 transition-colors">GymMitra Pro</a></li>
+                            <li><a href="https://flat.emitra.dev" className="hover:text-blue-600 transition-colors">FlatMitra OS</a></li>
+                            <li><span className="text-slate-300 cursor-not-allowed">MediMitra (Soon)</span></li>
+                        </ul>
+                    </div>
+
+                    {/* Resources */}
+                    <div>
+                        <h4 className="text-[10px] font-black text-slate-900 uppercase tracking-[0.2em] mb-8">Resources</h4>
+                        <ul className="space-y-4 text-sm font-bold text-slate-500">
+                            <li><Link href="/blog" className="hover:text-blue-600 transition-colors">Expert Blog</Link></li>
+                            <li><Link href="/contact" className="hover:text-blue-600 transition-colors">Help Center</Link></li>
+                            <li><Link href="/contact" className="hover:text-blue-600 transition-colors">Documentation</Link></li>
                         </ul>
                     </div>
 
                     {/* Company */}
                     <div>
-                        <h4 className="font-bold text-slate-900 mb-6">Company</h4>
-                        <ul className="space-y-4 text-sm text-slate-500">
-                            <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
-                            <li><Link href="/contact" className="hover:text-primary transition-colors">Careers</Link></li>
-                            <li><Link href="/contact" className="hover:text-primary transition-colors">Contact Us</Link></li>
+                        <h4 className="text-[10px] font-black text-slate-900 uppercase tracking-[0.2em] mb-8">Company</h4>
+                        <ul className="space-y-4 text-sm font-bold text-slate-500">
+                            <li><Link href="/about" className="hover:text-blue-600 transition-colors">Our Vision</Link></li>
+                            <li><Link href="/contact" className="hover:text-blue-600 transition-colors">Careers</Link></li>
+                            <li><Link href="/contact" className="hover:text-blue-600 transition-colors">Contact Sales</Link></li>
                         </ul>
                     </div>
 
-                    {/* Support */}
+                    {/* Security */}
                     <div>
-                        <h4 className="font-bold text-slate-900 mb-6">Support</h4>
-                        <ul className="space-y-4 text-sm text-slate-500">
-                            <li><Link href="/contact" className="hover:text-primary transition-colors">Help Center</Link></li>
-                            <li><Link href="/contact" className="hover:text-primary transition-colors">Sales</Link></li>
-                            <li><Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy</Link></li>
+                        <h4 className="text-[10px] font-black text-slate-900 uppercase tracking-[0.2em] mb-8">Legal</h4>
+                        <ul className="space-y-4 text-sm font-bold text-slate-500">
+                            <li><Link href="/privacy-policy" className="hover:text-blue-600 transition-colors">Privacy</Link></li>
+                            <li><Link href="/terms-of-service" className="hover:text-blue-600 transition-colors">Terms</Link></li>
+                            <li><Link href="/security" className="hover:text-blue-600 transition-colors">Security</Link></li>
                         </ul>
                     </div>
-
                 </div>
 
-                {/* Trust & Compliance Badges */}
-                <div className="border-t border-slate-100 py-8 mb-8">
-                    <div className="flex flex-wrap justify-center items-center opacity-80">
+                {/* Bottom Bar */}
+                <div className="pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-8">
+                    <div className="flex flex-col md:flex-row items-center gap-6">
+                        <p className="text-sm font-bold text-slate-400">© 2025 eMitra Technologies</p>
+                        <div className="h-1 w-1 rounded-full bg-slate-200 hidden md:block" />
                         <div className="flex items-center gap-2">
-                            <div className="h-6 w-6 rounded-full bg-orange-50 flex items-center justify-center text-xs">🇮🇳</div>
-                            <span className="text-sm font-bold text-slate-600 uppercase tracking-widest">Made in India, Made for India</span>
+                            <div className="text-[10px]">🇮🇳</div>
+                            <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Engineered in India</span>
+                        </div>
+                    </div>
+
+                    <div className="flex items-center gap-8">
+                        <div className="flex items-center gap-2 text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">
+                            <Globe className="h-3.5 w-3.5" />
+                            Global Operations
                         </div>
                     </div>
                 </div>
-
-                {/* Copyright */}
-                <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
-                    <p>© 2025 eMitra Technologies. All rights reserved.</p>
-                    <div className="flex gap-8">
-                        <Link href="/privacy-policy" className="hover:text-slate-600 transition-colors">Privacy Policy</Link>
-                        <Link href="/terms-of-service" className="hover:text-slate-600 transition-colors">Terms of Service</Link>
-                        <Link href="/security" className="hover:text-slate-600 transition-colors">Security</Link>
-                    </div>
-                </div>
             </div>
+
+            {/* Atmospheric Depth Noise Overlay */}
+            <div className="absolute inset-0 z-[1] opacity-[0.01] pointer-events-none" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }} />
         </footer>
     );
 }
