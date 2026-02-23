@@ -318,66 +318,177 @@ export default function ServicesPage() {
                 {/* Hero Section */}
                 <ServicesHero />
 
-                {/* Services Grid */}
-                <section className="py-20 bg-white">
+                {/* Core Services - Scrollytelling */}
+                <section className="py-24 bg-white overflow-hidden">
                     <div className="max-w-7xl mx-auto px-6">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {services.map((service, index) => (
-                                <motion.div
-                                    key={index}
-                                    className="bg-white rounded-2xl border border-slate-200 p-8 hover:shadow-lg transition-all group"
-                                    initial={{ opacity: 0, y: 30 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: index * 0.1 }}
-                                >
-                                    {/* Icon with Unique Animation per Card */}
-                                    <motion.div
-                                        className="h-12 w-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6"
-                                        whileHover={{
-                                            scale: 1.1,
-                                            backgroundColor: "rgba(37, 99, 235, 0.2)", // darker blue bg
-                                        }}
-                                    >
-                                        <motion.div
-                                            variants={{
-                                                hover: {
-                                                    rotate: index % 6 === 0 ? 360 : 0,           // 1. Full Spin
-                                                    y: index % 6 === 1 ? -5 : 0,                 // 2. Bounce Up
-                                                    rotateZ: index % 6 === 2 ? [0, -10, 10, 0] : 0, // 3. Wiggle
-                                                    scale: index % 6 === 3 ? 1.2 : 1,            // 4. Pulse
-                                                    rotateY: index % 6 === 4 ? 180 : 0,          // 5. Flip
-                                                    x: index % 6 === 5 ? [0, -5, 5, 0] : 0,      // 6. Shake
-                                                }
-                                            }}
-                                            transition={{
-                                                duration: 0.5,
-                                                ease: "easeInOut",
-                                                repeat: index % 6 === 1 ? Infinity : 0, // Bounce repeats
-                                                repeatType: "reverse"
-                                            }}
-                                        >
-                                            <service.icon className="h-6 w-6 text-primary" />
-                                        </motion.div>
-                                    </motion.div>
+                        <div className="text-center max-w-3xl mx-auto mb-20">
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                            >
+                                <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-6 tracking-tight">
+                                    Our Core Capabilities
+                                </h2>
+                                <p className="text-xl text-slate-500">
+                                    We build digital products that scale. From high-performance web applications to native mobile experiences and enterprise systems.
+                                </p>
+                            </motion.div>
+                        </div>
 
-                                    {/* Title */}
-                                    <h3 className="text-xl font-bold text-slate-900 mb-3">{service.title}</h3>
-
-                                    {/* Description */}
-                                    <p className="text-slate-600 text-sm mb-6 leading-relaxed">{service.description}</p>
-
-                                    {/* Features */}
-                                    <ul className="space-y-2">
-                                        {service.features.map((feature, i) => (
-                                            <li key={i} className="flex items-start gap-2 text-sm text-slate-600">
-                                                <CheckCircle className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
-                                                {feature}
+                        <div className="space-y-32">
+                            {/* Service 1: Web Development */}
+                            <motion.div
+                                className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20"
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-100px" }}
+                                transition={{ duration: 0.7 }}
+                            >
+                                <div className="lg:w-1/2 order-2 lg:order-1">
+                                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-blue-50 text-blue-600 mb-6">
+                                        <Code2 className="w-8 h-8" />
+                                    </div>
+                                    <h3 className="text-3xl font-bold text-slate-900 mb-4">Web Application Development</h3>
+                                    <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                                        We engineer fast, secure, and scalable web applications using modern stacks like Next.js, React, and Node.js. Whether it's a dynamic portal, a complex dashboard, or a high-traffic SaaS platform, we deliver pixel-perfect, responsive experiences.
+                                    </p>
+                                    <ul className="space-y-3">
+                                        {['High-Performance SPAs', 'Progressive Web Apps (PWA)', 'API-Driven Architecture', 'SEO-Optimized Rendering'].map((feat, i) => (
+                                            <li key={i} className="flex items-center gap-3 text-slate-700 font-medium">
+                                                <CheckCircle className="w-5 h-5 text-blue-500" />
+                                                {feat}
                                             </li>
                                         ))}
                                     </ul>
-                                </motion.div>
-                            ))}
+                                </div>
+                                <div className="lg:w-1/2 order-1 lg:order-2">
+                                    <div className="relative aspect-square w-full max-w-md mx-auto">
+                                        <div className="absolute inset-0 bg-gradient-to-tr from-blue-100 to-blue-50 rounded-3xl transform rotate-3 scale-105" />
+                                        <div className="absolute inset-0 bg-white rounded-3xl border border-slate-100 shadow-xl overflow-hidden flex flex-col">
+                                            {/* Mockup Browser Window */}
+                                            <div className="h-10 bg-slate-50 border-b border-slate-100 flex items-center px-4 gap-2">
+                                                <div className="w-3 h-3 rounded-full bg-red-400" />
+                                                <div className="w-3 h-3 rounded-full bg-amber-400" />
+                                                <div className="w-3 h-3 rounded-full bg-green-400" />
+                                            </div>
+                                            <div className="p-6 flex-grow flex flex-col gap-4">
+                                                <div className="h-8 w-3/4 bg-slate-100 rounded-lg animate-pulse" />
+                                                <div className="h-32 w-full bg-blue-50/50 rounded-lg animate-pulse" />
+                                                <div className="grid grid-cols-2 gap-4">
+                                                    <div className="h-24 bg-slate-50 rounded-lg animate-pulse" />
+                                                    <div className="h-24 bg-slate-50 rounded-lg animate-pulse" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </motion.div>
+
+                            {/* Service 2: Mobile App Dev */}
+                            <motion.div
+                                className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20"
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-100px" }}
+                                transition={{ duration: 0.7 }}
+                            >
+                                <div className="lg:w-1/2 order-1 lg:order-1">
+                                    <div className="relative aspect-[9/16] w-full max-w-[280px] mx-auto">
+                                        <div className="absolute inset-0 bg-gradient-to-tr from-indigo-100 to-indigo-50 rounded-[3rem] transform -rotate-3 scale-105" />
+                                        <div className="absolute inset-0 bg-slate-900 rounded-[3rem] border-8 border-slate-800 shadow-2xl overflow-hidden">
+                                            {/* Mockup Phone */}
+                                            <div className="absolute top-0 inset-x-0 h-6 bg-transparent flex justify-center z-10">
+                                                <div className="w-1/3 h-4 bg-slate-800 rounded-b-xl" />
+                                            </div>
+                                            <div className="pt-10 p-5 h-full flex flex-col gap-4">
+                                                <div className="flex justify-between items-center">
+                                                    <div className="w-10 h-10 rounded-full bg-slate-800 animate-pulse" />
+                                                    <div className="w-20 h-4 rounded bg-slate-800 animate-pulse" />
+                                                </div>
+                                                <div className="h-32 w-full bg-indigo-500/20 rounded-xl" />
+                                                <div className="space-y-3 mt-4">
+                                                    <div className="h-16 w-full bg-slate-800/80 rounded-xl animate-pulse" />
+                                                    <div className="h-16 w-full bg-slate-800/80 rounded-xl animate-pulse" />
+                                                    <div className="h-16 w-full bg-slate-800/80 rounded-xl animate-pulse" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="lg:w-1/2 order-2 lg:order-2">
+                                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-indigo-50 text-indigo-600 mb-6">
+                                        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                        </svg>
+                                    </div>
+                                    <h3 className="text-3xl font-bold text-slate-900 mb-4">Mobile App Development</h3>
+                                    <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                                        We build cross-platform and native mobile applications that put your services right in the pockets of your users. From Flutter and React Native to native iOS and Android, we ensure smooth, fluid experiences.
+                                    </p>
+                                    <ul className="space-y-3">
+                                        {['iOS & Android Native apps', 'Cross-Platform Frameworks', 'Offline-First Capabilities', 'Push Notifications integration'].map((feat, i) => (
+                                            <li key={i} className="flex items-center gap-3 text-slate-700 font-medium">
+                                                <CheckCircle className="w-5 h-5 text-indigo-500" />
+                                                {feat}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </motion.div>
+
+                            {/* Service 3: Custom ERP */}
+                            <motion.div
+                                className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20"
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-100px" }}
+                                transition={{ duration: 0.7 }}
+                            >
+                                <div className="lg:w-1/2 order-2 lg:order-1">
+                                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-emerald-50 text-emerald-600 mb-6">
+                                        <Database className="w-8 h-8" />
+                                    </div>
+                                    <h3 className="text-3xl font-bold text-slate-900 mb-4">Enterprise ERP & AI</h3>
+                                    <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                                        Beyond basic websites, we specialize in complex business logic. Custom ERPs, automated workflows, and AI integration that drastically cut down manual administrative overhead.
+                                    </p>
+                                    <ul className="space-y-3">
+                                        {['Custom Dashboard & Analytics', 'Cloud Data Migration', 'Automated Workflows', 'Machine Learning Models'].map((feat, i) => (
+                                            <li key={i} className="flex items-center gap-3 text-slate-700 font-medium">
+                                                <CheckCircle className="w-5 h-5 text-emerald-500" />
+                                                {feat}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                                <div className="lg:w-1/2 order-1 lg:order-2">
+                                    <div className="relative aspect-video w-full max-w-lg mx-auto">
+                                        <div className="absolute inset-0 bg-gradient-to-tr from-emerald-100 to-emerald-50 rounded-3xl transform rotate-2 scale-105" />
+                                        <div className="absolute inset-0 bg-white rounded-3xl border border-slate-100 shadow-xl overflow-hidden flex flex-col p-4">
+                                            {/* Mockup Dashboard */}
+                                            <div className="flex gap-4 h-full">
+                                                <div className="w-1/4 bg-slate-50 rounded-lg flex flex-col gap-2 p-2">
+                                                    <div className="h-6 w-3/4 bg-slate-200 rounded mb-4" />
+                                                    <div className="h-4 w-full bg-slate-200 rounded" />
+                                                    <div className="h-4 w-5/6 bg-slate-200 rounded" />
+                                                    <div className="h-4 w-full bg-emerald-100 rounded" />
+                                                </div>
+                                                <div className="w-3/4 flex flex-col gap-4">
+                                                    <div className="h-1/3 bg-slate-50 rounded-lg" />
+                                                    <div className="h-2/3 bg-emerald-50/50 rounded-lg flex items-end p-4 gap-2">
+                                                        <div className="w-1/5 bg-emerald-200 h-1/4 rounded-t-sm animate-pulse" />
+                                                        <div className="w-1/5 bg-emerald-300 h-2/4 rounded-t-sm animate-pulse" />
+                                                        <div className="w-1/5 bg-emerald-400 h-3/4 rounded-t-sm animate-pulse" />
+                                                        <div className="w-1/5 bg-emerald-500 h-full rounded-t-sm animate-pulse" />
+                                                        <div className="w-1/5 bg-emerald-600 h-5/6 rounded-t-sm animate-pulse" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </motion.div>
                         </div>
                     </div>
                 </section>

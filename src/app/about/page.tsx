@@ -2,6 +2,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { AboutHero } from '@/components/sections/about/AboutHero';
 import { VisionMission } from '@/components/sections/about/VisionMission';
+import { OurStory } from '@/components/sections/about/OurStory';
 import { LeadershipTeam } from '@/components/sections/about/LeadershipTeam';
 import { SecurityCore } from '@/components/sections/about/SecurityCore';
 import { JoinCTA } from '@/components/sections/about/JoinCTA';
@@ -13,6 +14,7 @@ export default function AboutPage() {
             <main>
                 <AboutHero />
                 <VisionMission />
+                <OurStory />
                 <LeadershipTeam />
                 <SecurityCore />
                 <JoinCTA />

@@ -53,7 +53,7 @@ export function GymMitraTemplate() {
 
                     <div className="flex flex-col items-center">
                         <a
-                            href="https://gym.emitra.dev"
+                            href="https://emitra.dev/gym"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center gap-3 px-8 py-5 bg-[#0066FF] text-white text-xl font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:-translate-y-1"
