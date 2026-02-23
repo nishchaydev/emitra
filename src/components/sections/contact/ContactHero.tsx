@@ -40,7 +40,7 @@ export function ContactHero() {
                         We're Online
                     </div>
 
-                    <h1 className="text-4xl lg:text-7xl font-display font-bold leading-[1.1] text-slate-900">
+                    <h1 className="text-3xl md:text-4xl lg:text-7xl font-display font-bold leading-[1.1] text-slate-900">
                         Let's start a <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
                             conversation.

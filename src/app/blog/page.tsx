@@ -70,7 +70,7 @@ export default function BlogPage() {
                                 <span className="w-2 h-2 rounded-full bg-[#0066FF] animate-pulse" />
                                 eMitra Insights
                             </div>
-                            <h1 className="text-4xl md:text-6xl font-display font-bold text-slate-900 tracking-tight mb-6">
+                            <h1 className="text-3xl md:text-4xl lg:text-6xl font-display font-bold text-slate-900 tracking-tight mb-6">
                                 Ideas that move <br className="hidden md:block" />
                                 institutions forward.
                             </h1>
@@ -102,7 +102,7 @@ export default function BlogPage() {
                                         </span>
                                         <span className="text-slate-500 text-sm font-medium">{featuredPost.date}</span>
                                     </div>
-                                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6 tracking-tight leading-tight group-hover:text-blue-300 transition-colors">
+                                    <h2 className="text-2xl md:text-3xl lg:text-5xl font-display font-bold text-white mb-6 tracking-tight leading-tight group-hover:text-blue-300 transition-colors">
                                         {featuredPost.title}
                                     </h2>
                                     <p className="text-lg text-slate-400 mb-8 leading-relaxed max-w-2xl">

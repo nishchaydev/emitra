@@ -24,9 +24,9 @@ export function ServicesHero() {
                         Our Expertise
                     </div>
 
-                    <h1 className="text-4xl lg:text-7xl font-display font-bold leading-[1.1] text-slate-900">
+                    <h1 className="text-3xl md:text-4xl lg:text-7xl font-display font-bold leading-[1.1] text-slate-900">
                         Tools to build <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0066FF] to-blue-700">
                             tomorrow.
                         </span>
                     </h1>
@@ -51,23 +51,23 @@ export function ServicesHero() {
 
                 {/* Visual - Floating Tools Array */}
                 <motion.div
-                    className="relative h-[400px] lg:h-[600px] flex items-center justify-center perspective-1000 mt-12 lg:mt-0"
+                    className="relative h-[280px] lg:h-[600px] flex items-center justify-center perspective-1000 mt-8 lg:mt-0"
                     initial={{ opacity: 0, rotateY: 20 }}
                     animate={{ opacity: 1, rotateY: 0 }}
                     transition={{ duration: 0.8 }}
                 >
                     {/* Central Gear/Core */}
                     <motion.div
-                        className="relative w-64 h-64 bg-slate-900 rounded-[3rem] shadow-2xl flex items-center justify-center z-20"
+                        className="relative w-40 h-40 lg:w-64 lg:h-64 bg-slate-900 rounded-[2rem] lg:rounded-[3rem] shadow-2xl flex items-center justify-center z-20"
                         animate={{ rotate: 360 }}
                         transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
                     >
-                        <Settings className="h-32 w-32 text-slate-800" />
+                        <Settings className="h-20 w-20 lg:h-32 lg:w-32 text-slate-800" />
 
                         {/* Static Center */}
                         <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="w-32 h-32 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center shadow-inner">
-                                <Cpu className="h-16 w-16 text-white animate-pulse" />
+                            <div className="w-20 h-20 lg:w-32 lg:h-32 bg-gradient-to-br from-[#0066FF] to-blue-700 rounded-full flex items-center justify-center shadow-inner">
+                                <Cpu className="h-10 w-10 lg:h-16 lg:w-16 text-white animate-pulse" />
                             </div>
                         </div>
                     </motion.div>
@@ -76,14 +76,14 @@ export function ServicesHero() {
                     {[
                         { icon: Layers, color: 'bg-orange-500', delay: 0 },
                         { icon: PenTool, color: 'bg-green-500', delay: 2 },
-                        { icon: Wrench, color: 'bg-purple-500', delay: 4 },
+                        { icon: Wrench, color: 'bg-[#0066FF]', delay: 4 },
                     ].map((item, i) => (
                         <motion.div
                             key={i}
                             className={`absolute p-4 ${item.color} rounded-2xl shadow-xl z-30`}
                             animate={{
-                                x: [Math.cos(i * 2) * 180, Math.cos(i * 2 + Math.PI) * 180, Math.cos(i * 2) * 180],
-                                y: [Math.sin(i * 2) * 180, Math.sin(i * 2 + Math.PI) * 180, Math.sin(i * 2) * 180],
+                                x: [Math.cos(i * 2) * 120, Math.cos(i * 2 + Math.PI) * 120, Math.cos(i * 2) * 120],
+                                y: [Math.sin(i * 2) * 120, Math.sin(i * 2 + Math.PI) * 120, Math.sin(i * 2) * 120],
                                 scale: [1, 1.2, 1],
                                 rotate: [0, 180, 360]
                             }}
