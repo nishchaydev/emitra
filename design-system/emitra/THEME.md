@@ -9,8 +9,8 @@ This document defines the official color palette and design tokens for the eMitr
 ### 1. Primary Brand Colors
 | Token | Hex | Role |
 |-------|-----|------|
-| **Ion Blue** | `#0066FF` | **Primary Brand Color.** Used for main CTAs, active states, and brand signatures. |
-| **Midnight Navy** | `#1E3A8A` | **Foundation Color.** Used for deep backgrounds, footer headers, and structural elements. |
+| **Ion Blue** | `#0066FF` | **Primary Brand Color.** Used for main CTAs (`--color-primary`), active states, and brand signatures. |
+| **Midnight Navy** | `#1E3A8A` | **Foundation Color.** Used for deep backgrounds (`--color-background` in some contexts), footer headers, and structural elements. |
 | **Ocean Teal** | `#0D9488` | **Accent Color.** Used for secondary highlights, success states, and eco-related features. |
 
 ### 2. Base Colors
@@ -40,7 +40,7 @@ Standardized surface for modern, high-tech product representation:
 - **Border:** `1px solid rgba(255, 255, 255, 0.3)`
 
 ### 2. High-Tech Accents
-- **Circuit Patterns:** Subtle radial gradients (`rgba(30, 58, 138, 0.05)`) at 24px intervals to reinforce the "digital infrastructure" theme.
+- **Circuit Patterns:** Subtle radial gradients (`rgba(30, 58, 138, 0.05)`) with a background pattern tile size of 24px (`background-repeat` distance) to reinforce the "digital infrastructure" theme.
 - **Shadows:** Use `rgba(0, 102, 255, 0.08)` for elevation to maintain the "blue glow" consistency.
 
 ---
