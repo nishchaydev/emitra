@@ -37,7 +37,7 @@ export function Header() {
         <header className="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-slate-200/50">
             <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
                 {/* Logo */}
-                <Link href="/">
+                <a href="https://emitra.dev">
                     <motion.div
                         className="relative flex items-center group"
                         whileHover={{ scale: 1.02 }}
@@ -51,7 +51,7 @@ export function Header() {
                             className="w-[120px] md:w-[150px] lg:w-[160px] h-auto object-contain transition-all group-hover:drop-shadow-[0_0_8px_rgba(0,102,255,0.3)]"
                         />
                     </motion.div>
-                </Link>
+                </a>
 
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex items-center gap-10">
