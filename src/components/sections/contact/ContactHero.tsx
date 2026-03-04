@@ -58,7 +58,7 @@ export function ContactHero() {
                             </div>
                             <div>
                                 <p className="text-xs text-slate-500 font-bold uppercase text-left">Email us</p>
-                                <p className="font-medium text-slate-900">contact@emitra.dev</p>
+                                <a href="mailto:contact@emitra.dev" aria-label="Email contact@emitra.dev" className="font-medium text-slate-900 hover:text-blue-600 transition-colors">contact@emitra.dev</a>
                             </div>
                         </div>
                         <div className="flex items-center gap-3 text-slate-600">

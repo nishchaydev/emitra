@@ -156,7 +156,7 @@ export function Footer() {
                 {/* Bottom Bar */}
                 <div className="pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-8">
                     <div className="flex flex-col md:flex-row items-center gap-6">
-                        <p className="text-sm font-bold text-slate-400">© 2025 eMitra Technologies</p>
+                        <p className="text-sm font-bold text-slate-400">© {new Date().getFullYear()} eMitra Technologies</p>
                         <div className="h-1 w-1 rounded-full bg-slate-200 hidden md:block" />
                         <div className="flex items-center gap-2">
                             <div className="text-[10px]">🇮🇳</div>

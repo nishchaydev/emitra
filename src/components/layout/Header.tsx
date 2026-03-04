@@ -63,7 +63,7 @@ export function Header() {
                         </button>
 
                         {/* Mega Menu Dropdown */}
-                        <div className="absolute top-full left-1/2 -translate-x-1/2 w-[580px] bg-white/95 backdrop-blur-md md:backdrop-blur-2xl rounded-[32px] shadow-[0_40px_100px_-20px_rgba(0,0,0,0.15)] border border-slate-100 p-8 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top translate-y-4 group-hover:translate-y-2">
+                        <div className="absolute top-full left-1/2 -translate-x-1/2 w-[580px] bg-white/95 md:backdrop-blur-2xl rounded-[32px] shadow-[0_40px_100px_-20px_rgba(0,0,0,0.15)] border border-slate-100 p-8 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top translate-y-4 group-hover:translate-y-2">
                             <div className="grid grid-cols-2 gap-8">
                                 <div className="space-y-6">
                                     <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] pl-2">Institutional ERP</h4>
@@ -125,7 +125,7 @@ export function Header() {
                             Services
                             <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" />
                         </button>
-                        <div className="absolute top-full left-0 w-[300px] bg-white/95 backdrop-blur-md md:backdrop-blur-2xl rounded-3xl shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] border border-slate-100 p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top translate-y-4 group-hover:translate-y-2">
+                        <div className="absolute top-full left-0 w-[300px] bg-white/95 md:backdrop-blur-2xl rounded-3xl shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] border border-slate-100 p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top translate-y-4 group-hover:translate-y-2">
                             {services.map((service) => (
                                 <Link
                                     key={service.href}

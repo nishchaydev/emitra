@@ -6,6 +6,8 @@ import { motion } from 'framer-motion';
 import { Terminal, Code2, Rocket, CheckCircle, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
+const MotionLink = motion(Link);
+
 export default function WebDevelopmentPage() {
     return (
         <>
@@ -16,7 +18,7 @@ export default function WebDevelopmentPage() {
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        className="h-24 w-24 bg-blue-100 rounded-3xl flex items-center justify-center text-blue-600 mx-auto mb-8 shadow-lg shadow-blue-500/20 shadow-inner"
+                        className="h-24 w-24 bg-blue-100 rounded-3xl flex items-center justify-center text-blue-600 mx-auto mb-8 shadow-lg shadow-blue-500/20"
                     >
                         <Code2 className="h-12 w-12" />
                     </motion.div>
@@ -161,15 +163,14 @@ export default function WebDevelopmentPage() {
                     <div className="max-w-4xl mx-auto px-6 text-center">
                         <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-6">Ready to start building?</h2>
                         <p className="text-slate-400 mb-10 text-lg">Let's discuss how customized web applications can transform your institution.</p>
-                        <Link href="/contact">
-                            <motion.button
-                                className="bg-[#0066FF] text-white px-8 py-4 rounded-xl font-bold text-sm hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-500/25 flex items-center justify-center gap-2 mx-auto"
-                                whileHover={{ scale: 1.02 }}
-                                whileTap={{ scale: 0.98 }}
-                            >
-                                Contact Our Team <ArrowRight className="h-4 w-4" />
-                            </motion.button>
-                        </Link>
+                        <MotionLink
+                            href="/contact"
+                            className="bg-[#0066FF] text-white px-8 py-4 rounded-xl font-bold text-sm hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-500/25 inline-flex items-center justify-center gap-2 mx-auto"
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                        >
+                            Contact Our Team <ArrowRight className="h-4 w-4" />
+                        </MotionLink>
                     </div>
                 </section>
             </main>

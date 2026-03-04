@@ -3,9 +3,19 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 import { RippleButton } from '../ui/RippleButton';
 
 export function Hero() {
+    const [isDesktop, setIsDesktop] = useState(false);
+
+    useEffect(() => {
+        const checkMatch = () => setIsDesktop(window.matchMedia('(min-width: 1024px)').matches);
+        checkMatch();
+        window.addEventListener('resize', checkMatch);
+        return () => window.removeEventListener('resize', checkMatch);
+    }, []);
+
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white pt-20">
             {/* --- Background Effects --- */}
@@ -22,7 +32,7 @@ export function Hero() {
                     xmlns="http://www.w3.org/2000/svg"
                 >
                     <defs>
-                        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%" className="hidden lg:block">
+                        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
                             <feGaussianBlur stdDeviation="15" result="blur" />
                             <feComposite in="SourceGraphic" in2="blur" operator="over" />
                         </filter>
@@ -43,7 +53,7 @@ export function Hero() {
                             strokeLinecap="round"
                             className={i > 2 ? "hidden lg:block" : "block"}
                             opacity={0.15 + i * 0.05}
-                            filter="url(#glow)"
+                            filter={isDesktop ? "url(#glow)" : undefined}
                             style={{ willChange: "transform, opacity, stroke-dashoffset" }}
                             initial={{ pathLength: 0, opacity: 0 }}
                             animate={{
@@ -99,7 +109,6 @@ export function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
-                        style={{ willChange: "transform, opacity" }}
                         className="inline-flex items-center gap-2 px-4 py-2 lg:px-5 lg:py-2.5 mb-6 lg:mb-8 rounded-2xl bg-white/40 backdrop-blur-sm lg:backdrop-blur-md border border-white/60 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)]"
                     >
                         <Sparkles className="h-3 w-3 lg:h-4 lg:w-4 text-blue-600" />
@@ -112,7 +121,6 @@ export function Hero() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                        style={{ willChange: "transform, opacity" }}
                         className="text-4xl lg:text-8xl font-display font-bold text-slate-900 tracking-tight leading-[1.1] lg:leading-[1.05] mb-6 lg:mb-8"
                     >
                         Your Digital <br className="hidden md:block" />
@@ -123,7 +131,6 @@ export function Hero() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-                        style={{ willChange: "transform, opacity" }}
                         className="text-lg lg:text-2xl text-slate-500 max-w-2xl mx-auto mb-8 lg:mb-12 font-medium leading-relaxed"
                     >
                         Seamless management solutions that grow with your institution.
@@ -134,7 +141,6 @@ export function Hero() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-                        style={{ willChange: "transform, opacity" }}
                     >
                         <Link href="#products">
                             <RippleButton
