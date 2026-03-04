@@ -10,10 +10,25 @@ export function Hero() {
     const [isDesktop, setIsDesktop] = useState(false);
 
     useEffect(() => {
-        const checkMatch = () => setIsDesktop(window.matchMedia('(min-width: 1024px)').matches);
-        checkMatch();
-        window.addEventListener('resize', checkMatch);
-        return () => window.removeEventListener('resize', checkMatch);
+        const mql = window.matchMedia('(min-width: 1024px)');
+        setIsDesktop(mql.matches);
+
+        const handler = (e: MediaQueryListEvent) => setIsDesktop(e.matches);
+
+        if (mql.addEventListener) {
+            mql.addEventListener('change', handler);
+        } else {
+            // Fallback for older browsers
+            mql.addListener(handler);
+        }
+
+        return () => {
+            if (mql.removeEventListener) {
+                mql.removeEventListener('change', handler);
+            } else {
+                mql.removeListener(handler);
+            }
+        };
     }, []);
 
     return (

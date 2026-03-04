@@ -67,7 +67,11 @@ export function ContactHero() {
                             </div>
                             <div>
                                 <p className="text-xs text-slate-500 font-bold uppercase text-left">Call us</p>
-                                <p className="font-medium text-slate-900">+91 86021 75892 / +91 62618 54014</p>
+                                <p className="font-medium text-slate-900 group">
+                                    <a href="tel:+918602175892" className="hover:text-blue-600 transition-colors">+91 86021 75892</a>
+                                    <span className="mx-2 text-slate-300">/</span>
+                                    <a href="tel:+916261854014" className="hover:text-blue-600 transition-colors">+91 62618 54014</a>
+                                </p>
                             </div>
                         </div>
                     </div>

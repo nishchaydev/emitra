@@ -14,7 +14,7 @@ export default function PrivacyPolicyPage() {
             <main className="pt-20">
                 <div className="max-w-4xl mx-auto px-6 py-16">
                     <h1 className="text-4xl font-display font-bold text-slate-900 mb-4">Privacy Policy</h1>
-                    <p className="text-slate-500 mb-12">Last updated: March 4, 2026</p>
+                    <p className="text-slate-500 mb-12">Last reviewed: March 4, 2026</p>
 
                     <div className="prose prose-slate max-w-none">
                         <section className="mb-12">
@@ -28,6 +28,25 @@ export default function PrivacyPolicyPage() {
                                 Please read this privacy policy carefully. If you do not agree with the terms of this
                                 privacy policy, please do not access the site.
                             </p>
+                            <p className="text-slate-600">
+                                Any changes will be posted on this page with an updated &quot;Last updated&quot; date.
+                            </p>
+                        </section>
+
+                        <section className="mb-12">
+                            <h2 className="text-2xl font-bold text-slate-900 mb-4">Changelog</h2>
+                            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+                                <ul className="space-y-4">
+                                    <li className="flex gap-4">
+                                        <span className="text-sm font-medium text-slate-500 whitespace-nowrap">Mar 4, 2026</span>
+                                        <span className="text-slate-700">Reviewed policy for current practices</span>
+                                    </li>
+                                    <li className="flex gap-4">
+                                        <span className="text-sm font-medium text-slate-500 whitespace-nowrap">Jan 29, 2025</span>
+                                        <span className="text-slate-700">Initial privacy policy published</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </section>
 
                         <section className="mb-12">
