@@ -99,8 +99,7 @@ export default function SecurityPage() {
                     <section className="mb-16">
                         <h2 className="text-2xl font-bold text-slate-900 mb-6">Responsible Disclosure</h2>
                         <p className="text-slate-600 mb-4">
-                            If you discover a security vulnerability, we encourage you to report it responsibly.
-                            Please email us at <a href="mailto:security@emitra.tech" className="text-primary font-medium">security@emitra.tech</a> with:
+                            Please email us at <a href="mailto:security@emitra.dev" className="text-primary font-medium">security@emitra.dev</a> with:
                         </p>
                         <ul className="list-disc list-inside text-slate-600 space-y-2">
                             <li>Description of the vulnerability</li>
@@ -119,7 +118,7 @@ export default function SecurityPage() {
                             <p className="text-slate-600 mb-4">
                                 For security-related inquiries or to request our security documentation:
                             </p>
-                            <p className="text-slate-700 font-medium">Email: <a href="mailto:security@emitra.tech" className="text-primary hover:underline">security@emitra.tech</a></p>
+                            <p className="text-slate-700 font-medium">Email: <a href="mailto:security@emitra.dev" className="text-primary hover:underline">security@emitra.dev</a></p>
                         </div>
                     </section>
                 </div>

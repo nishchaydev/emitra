@@ -105,7 +105,7 @@ export function Footer() {
                             <a href="https://linkedin.com/company/emitra" target="_blank" rel="noopener noreferrer" className="h-12 w-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-100 transition-all duration-300">
                                 <Linkedin className="h-5 w-5" />
                             </a>
-                            <a href="mailto:emitratechnologies@gmail.com" className="h-12 w-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-100 transition-all duration-300">
+                            <a href="mailto:contact@emitra.dev" className="h-12 w-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-100 transition-all duration-300">
                                 <Mail className="h-5 w-5" />
                             </a>
                         </div>

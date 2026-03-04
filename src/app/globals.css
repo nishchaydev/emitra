@@ -108,6 +108,7 @@ body {
     inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
+
 /* 3. Ripple Effect */
 @keyframes ripple {
   to {
@@ -118,4 +119,25 @@ body {
 
 .animate-ripple {
   animation: ripple 0.6s ease-out;
+}
+
+/* 4. Performance & Base64 Noise */
+.bg-noise {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAADsEZWCAAAAGFBMVEUAAAAAAP////////////////////////8Q0Bq0AAAACHRSTlMAEZHz/v/9/W9t1lEAAAAsSURBVDjLY2AAAUYwxgABYxwYQ2AAwhjggHEMDAwQjJEiQWAAIRRjAOGyAACQ3yAC87PZ1gAAAABJRU5ErkJggg==");
+  background-repeat: repeat;
+  background-size: 50px 50px;
+  mix-blend-mode: overlay;
+}
+
+/* Respect user preferences */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

@@ -133,7 +133,7 @@ export default function TermsOfServicePage() {
                             </p>
                             <div className="bg-slate-50 p-6 rounded-lg">
                                 <p className="text-slate-700 font-medium">eMitra Technologies</p>
-                                <p className="text-slate-600">Email: legal@emitra.tech</p>
+                                <p className="text-slate-600">Email: legal@emitra.dev</p>
                                 <p className="text-slate-600">Address: India</p>
                             </div>
                         </section>

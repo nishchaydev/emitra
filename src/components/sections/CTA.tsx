@@ -51,7 +51,7 @@ export function CTA() {
                         </Link>
 
                         <motion.a
-                            href="mailto:emitratechnologies@gmail.com"
+                            href="mailto:contact@emitra.dev"
                             className="w-full sm:w-auto group bg-white border border-slate-200 px-12 py-6 rounded-[24px] font-bold text-xl hover:bg-slate-50 hover:border-blue-200 transition-all shadow-sm flex items-center justify-center gap-3"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}

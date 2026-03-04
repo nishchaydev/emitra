@@ -22,7 +22,7 @@ export function Hero() {
                     xmlns="http://www.w3.org/2000/svg"
                 >
                     <defs>
-                        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%" className="hidden lg:block">
                             <feGaussianBlur stdDeviation="15" result="blur" />
                             <feComposite in="SourceGraphic" in2="blur" operator="over" />
                         </filter>
@@ -41,9 +41,10 @@ export function Hero() {
                             stroke="url(#trailGradient)"
                             strokeWidth={2 + i}
                             strokeLinecap="round"
-                            className={i > 3 ? "hidden lg:block" : "block"}
+                            className={i > 2 ? "hidden lg:block" : "block"}
                             opacity={0.15 + i * 0.05}
                             filter="url(#glow)"
+                            style={{ willChange: "transform, opacity, stroke-dashoffset" }}
                             initial={{ pathLength: 0, opacity: 0 }}
                             animate={{
                                 pathLength: [0, 1, 1, 0],
@@ -67,7 +68,8 @@ export function Hero() {
                             stroke="#E2E8F0"
                             strokeWidth="1.5"
                             strokeLinecap="round"
-                            className={i > 1 ? "hidden lg:block" : "block"}
+                            className={i > 0 ? "hidden lg:block" : "block"}
+                            style={{ willChange: "transform, opacity, stroke-dashoffset" }}
                             initial={{ pathLength: 0, opacity: 0 }}
                             animate={{
                                 pathLength: [0, 1, 1, 0],
@@ -97,7 +99,8 @@ export function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
-                        className="inline-flex items-center gap-2 px-4 py-2 lg:px-5 lg:py-2.5 mb-6 lg:mb-8 rounded-2xl bg-white/40 backdrop-blur-md border border-white/60 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)]"
+                        style={{ willChange: "transform, opacity" }}
+                        className="inline-flex items-center gap-2 px-4 py-2 lg:px-5 lg:py-2.5 mb-6 lg:mb-8 rounded-2xl bg-white/40 backdrop-blur-sm lg:backdrop-blur-md border border-white/60 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)]"
                     >
                         <Sparkles className="h-3 w-3 lg:h-4 lg:w-4 text-blue-600" />
                         <span className="text-[10px] lg:text-sm font-semibold tracking-wide text-slate-600 uppercase">
@@ -105,33 +108,33 @@ export function Hero() {
                         </span>
                     </motion.div>
 
-                    {/* Headline */}
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                        style={{ willChange: "transform, opacity" }}
                         className="text-4xl lg:text-8xl font-display font-bold text-slate-900 tracking-tight leading-[1.1] lg:leading-[1.05] mb-6 lg:mb-8"
                     >
                         Your Digital <br className="hidden md:block" />
                         Friend For Life
                     </motion.h1>
 
-                    {/* Subtext */}
                     <motion.p
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+                        style={{ willChange: "transform, opacity" }}
                         className="text-lg lg:text-2xl text-slate-500 max-w-2xl mx-auto mb-8 lg:mb-12 font-medium leading-relaxed"
                     >
                         Seamless management solutions that grow with your institution.
                         Simplified, secure, and smart.
                     </motion.p>
 
-                    {/* Rounded Solid Electric Blue Button */}
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+                        style={{ willChange: "transform, opacity" }}
                     >
                         <Link href="#products">
                             <RippleButton
@@ -146,8 +149,8 @@ export function Hero() {
                 </div>
             </div>
 
-            {/* Fine-grain noise atmosphere (CSS based) */}
-            <div className="absolute inset-0 z-[1] opacity-[0.03] pointer-events-none" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }} />
+            {/* Performant Base64 Noise Overlay */}
+            <div className="absolute inset-0 z-[1] opacity-40 pointer-events-none bg-noise" />
         </section>
     );
 }

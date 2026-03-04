@@ -45,7 +45,7 @@ export function FloatingContact() {
                                 </div>
                             </a>
                             <a
-                                href="mailto:emitratechnologies@gmail.com"
+                                href="mailto:contact@emitra.dev"
                                 className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors"
                             >
                                 <div className="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
@@ -53,7 +53,7 @@ export function FloatingContact() {
                                 </div>
                                 <div>
                                     <p className="font-medium text-slate-900 text-sm">Email Us</p>
-                                    <p className="text-xs text-slate-500">emitratechnologies@gmail.com</p>
+                                    <p className="text-xs text-slate-500">contact@emitra.dev</p>
                                 </div>
                             </a>
                         </div>
