@@ -46,7 +46,7 @@ export function Footer() {
                                 Stay at the forefront of <span className="text-blue-500">innovation.</span>
                             </h3>
                             <p className="text-slate-400 text-lg font-medium leading-relaxed">
-                                Join 500+ institutions receiving our weekly deep-dive into digital transformation and institutional AI.
+                                Join top-tier institutions receiving our weekly deep-dive into digital transformation and institutional AI.
                             </p>
                         </div>
 
@@ -115,10 +115,8 @@ export function Footer() {
                     <div>
                         <h4 className="text-[10px] font-black text-slate-900 uppercase tracking-[0.2em] mb-8">Infrastructure</h4>
                         <ul className="space-y-4 text-sm font-bold text-slate-500">
-                            <li><a href="https://school.emitra.dev" className="hover:text-blue-600 transition-colors">EduMitra ERP</a></li>
-                            <li><a href="https://gym.emitra.dev" className="hover:text-blue-600 transition-colors">GymMitra Pro</a></li>
-                            <li><a href="https://flat.emitra.dev" className="hover:text-blue-600 transition-colors">FlatMitra OS</a></li>
-                            <li><span className="text-slate-300 cursor-not-allowed">MediMitra (Soon)</span></li>
+                            <li><a href="https://gym.emitra.dev" className="hover:text-blue-600 transition-colors">Gym Mitra Pro</a></li>
+                            <li><a href="https://flat.emitra.dev" className="hover:text-blue-600 transition-colors">Society Mitra OS</a></li>
                         </ul>
                     </div>
 

@@ -68,32 +68,7 @@ export default function SecurityPage() {
                         ))}
                     </div>
 
-                    {/* Compliance Roadmap */}
-                    <section className="mb-16">
-                        <h2 className="text-2xl font-bold text-slate-900 mb-6">Compliance Roadmap</h2>
-                        <div className="bg-blue-50 border border-blue-100 rounded-xl p-6">
-                            <p className="text-slate-700 mb-4">
-                                We are actively working towards industry-standard compliance certifications:
-                            </p>
-                            <ul className="space-y-3">
-                                <li className="flex items-center gap-3 text-slate-600">
-                                    <span className="h-6 w-6 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 text-sm">→</span>
-                                    ISO 27001 certification (In Progress)
-                                </li>
-                                <li className="flex items-center gap-3 text-slate-600">
-                                    <span className="h-6 w-6 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 text-sm">→</span>
-                                    SOC 2 Type II audit (Planned)
-                                </li>
-                                <li className="flex items-center gap-3 text-slate-600">
-                                    <span className="h-6 w-6 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 text-sm">→</span>
-                                    GDPR compliance documentation (In Progress)
-                                </li>
-                            </ul>
-                            <p className="text-sm text-slate-500 mt-4">
-                                Contact us for the latest updates on our compliance status.
-                            </p>
-                        </div>
-                    </section>
+
 
                     {/* Responsible Disclosure */}
                     <section className="mb-16">

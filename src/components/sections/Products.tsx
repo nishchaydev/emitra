@@ -5,24 +5,8 @@ import { GraduationCap, Dumbbell, Building2, ArrowRight, Check, Shield, Sparkles
 
 const products = [
     {
-        id: 'schoolmitra',
-        title: 'SchoolMitra',
-        subtitle: 'Reduce admin workload by 50% in 60 days',
-        icon: GraduationCap,
-        features: [
-            'Attendance, fees, exams, engagement',
-            'Centralized reporting dashboard',
-            'Admissions & student records',
-            'Parent app & AI chatbot'
-        ],
-        target: 'For schools scaling up',
-        color: 'text-blue-600',
-        iconBg: 'bg-blue-50',
-        href: 'https://school.emitra.dev'
-    },
-    {
         id: 'gymmitra',
-        title: 'GymMitra',
+        title: 'Gym Mitra',
         subtitle: 'Increase member retention by 30%',
         icon: Dumbbell,
         features: [
@@ -37,37 +21,20 @@ const products = [
         href: 'https://gym.emitra.dev'
     },
     {
-        id: 'flatmitra',
-        title: 'FlatMitra',
-        subtitle: 'Eliminate rent collection headaches',
+        id: 'societymitra',
+        title: 'Society Mitra',
+        subtitle: 'Management ERP for Indian Flat Managers and Societies!',
         icon: Building2,
         features: [
-            'Automated rent management',
+            'Automated rent & maintenance management',
             'Digital tenant & landlord portal',
             'Maintenance request system',
-            'Room availability tracking'
+            'Society billing & accounting'
         ],
-        target: 'Modern student housing',
+        target: 'For modern housing societies',
         color: 'text-blue-500',
         iconBg: 'bg-blue-50/50',
         href: 'https://flat.emitra.dev'
-    },
-    {
-        id: 'medimitra',
-        title: 'MediMitra',
-        subtitle: 'Coming Soon',
-        icon: Shield,
-        features: [
-            'Hospital management OS',
-            'Patient record digitalization',
-            'Pharmacy & lab integration',
-            'Appointment scheduling'
-        ],
-        target: 'Institutional Healthcare',
-        color: 'text-slate-400',
-        iconBg: 'bg-slate-50',
-        href: '#',
-        disabled: true
     }
 ];
 
@@ -126,7 +93,7 @@ export function Products() {
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true, margin: "-100px" }}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+                    className="grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto gap-8"
                 >
                     {products.map((product) => (
                         <motion.div
@@ -161,18 +128,12 @@ export function Products() {
                                         {product.target}
                                     </p>
 
-                                    {product.disabled ? (
-                                        <div className="w-full py-4 px-6 bg-slate-50 text-slate-400 font-bold rounded-2xl flex items-center justify-center gap-2 cursor-not-allowed">
-                                            Coming Soon
-                                        </div>
-                                    ) : (
                                         <a href={product.href} className="block w-full">
                                             <div className="w-full py-4 px-6 bg-slate-900 text-white font-bold rounded-2xl transition-all duration-300 flex items-center justify-center gap-2 group/btn hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-500/20 active:scale-95">
                                                 Launch System
                                                 <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                                             </div>
                                         </a>
-                                    )}
                                 </div>
                             </div>
                         </motion.div>

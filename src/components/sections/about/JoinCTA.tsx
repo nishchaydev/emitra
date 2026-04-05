@@ -11,7 +11,7 @@ export function JoinCTA() {
                             Join the future of education.
                         </h2>
                         <p className="text-blue-100 text-lg">
-                            Discover why 500+ top-tier institutions trust eMitra for their critical operations.
+                            Discover why top-tier institutions trust eMitra for their critical operations.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                             <button className="w-full sm:w-auto bg-accent text-white px-8 py-4 rounded-xl font-bold hover:bg-teal-600 transition-all">

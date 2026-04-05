@@ -15,10 +15,8 @@ const navLinks = [
 ];
 
 const mobileProducts = [
-    { href: 'https://school.emitra.dev', label: 'EduMitra', icon: GraduationCap },
-    { href: 'https://gym.emitra.dev', label: 'GymMitra', icon: Dumbbell },
-    { href: 'https://flat.emitra.dev', label: 'FlatMitra', icon: Building2 },
-    { href: '#', label: 'MediMitra (Soon)', icon: Shield, disabled: true },
+    { href: 'https://gym.emitra.dev', label: 'Gym Mitra', icon: Dumbbell },
+    { href: 'https://flat.emitra.dev', label: 'Society Mitra', icon: Building2 },
 ];
 
 const services = [
@@ -66,37 +64,28 @@ export function Header() {
                         <div className="absolute top-full left-1/2 -translate-x-1/2 w-[580px] bg-white/95 md:backdrop-blur-2xl rounded-[32px] shadow-[0_40px_100px_-20px_rgba(0,0,0,0.15)] border border-slate-100 p-8 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top translate-y-4 group-hover:translate-y-2">
                             <div className="grid grid-cols-2 gap-8">
                                 <div className="space-y-6">
-                                    <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] pl-2">Institutional ERP</h4>
-                                    <a href="https://school.emitra.dev" className="block group/item p-4 hover:bg-blue-50/50 rounded-2xl transition-all">
-                                        <div className="flex items-center gap-4 mb-2">
-                                            <div className="h-10 w-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover/item:bg-blue-600 group-hover/item:text-white transition-all shadow-sm">
-                                                <GraduationCap className="h-5 w-5" />
-                                            </div>
-                                            <span className="font-bold text-slate-900 tracking-tight">EduMitra</span>
-                                        </div>
-                                        <p className="text-[11px] text-slate-500 pl-14 font-medium leading-relaxed">Enterprise automation for modern educational institutions.</p>
-                                    </a>
-                                </div>
-
-                                <div className="space-y-6">
-                                    <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] pl-2">Lifestyle & Security</h4>
+                                    <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] pl-2">Lifestyle & Fitness</h4>
                                     <a href="https://gym.emitra.dev" className="block group/item p-4 hover:bg-emerald-50/50 rounded-2xl transition-all">
                                         <div className="flex items-center gap-4 mb-2">
                                             <div className="h-10 w-10 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 group-hover/item:bg-emerald-600 group-hover/item:text-white transition-all shadow-sm">
                                                 <Dumbbell className="h-5 w-5" />
                                             </div>
-                                            <span className="font-bold text-slate-900 tracking-tight">GymMitra</span>
+                                            <span className="font-bold text-slate-900 tracking-tight">Gym Mitra</span>
                                         </div>
                                         <p className="text-[11px] text-slate-500 pl-14 font-medium leading-relaxed">Precision management for elite fitness centers.</p>
                                     </a>
+                                </div>
+
+                                <div className="space-y-6">
+                                    <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] pl-2">Real Estate</h4>
                                     <a href="https://flat.emitra.dev" className="block group/item p-4 hover:bg-indigo-50/50 rounded-2xl transition-all">
                                         <div className="flex items-center gap-4 mb-2">
                                             <div className="h-10 w-10 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 group-hover/item:bg-indigo-600 group-hover/item:text-white transition-all shadow-sm">
                                                 <Building2 className="h-5 w-5" />
                                             </div>
-                                            <span className="font-bold text-slate-900 tracking-tight">FlatMitra</span>
+                                            <span className="font-bold text-slate-900 tracking-tight">Society Mitra</span>
                                         </div>
-                                        <p className="text-[11px] text-slate-500 pl-14 font-medium leading-relaxed">Smart society management with native mobile apps.</p>
+                                        <p className="text-[11px] text-slate-500 pl-14 font-medium leading-relaxed">Management ERP for Indian Flat Managers and Societies!</p>
                                     </a>
                                 </div>
                             </div>
@@ -229,21 +218,14 @@ export function Header() {
                                             >
                                                 <div className="p-4 space-y-2">
                                                     {mobileProducts.map((product) => (
-                                                        product.disabled ? (
-                                                            <div key={product.label} className="flex items-center gap-4 py-4 px-4 text-slate-400 border-b border-white/50 last:border-0 opacity-60">
-                                                                <product.icon className="h-5 w-5" />
-                                                                <span className="text-base font-bold tracking-tight">{product.label}</span>
-                                                            </div>
-                                                        ) : (
-                                                            <a
-                                                                key={product.label}
-                                                                href={product.href}
-                                                                className="flex items-center gap-4 py-4 px-4 rounded-2xl text-base font-bold text-slate-700 hover:bg-white hover:text-blue-600 transition-all border-b border-white/50 last:border-0 hover:shadow-sm"
-                                                            >
-                                                                <product.icon className="h-5 w-5" />
-                                                                <span className="tracking-tight">{product.label}</span>
-                                                            </a>
-                                                        )
+                                                        <a
+                                                            key={product.label}
+                                                            href={product.href}
+                                                            className="flex items-center gap-4 py-4 px-4 rounded-2xl text-base font-bold text-slate-700 hover:bg-white hover:text-blue-600 transition-all border-b border-white/50 last:border-0 hover:shadow-sm"
+                                                        >
+                                                            <product.icon className="h-5 w-5" />
+                                                            <span className="tracking-tight">{product.label}</span>
+                                                        </a>
                                                     ))}
                                                 </div>
                                             </motion.div>

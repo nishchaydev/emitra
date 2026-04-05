@@ -1,12 +1,12 @@
 import { Shield, CheckCircle, Clock, Award, Lock, Server } from 'lucide-react';
 
-const certifications = [
-    { icon: Shield, label: 'GDPR Compliant' },
-    { icon: CheckCircle, label: 'SOC 2 Type II' },
-    { icon: Award, label: 'ISO 27001' },
-    { icon: Lock, label: 'End-to-End Encrypted' },
-    { icon: Clock, label: '99.99% Uptime' },
-    { icon: Server, label: 'FERPA Ready' },
+const securityFeatures = [
+    { icon: Shield, label: 'Secure Access' },
+    { icon: CheckCircle, label: 'Regular Audits' },
+    { icon: Award, label: 'Industry Standards' },
+    { icon: Lock, label: 'Data Encryption' },
+    { icon: Clock, label: '24/7 Monitoring' },
+    { icon: Server, label: 'Secure Infrastructure' },
 ];
 
 export function SecurityCore() {
@@ -30,15 +30,15 @@ export function SecurityCore() {
                         </button>
                     </div>
 
-                    {/* Certifications Grid */}
+                    {/* Security Features Grid */}
                     <div className="grid grid-cols-3 gap-4">
-                        {certifications.map((cert, index) => (
+                        {securityFeatures.map((feature, index) => (
                             <div
                                 key={index}
                                 className="p-6 bg-white rounded-2xl border border-slate-100 text-center hover:shadow-md transition-shadow"
                             >
-                                <cert.icon className="h-8 w-8 mx-auto mb-3 text-primary" />
-                                <p className="text-xs font-medium text-slate-600">{cert.label}</p>
+                                <feature.icon className="h-8 w-8 mx-auto mb-3 text-primary" />
+                                <p className="text-xs font-medium text-slate-600">{feature.label}</p>
                             </div>
                         ))}
                     </div>
