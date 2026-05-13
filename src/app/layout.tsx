@@ -51,6 +51,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // suppressHydrationWarning is added to prevent hydration mismatch errors from browser extensions injecting attributes
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body className={`${inter.variable} ${outfit.variable} bg-white text-slate-900 font-sans antialiased`}>

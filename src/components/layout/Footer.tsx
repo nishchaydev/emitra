@@ -43,7 +43,7 @@ export function Footer() {
                 {/* Massive Brand Wordmark (Junction style) */}
                 <div className="pt-28 pb-16 md:py-32 border-y border-white/10 overflow-hidden relative flex items-center justify-center">
                     <motion.h2 
-                        className="text-[16vw] md:text-[14vw] font-display font-black tracking-tighter text-white/10 md:text-white/5 leading-none text-center select-none"
+                        className="text-[clamp(4rem,16vw,16rem)] md:text-[clamp(6rem,14vw,24rem)] font-display font-black tracking-tighter text-white/10 md:text-white/5 leading-none text-center select-none"
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
