@@ -60,30 +60,35 @@ export default function TeamPage() {
         <>
             <PageBreadcrumbJsonLd items={[{ name: 'Team', url: 'https://emitra.dev/team' }]} />
             {/* Person schema for E-E-A-T */}
-            {team.map((member) => (
-                <script
-                    key={member.name}
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify({
-                            '@context': 'https://schema.org',
-                            '@type': 'Person',
-                            name: member.name,
-                            jobTitle: member.role,
-                            description: member.bio,
-                            worksFor: {
-                                '@type': 'Organization',
-                                '@id': 'https://emitra.dev/#organization',
-                                name: 'eMitra Technologies',
-                            },
-                            workLocation: {
-                                '@type': 'Place',
-                                name: 'Indore, Madhya Pradesh, India',
-                            },
-                        }),
-                    }}
-                />
-            ))}
+            {team.map((member) => {
+                const slug = member.name.toLowerCase().replace(/\s+/g, '-');
+                return (
+                    <script
+                        key={member.name}
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{
+                            __html: JSON.stringify({
+                                '@context': 'https://schema.org',
+                                '@type': 'Person',
+                                '@id': `https://emitra.dev/team/#${slug}`,
+                                url: `https://emitra.dev/team/#${slug}`,
+                                name: member.name,
+                                jobTitle: member.role,
+                                description: member.bio,
+                                worksFor: {
+                                    '@type': 'Organization',
+                                    '@id': 'https://emitra.dev/#organization',
+                                    name: 'eMitra Technologies',
+                                },
+                                workLocation: {
+                                    '@type': 'Place',
+                                    name: 'Indore, Madhya Pradesh, India',
+                                },
+                            }),
+                        }}
+                    />
+                );
+            })}
             <Header />
             <main className="relative pt-32 pb-20 bg-white min-h-screen">
                 <div className="max-w-7xl mx-auto px-6">

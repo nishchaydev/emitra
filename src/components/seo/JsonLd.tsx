@@ -234,14 +234,18 @@ export function SoftwareAppJsonLd({
     url,
     applicationCategory = 'BusinessApplication',
     operatingSystem = 'Web',
+    price,
+    priceCurrency = 'INR',
 }: {
     name: string;
     description: string;
     url: string;
     applicationCategory?: string;
     operatingSystem?: string;
+    price?: string;
+    priceCurrency?: string;
 }) {
-    const schema = {
+    const schema: Record<string, unknown> = {
         '@context': 'https://schema.org',
         '@type': 'SoftwareApplication',
         name,
@@ -249,14 +253,17 @@ export function SoftwareAppJsonLd({
         url,
         applicationCategory,
         operatingSystem,
-        offers: {
-            '@type': 'Offer',
-            price: '0',
-            priceCurrency: 'INR',
-            availability: 'https://schema.org/InStock',
-        },
         publisher: { '@id': `${SITE_URL}/#organization` },
     };
+
+    if (price !== undefined) {
+        schema.offers = {
+            '@type': 'Offer',
+            price,
+            priceCurrency,
+            availability: 'https://schema.org/InStock',
+        };
+    }
 
     return (
         <script

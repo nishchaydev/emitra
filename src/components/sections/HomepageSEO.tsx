@@ -32,7 +32,7 @@ export function HomepageSEO() {
                             like Aadhaar enrollment and bill payments, <strong>eMitra Technologies is a private software company</strong> that 
                             creates products like <Link href="/gymmitra" className="text-indigo-600 font-semibold hover:text-indigo-700">GymMitra</Link> for 
                             fitness centers, <Link href="/flatmitra" className="text-indigo-600 font-semibold hover:text-indigo-700">FlatMitra</Link> for 
-                            housing societies, and SchoolMitra for educational institutions.
+                            housing societies, and <Link href="/schoolmitra" className="text-indigo-600 font-semibold hover:text-indigo-700">SchoolMitra</Link> for educational institutions.
                         </p>
                         <p className="text-slate-600 leading-relaxed mb-8">
                             Based in <strong>Indore</strong> — one of India&apos;s fastest-growing tech cities — eMitra Tech operates at the intersection 
@@ -125,8 +125,8 @@ export function HomepageSEO() {
                             <p className="mt-4 text-sm text-slate-600 leading-relaxed">
                                 eMitra Technologies builds SaaS products under the &quot;Mitra&quot; ecosystem: <strong>GymMitra</strong> is a 
                                 gym and fitness center management platform with member tracking, billing, and attendance features. 
-                                <strong> FlatMitra</strong> is a housing society management tool for billing, complaints, and visitor management. 
-                                <strong> SchoolMitra</strong> is an education ERP for school administration, fee management, and parent communication. 
+                                <strong>FlatMitra</strong> is a housing society management tool for billing, complaints, and visitor management. 
+                                <strong>SchoolMitra</strong> is an education ERP for school administration, fee management, and parent communication. 
                                 All products are available at <Link href="/products" className="text-indigo-600 font-semibold hover:text-indigo-700">emitra.dev/products</Link>.
                             </p>
                         </details>

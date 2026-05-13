@@ -255,7 +255,7 @@ export function HeroPremium() {
                             transition={{ duration: 0.8, delay: 0.2 }}
                             className="text-base md:text-lg lg:text-xl text-slate-500 font-medium leading-relaxed mb-10 max-w-lg"
                         >
-                            eMitra Technologies (eMitra Tech) is a product studio, custom dev firm, and student innovation community based in Indore, India.
+                            eMitra Technologies (eMitra Tech) is a product studio, custom development firm, and student innovation community based in Indore, India.
                         </motion.p>
 
                         <motion.div

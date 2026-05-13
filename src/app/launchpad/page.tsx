@@ -3,7 +3,6 @@ import { Footer } from '@/components/layout/Footer';
 import { Rocket, Lightbulb, Users, Trophy, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { PageBreadcrumbJsonLd } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
     title: 'eMitra Launchpad — Startup Studio for Student Founders, Indore',

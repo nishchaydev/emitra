@@ -62,6 +62,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://emitra.dev',
+    languages: {
+      'en-IN': 'https://emitra.dev',
+      'x-default': 'https://emitra.dev',
+    },
   },
   openGraph: {
     type: 'website',

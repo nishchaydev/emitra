@@ -57,14 +57,16 @@ export default function WhatIsEmitraPage() {
             name: 'eMitra Technologies',
             logo: {
                 '@type': 'ImageObject',
-                url: 'https://res.cloudinary.com/dkits80xk/image/upload/v1771839836/ChatGPT_Image_Feb_23_2026_03_13_03_PM_foi1so.png',
+                url: 'https://res.cloudinary.com/dkits80xk/image/upload/c_fill,w_400,h_400/v1771839836/ChatGPT_Image_Feb_23_2026_03_13_03_PM_foi1so.png',
+                width: 400,
+                height: 400,
             },
         },
         datePublished: '2026-05-13T00:00:00.000Z',
         dateModified: '2026-05-13T00:00:00.000Z',
         mainEntityOfPage: 'https://emitra.dev/blog/what-is-emitra',
         url: 'https://emitra.dev/blog/what-is-emitra',
-        image: 'https://res.cloudinary.com/dkits80xk/image/upload/v1771839836/ChatGPT_Image_Feb_23_2026_03_13_03_PM_foi1so.png',
+        image: 'https://res.cloudinary.com/dkits80xk/image/upload/c_fill,w_1200,h_630/v1771839836/ChatGPT_Image_Feb_23_2026_03_13_03_PM_foi1so.png',
         wordCount: 1800,
         keywords: 'emitra, emitra technologies, emitra tech, emitra indore, emitra rajasthan',
     };

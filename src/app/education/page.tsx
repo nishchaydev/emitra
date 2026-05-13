@@ -13,7 +13,7 @@ export const metadata: Metadata = {
         canonical: 'https://emitra.dev/education',
     },
     openGraph: {
-        title: 'Education Technology Solutions — eMitra Tech',
+        title: 'Education Technology Solutions — SchoolMitra by eMitra Tech',
         description: 'Smart school ERP systems built for Indian educational institutions.',
         url: 'https://emitra.dev/education',
     },
