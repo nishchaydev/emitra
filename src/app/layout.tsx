@@ -20,6 +20,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://emitra.dev'),
   title: 'eMitra Technologies | Smart Systems for Complex Institutions',
   description:
     'Unifying disconnected workflows with enterprise-grade automation and real-time analytics designed for the modern era.',
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://emitra.tech',
+    url: 'https://emitra.dev',
     siteName: 'eMitra Technologies',
     title: 'eMitra Technologies | Smart Systems for Complex Institutions',
     description: 'Unifying disconnected workflows with enterprise-grade automation.',
