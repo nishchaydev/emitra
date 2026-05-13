@@ -1,17 +1,19 @@
 // Site Metadata
 export const SITE_CONFIG = {
     name: 'eMitra Technologies',
-    description: 'Empowering businesses with innovative technology solutions',
-    url: 'https://emitra.tech',
+    description: 'Indian Product Studio & Student Innovation Hub based in Indore.',
+    url: 'https://emitra.dev',
     ogImage: '/images/og-image.png',
 } as const;
 
 // Navigation Links
 export const NAV_LINKS = [
-    { label: 'Home', href: '/' },
-    { label: 'Services', href: '#services' },
-    { label: 'About', href: '#about' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Products', href: '/products' },
+    { label: 'Services', href: '/services' },
+    { label: 'Launchpad', href: '/launchpad' },
+    { label: 'Pathways', href: '/pathways' },
+    { label: 'Team', href: '/team' },
+    { label: 'Contact', href: '/contact' },
 ] as const;
 
 // Social Links
@@ -23,15 +25,18 @@ export const SOCIAL_LINKS = [
 
 // Footer Links
 export const FOOTER_LINKS = {
-    company: [
-        { label: 'About Us', href: '/about' },
-        { label: 'Careers', href: '/careers' },
-        { label: 'Blog', href: '/blog' },
+    products: [
+        { label: 'GymMitra', href: 'https://gym.emitra.dev' },
+        { label: 'FlatMitra', href: 'https://flat.emitra.dev' },
     ],
-    services: [
-        { label: 'Consulting', href: '/services/consulting' },
-        { label: 'Development', href: '/services/development' },
-        { label: 'Support', href: '/services/support' },
+    company: [
+        { label: 'About Us', href: '/team' },
+        { label: 'Team', href: '/team' },
+        { label: 'Contact', href: '/contact' },
+    ],
+    community: [
+        { label: 'eMitra Launchpad', href: '/launchpad' },
+        { label: 'eMitra Pathways', href: '/pathways' },
     ],
     legal: [
         { label: 'Privacy Policy', href: '/privacy-policy' },
@@ -39,8 +44,15 @@ export const FOOTER_LINKS = {
     ],
 } as const;
 
-// Design Tokens (referenced in Tailwind config)
+// Design Tokens
 export const COLORS = {
+    brand: {
+        navy: '#1e1b4b',
+        ion: '#4f46e5',
+        amber: '#f59e0b',
+        teal: '#0d9488',
+        offWhite: '#f8fafc',
+    },
     navy: {
         50: '#f0f4f8',
         100: '#d9e2ec',
@@ -53,18 +65,5 @@ export const COLORS = {
         800: '#243b53',
         900: '#102a43',
         950: '#0a1929',
-    },
-    teal: {
-        50: '#f0fdfa',
-        100: '#ccfbf1',
-        200: '#99f6e4',
-        300: '#5eead4',
-        400: '#2dd4bf',
-        500: '#14b8a6',
-        600: '#0d9488',
-        700: '#0f766e',
-        800: '#115e59',
-        900: '#134e4a',
-        950: '#042f2e',
     },
 } as const;
