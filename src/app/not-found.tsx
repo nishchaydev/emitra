@@ -3,24 +3,15 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Home, ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Home } from 'lucide-react';
 
 export default function NotFound() {
     const [mounted, setMounted] = useState(false);
-    const [particles, setParticles] = useState<any[]>([]);
 
     useEffect(() => {
         setMounted(true);
-        setParticles([...Array(20)].map((_, i) => ({
-            id: i,
-            width: Math.random() * 4 + 1 + 'px',
-            height: Math.random() * 4 + 1 + 'px',
-            left: Math.random() * 100 + '%',
-            top: Math.random() * 100 + '%',
-            duration: Math.random() * 10 + 10,
-        })));
 
-        // Disable preloader effect
+        // Disable preloader effect immediately
         if (typeof window !== 'undefined') {
             sessionStorage.setItem('disablePreloader', 'true');
             const preloader = document.getElementById('preloader-root');
@@ -36,103 +27,80 @@ export default function NotFound() {
         }
     };
 
-    return (
-        <div className="min-h-screen bg-[#020617] flex items-center justify-center px-6 relative overflow-hidden font-sans">
+    if (!mounted) return null;
 
-            {/* Animated Background Mesh */}
-            <div className="absolute inset-0 pointer-events-none opacity-20">
-                <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/40 via-[#020617] to-[#020617]"></div>
+    return (
+        <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center px-6 relative overflow-hidden font-sans">
+            
+            {/* Cinematic Video Background */}
+            <div className="absolute inset-0 z-0">
+                <video 
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline 
+                    className="w-full h-full object-cover opacity-20 mix-blend-screen rotate-90 scale-[1.8]"
+                >
+                    <source src="https://res.cloudinary.com/dkits80xk/video/upload/v1778683152/hero-animation_gep3ir.mp4" type="video/mp4" />
+                </video>
+                {/* Gradient Masks */}
+                <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-transparent to-slate-950" />
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-transparent to-slate-950" />
             </div>
 
-            {/* Floating Particles/Stars */}
-            {mounted && particles.map((p) => (
-                <motion.div
-                    key={p.id}
-                    className="absolute bg-white rounded-full opacity-20"
-                    style={{
-                        width: p.width,
-                        height: p.height,
-                        left: p.left,
-                        top: p.top,
-                    }}
-                    animate={{
-                        y: [0, -100, 0],
-                        opacity: [0.2, 0.5, 0.2],
-                    }}
-                    transition={{
-                        duration: p.duration,
-                        repeat: Infinity,
-                        ease: "linear"
-                    }}
-                />
-            ))}
+            {/* Junction-style Grid Overlay */}
+            <div className="absolute inset-0 bg-dot-grid opacity-[0.2] pointer-events-none z-[1]" />
 
-            <div className="relative z-10 text-center max-w-2xl w-full">
-                {/* Glitch Effect 404 */}
-                <div className="relative mb-8">
-                    <motion.div
-                        className="text-[150px] md:text-[220px] font-bold leading-none text-white opacity-10 absolute inset-0 select-none blur-sm"
-                        animate={{ x: [-2, 2, -2] }}
-                        transition={{ repeat: Infinity, duration: 0.2 }}
-                    >
-                        404
-                    </motion.div>
-                    <motion.h1
-                        className="text-[150px] md:text-[220px] font-bold leading-none bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent relative z-10"
-                        initial={{ scale: 0.8, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        transition={{ type: "spring", stiffness: 100 }}
-                    >
-                        404
-                    </motion.h1>
-                </div>
+            {/* Massive Background 404 Text */}
+            <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none z-[2]">
+                <motion.h1 
+                    className="text-[clamp(12rem,30vw,40rem)] font-display font-black tracking-tighter text-white/[0.03] leading-none select-none"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+                >
+                    404<span className="text-indigo-400/[0.03]">.</span>
+                </motion.h1>
+            </div>
 
-                {/* Message */}
+            <div className="relative z-10 text-center max-w-2xl w-full flex flex-col items-center pt-20">
+                
+                {/* Custom Message */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2 }}
+                    transition={{ delay: 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                     className="space-y-6 mb-12"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold text-white">
-                        Lost in the Digital Void?
+                    <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 rounded-full mb-4">
+                        <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+                        <span className="text-xs font-bold text-slate-300 uppercase tracking-widest">Error 404</span>
+                    </div>
+
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black tracking-tight text-white leading-tight">
+                        System Anomaly.
                     </h2>
                     <p className="text-lg text-slate-400 max-w-md mx-auto leading-relaxed">
-                        The page you are looking for seems to have drifted away from our network.
+                        The requested sector cannot be located in our current architecture. It may have been deprecated, moved, or never existed.
                     </p>
                 </motion.div>
-
-                {/* Animated Astronaut/Graphic (represented by a floating icon for now) */}
-                <motion.div
-                    className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] opacity-10"
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 100, repeat: Infinity, ease: "linear" }}
-                >
-                    <div className="absolute inset-0 border border-blue-500/30 rounded-full border-dashed" />
-                    <div className="absolute inset-[10%] border border-cyan-500/20 rounded-full" />
-                </motion.div>
-
 
                 {/* Buttons */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4 }}
-                    className="flex flex-col sm:flex-row items-center justify-center gap-4"
+                    transition={{ delay: 0.4, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                    className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto"
                 >
-                    <Link href="/">
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all border border-blue-400/20"
-                        >
+                    <Link href="/" className="w-full sm:w-auto">
+                        <button className="w-full flex items-center justify-center gap-2 bg-white text-slate-950 px-8 py-4 rounded-xl font-bold hover:bg-slate-200 transition-colors">
                             <Home className="h-5 w-5" />
                             Return to Base
-                        </motion.button>
+                        </button>
                     </Link>
                     <button
                         onClick={handleGoBack}
-                        className="flex items-center gap-2 bg-white/5 backdrop-blur-md border border-white/10 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-all"
+                        className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/5 backdrop-blur-md border border-white/10 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-all"
                     >
                         <ArrowLeft className="h-5 w-5" />
                         Go Back
@@ -141,18 +109,18 @@ export default function NotFound() {
 
                 {/* Footer Links */}
                 <motion.div
-                    className="mt-16 flex justify-center gap-8 text-sm text-slate-500"
+                    className="mt-20 flex justify-center gap-8 text-sm text-slate-500 font-medium"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 0.8 }}
+                    transition={{ delay: 0.6 }}
                 >
-                    <Link href="/contact" className="hover:text-cyan-400 transition-colors">Contact Support</Link>
-                    <Link href="/sitemap.xml" className="hover:text-cyan-400 transition-colors">Sitemap</Link>
+                    <Link href="/contact" className="hover:text-white transition-colors">Contact Support</Link>
+                    <Link href="/sitemap.xml" className="hover:text-white transition-colors">Sitemap</Link>
                 </motion.div>
-
             </div>
+
+            {/* Subtle glow */}
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] h-96 bg-gradient-to-t from-indigo-500/10 via-transparent to-transparent blur-[100px] pointer-events-none opacity-50 z-0" />
         </div>
     );
 }
-
-
