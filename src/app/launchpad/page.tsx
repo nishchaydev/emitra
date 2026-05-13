@@ -2,10 +2,22 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Rocket, Lightbulb, Users, Trophy, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+import { PageBreadcrumbJsonLd } from '@/components/seo/JsonLd';
 
-export const metadata = {
-    title: 'Launchpad | eMitra Technologies',
-    description: 'Our startup studio — we help students validate, build, and launch real companies.',
+export const metadata: Metadata = {
+    title: 'eMitra Launchpad — Startup Studio for Student Founders, Indore',
+    description:
+        'eMitra Launchpad helps student founders validate, build, and launch real startups. Mentorship, tech infrastructure, and community — all from eMitra Tech, Indore.',
+    keywords: ['emitra launchpad', 'startup studio indore', 'student startup india', 'emitra tech launchpad', 'student founders indore'],
+    alternates: {
+        canonical: 'https://emitra.dev/launchpad',
+    },
+    openGraph: {
+        title: 'eMitra Launchpad — Startup Studio for Student Founders',
+        description: 'Pitch your idea and we\'ll help you build, launch, and scale it. eMitra Technologies, Indore.',
+        url: 'https://emitra.dev/launchpad',
+    },
 };
 
 export default function LaunchpadPage() {

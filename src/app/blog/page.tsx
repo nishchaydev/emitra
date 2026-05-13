@@ -9,13 +9,23 @@ import Image from 'next/image';
 
 const blogPosts = [
     {
+        slug: 'what-is-emitra',
+        title: 'What is eMitra? Technology Studio vs Government Portal — Complete Guide',
+        excerpt: 'Confused between eMitra Technologies and the Rajasthan eMitra portal? This definitive guide explains the difference between eMitra Tech (private software studio in Indore) and eMitra Rajasthan (government citizen services).',
+        category: 'Guide',
+        readTime: '8 min read',
+        date: 'May 13, 2026',
+        featured: true,
+        icon: Globe,
+    },
+    {
         slug: 'why-online-brand-presence-matters',
         title: 'Why Having an Online Brand Presence is Non-Negotiable in 2025',
         excerpt: 'In a world where 81% of consumers research online before making a decision, your brand\'s digital footprint isn\'t optional — it\'s your first impression, your credibility, and your growth engine.',
         category: 'Digital Strategy',
         readTime: '7 min read',
         date: 'Feb 23, 2026',
-        featured: true,
+        featured: false,
         icon: Globe,
     },
     {

@@ -5,6 +5,7 @@ import { StudioPillars } from '@/components/sections/StudioPillars';
 import { Products } from '@/components/sections/Products';
 import { TrustedBy } from '@/components/sections/TrustedBy';
 import { CustomSolutions } from '@/components/sections/CustomSolutions';
+import { HomepageSEO, HomepageFAQJsonLd } from '@/components/sections/HomepageSEO';
 
 export default function Home() {
   return (
@@ -67,6 +68,8 @@ export default function Home() {
         </div>
         
         <CustomSolutions />
+        <HomepageSEO />
+        <HomepageFAQJsonLd />
       </main>
       <Footer />
     </div>

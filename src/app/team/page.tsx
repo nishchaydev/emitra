@@ -2,10 +2,22 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Mail, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+import { PageBreadcrumbJsonLd } from '@/components/seo/JsonLd';
 
-export const metadata = {
-    title: 'Team | eMitra Technologies',
-    description: 'Meet the team behind eMitra Technologies — builders, designers, and mentors from Indore.',
+export const metadata: Metadata = {
+    title: 'Our Team — eMitra Technologies, Indore',
+    description:
+        'Meet the builders behind eMitra Tech — a focused team of engineers, designers, and mentors building enterprise-grade SaaS from Indore, India.',
+    keywords: ['emitra team', 'emitra technologies team', 'emitra indore team', 'tech startup indore team'],
+    alternates: {
+        canonical: 'https://emitra.dev/team',
+    },
+    openGraph: {
+        title: 'Our Team — eMitra Technologies',
+        description: 'A small, focused team of builders from Indore. We build everything in-house with obsessive attention to quality.',
+        url: 'https://emitra.dev/team',
+    },
 };
 
 export default function TeamPage() {
@@ -46,6 +58,32 @@ export default function TeamPage() {
 
     return (
         <>
+            <PageBreadcrumbJsonLd items={[{ name: 'Team', url: 'https://emitra.dev/team' }]} />
+            {/* Person schema for E-E-A-T */}
+            {team.map((member) => (
+                <script
+                    key={member.name}
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            '@context': 'https://schema.org',
+                            '@type': 'Person',
+                            name: member.name,
+                            jobTitle: member.role,
+                            description: member.bio,
+                            worksFor: {
+                                '@type': 'Organization',
+                                '@id': 'https://emitra.dev/#organization',
+                                name: 'eMitra Technologies',
+                            },
+                            workLocation: {
+                                '@type': 'Place',
+                                name: 'Indore, Madhya Pradesh, India',
+                            },
+                        }),
+                    }}
+                />
+            ))}
             <Header />
             <main className="relative pt-32 pb-20 bg-white min-h-screen">
                 <div className="max-w-7xl mx-auto px-6">

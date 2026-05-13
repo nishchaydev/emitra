@@ -2,10 +2,21 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { GraduationCap, Code2, Briefcase, Users, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 
-export const metadata = {
-    title: 'Pathways | eMitra Technologies',
-    description: 'Your career journey starts here — internships, mentorship, and real-world experience at eMitra.',
+export const metadata: Metadata = {
+    title: 'eMitra Pathways — Internships & Careers in Indore',
+    description:
+        'Start your tech career at eMitra Technologies, Indore. Engineering internships, campus ambassador roles, open-source contributions, and mentorship programs.',
+    keywords: ['emitra internships', 'emitra careers', 'tech internship indore', 'emitra technologies careers', 'student jobs indore'],
+    alternates: {
+        canonical: 'https://emitra.dev/pathways',
+    },
+    openGraph: {
+        title: 'eMitra Pathways — Internships & Careers',
+        description: 'Start your tech career at eMitra Technologies, Indore. Real projects, real mentorship.',
+        url: 'https://emitra.dev/pathways',
+    },
 };
 
 export default function PathwaysPage() {

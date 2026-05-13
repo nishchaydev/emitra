@@ -1,0 +1,256 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]: Your browser does not support the video tag.
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - link "eMitra. Technologies" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e8]: eMitra.
+          - generic [ref=e9]: Technologies
+        - navigation [ref=e10]:
+          - link "Products" [ref=e11] [cursor=pointer]:
+            - /url: /products
+          - link "Services" [ref=e12] [cursor=pointer]:
+            - /url: /services
+          - link "Launchpad" [ref=e13] [cursor=pointer]:
+            - /url: /launchpad
+          - link "Pathways" [ref=e14] [cursor=pointer]:
+            - /url: /pathways
+          - link "Team" [ref=e15] [cursor=pointer]:
+            - /url: /team
+          - link "Contact" [ref=e16] [cursor=pointer]:
+            - /url: /contact
+        - link "Work With Us" [ref=e18] [cursor=pointer]:
+          - /url: /contact
+          - button "Work With Us" [ref=e19]
+    - main [ref=e20]:
+      - generic [ref=e24]:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic: e
+                - paragraph: Building the future
+            - generic:
+              - paragraph: Studio
+              - paragraph: In-House Ventures
+            - generic:
+              - paragraph: Agency
+              - paragraph: Custom Engineering
+            - generic:
+              - paragraph: Community
+              - paragraph: Student Labs
+        - generic [ref=e25]:
+          - generic [ref=e26]:
+            - img [ref=e27]
+            - text: Product Studio • Indore, India
+          - heading "We build software. We back founders. We shape careers." [level=1] [ref=e30]:
+            - text: We build software.
+            - text: We back founders.
+            - text: We shape careers.
+          - paragraph [ref=e31]: eMitra Technologies is a product studio, custom dev firm, and student innovation community — all in one.
+          - generic [ref=e32]:
+            - link "Explore Products" [ref=e33] [cursor=pointer]:
+              - /url: /products
+              - text: Explore Products
+              - img [ref=e34]
+            - link "Work With Us" [ref=e36] [cursor=pointer]:
+              - /url: /contact
+              - text: Work With Us
+              - img [ref=e37]
+      - generic [ref=e40]:
+        - generic [ref=e42]:
+          - heading "Four Pillars of Digital Mastery." [level=2] [ref=e43]
+          - paragraph [ref=e44]: We don't just build apps; we engineer the essential frameworks that power institutions and drive technical advancement.
+        - generic [ref=e45]:
+          - generic [ref=e46]:
+            - img [ref=e48]
+            - heading "Institutional SaaS" [level=3] [ref=e52]
+            - paragraph [ref=e53]: Building the operating systems for modern educational and residential institutions.
+            - link "Explore Pillar" [ref=e54] [cursor=pointer]:
+              - /url: /products
+              - text: Explore Pillar
+              - img [ref=e55]
+          - generic [ref=e58]:
+            - img [ref=e60]
+            - heading "Enterprise Logic" [level=3] [ref=e63]
+            - paragraph [ref=e64]: Bespoke software architecture designed to handle massive complexity with elegant simplicity.
+            - link "Explore Pillar" [ref=e65] [cursor=pointer]:
+              - /url: /services
+              - text: Explore Pillar
+              - img [ref=e66]
+          - generic [ref=e69]:
+            - img [ref=e71]
+            - heading "Rapid Innovation" [level=3] [ref=e73]
+            - paragraph [ref=e74]: From concept to production-ready ecosystem in record time without compromising quality.
+            - link "Explore Pillar" [ref=e75] [cursor=pointer]:
+              - /url: /launchpad
+              - text: Explore Pillar
+              - img [ref=e76]
+          - generic [ref=e79]:
+            - img [ref=e81]
+            - heading "Data Sovereignty" [level=3] [ref=e83]
+            - paragraph [ref=e84]: Ensuring absolute privacy and control over institutional data through local-first engineering.
+            - link "Explore Pillar" [ref=e85] [cursor=pointer]:
+              - /url: /services
+              - text: Explore Pillar
+              - img [ref=e86]
+      - generic [ref=e95]:
+        - paragraph [ref=e99]: Trusted by forward-thinking institutions
+        - generic [ref=e101]:
+          - img "SIA School" [ref=e103] [cursor=pointer]
+          - img "MP Punjab Harvesters" [ref=e105] [cursor=pointer]
+          - generic [ref=e107] [cursor=pointer]: Global Institute
+          - img "SIA School" [ref=e109] [cursor=pointer]
+          - img "MP Punjab Harvesters" [ref=e111] [cursor=pointer]
+          - generic [ref=e113] [cursor=pointer]: Global Institute
+          - img "SIA School" [ref=e115] [cursor=pointer]
+          - img "MP Punjab Harvesters" [ref=e117] [cursor=pointer]
+          - generic [ref=e119] [cursor=pointer]: Global Institute
+          - img "SIA School" [ref=e121] [cursor=pointer]
+          - img "MP Punjab Harvesters" [ref=e123] [cursor=pointer]
+          - generic [ref=e125] [cursor=pointer]: Global Institute
+      - generic [ref=e132]:
+        - generic [ref=e133]:
+          - generic [ref=e134]:
+            - img [ref=e135]
+            - text: Ecosystem Solutions
+          - heading "Explore Our Products." [level=2] [ref=e138]
+          - paragraph [ref=e139]: SaaS built for Indian SMBs and institutions — solving real operational pain points with premium software.
+        - generic [ref=e140]:
+          - generic [ref=e143]:
+            - img [ref=e145]
+            - heading "Gym Mitra" [level=3] [ref=e151]
+            - paragraph [ref=e152]: Increase member retention by 30%
+            - list [ref=e153]:
+              - listitem [ref=e154]:
+                - img [ref=e156]
+                - generic [ref=e158]: Billing & automated renewals
+              - listitem [ref=e159]:
+                - img [ref=e161]
+                - generic [ref=e163]: PT scheduling & workout plans
+              - listitem [ref=e164]:
+                - img [ref=e166]
+                - generic [ref=e168]: Real-time attendance tracking
+              - listitem [ref=e169]:
+                - img [ref=e171]
+                - generic [ref=e173]: Member engagement suite
+            - generic [ref=e174]:
+              - paragraph [ref=e175]: For growth-focused gyms
+              - link "Launch System" [ref=e176] [cursor=pointer]:
+                - /url: https://gym.emitra.dev
+                - generic [ref=e177]:
+                  - text: Launch System
+                  - img [ref=e178]
+          - generic [ref=e182]:
+            - img [ref=e184]
+            - heading "Flat Mitra" [level=3] [ref=e188]
+            - paragraph [ref=e189]: Smart ERP for Indian Flat Managers & Housing Societies
+            - list [ref=e190]:
+              - listitem [ref=e191]:
+                - img [ref=e193]
+                - generic [ref=e195]: Automated rent & maintenance billing
+              - listitem [ref=e196]:
+                - img [ref=e198]
+                - generic [ref=e200]: Digital tenant & landlord portal
+              - listitem [ref=e201]:
+                - img [ref=e203]
+                - generic [ref=e205]: Maintenance request tracking
+              - listitem [ref=e206]:
+                - img [ref=e208]
+                - generic [ref=e210]: Society accounting & reports
+            - generic [ref=e211]:
+              - paragraph [ref=e212]: For modern housing societies
+              - link "Launch System" [ref=e213] [cursor=pointer]:
+                - /url: https://flat.emitra.dev
+                - generic [ref=e214]:
+                  - text: Launch System
+                  - img [ref=e215]
+        - link "View All Products & Services" [ref=e218] [cursor=pointer]:
+          - /url: /products
+          - text: View All Products & Services
+          - img [ref=e219]
+      - generic [ref=e222]:
+        - generic [ref=e223]:
+          - paragraph [ref=e224]: What People Say
+          - heading "Voices from the Ground." [level=2] [ref=e225]
+          - paragraph [ref=e226]: From government officers to student founders — hear from the people who work with us.
+        - generic [ref=e227]:
+          - generic [ref=e228]:
+            - img [ref=e229]
+            - paragraph [ref=e232]: “eMitra didn't just build software for us — they understood our operations and delivered a system that actually works on the ground.”
+            - generic [ref=e233]:
+              - paragraph [ref=e234]: Municipal Officer
+              - paragraph [ref=e235]: City Administration, Madhya Pradesh
+          - generic [ref=e236]:
+            - img [ref=e237]
+            - paragraph [ref=e240]: “As a student founder, having the eMitra team behind me gave me the confidence to ship my first product. The mentorship is real.”
+            - generic [ref=e241]:
+              - paragraph [ref=e242]: Student Founder
+              - paragraph [ref=e243]: eMitra Launchpad Cohort
+          - generic [ref=e244]:
+            - img [ref=e245]
+            - paragraph [ref=e248]: “GymMitra transformed how we manage our members. Billing, attendance, everything is seamless now.”
+            - generic [ref=e249]:
+              - paragraph [ref=e250]: Gym Owner
+              - paragraph [ref=e251]: Indore, MP
+    - contentinfo [ref=e252]:
+      - generic [ref=e257]:
+        - heading "eMitra." [level=2] [ref=e259]
+        - generic [ref=e260]:
+          - generic [ref=e261]:
+            - generic [ref=e263]: eMitra.
+            - paragraph [ref=e264]:
+              - text: Indore, Madhya Pradesh
+              - text: India • Product Studio
+            - generic [ref=e265]:
+              - link [ref=e266] [cursor=pointer]:
+                - /url: https://linkedin.com/company/emitra
+                - img [ref=e267]
+              - link [ref=e271] [cursor=pointer]:
+                - /url: mailto:hello@emitra.dev
+                - img [ref=e272]
+          - generic [ref=e275]:
+            - generic [ref=e276]:
+              - heading "Studio" [level=4] [ref=e277]
+              - list [ref=e278]:
+                - listitem [ref=e279]:
+                  - link "Products" [ref=e280] [cursor=pointer]:
+                    - /url: /products
+                - listitem [ref=e281]:
+                  - link "Services" [ref=e282] [cursor=pointer]:
+                    - /url: /services
+                - listitem [ref=e283]:
+                  - link "Launchpad" [ref=e284] [cursor=pointer]:
+                    - /url: /launchpad
+            - generic [ref=e285]:
+              - heading "Company" [level=4] [ref=e286]
+              - list [ref=e287]:
+                - listitem [ref=e288]:
+                  - link "Team" [ref=e289] [cursor=pointer]:
+                    - /url: /team
+                - listitem [ref=e290]:
+                  - link "Work With Us" [ref=e291] [cursor=pointer]:
+                    - /url: /contact
+                - listitem [ref=e292]:
+                  - link "Legal" [ref=e293] [cursor=pointer]:
+                    - /url: /terms-of-service
+          - generic [ref=e294]:
+            - heading "Newsletter" [level=4] [ref=e295]
+            - generic [ref=e296]:
+              - textbox "Email address" [ref=e297]
+              - button [ref=e298]:
+                - img [ref=e299]
+        - generic [ref=e301]:
+          - generic [ref=e302]:
+            - paragraph [ref=e303]: © 2026 eMitra Technologies
+            - generic [ref=e304]:
+              - generic [ref=e305]: 🇮🇳
+              - generic [ref=e306]: Engineered in India
+          - generic [ref=e307]:
+            - img [ref=e308]
+            - text: Registered Proprietorship
+  - button "Toggle contact menu" [ref=e312]:
+    - img [ref=e313]
+  - alert [ref=e315]

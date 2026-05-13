@@ -2,10 +2,22 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import Link from 'next/link';
 import { ArrowRight, Dumbbell, Building2, Code2, Rocket } from 'lucide-react';
+import type { Metadata } from 'next';
+import { PageBreadcrumbJsonLd } from '@/components/seo/JsonLd';
 
-export const metadata = {
-    title: 'Products | eMitra Technologies',
-    description: 'Explore our ecosystem of products — SaaS built for Indian SMBs and institutions.',
+export const metadata: Metadata = {
+    title: 'Our Products — GymMitra, FlatMitra & More | eMitra Tech',
+    description:
+        'Explore eMitra Technologies\' product ecosystem — SaaS built for Indian SMBs. GymMitra for gyms, FlatMitra for housing societies, SchoolMitra for schools. Built in Indore, India.',
+    keywords: ['emitra products', 'GymMitra', 'FlatMitra', 'SchoolMitra', 'SaaS india', 'emitra tech products', 'gym management software', 'society management app'],
+    alternates: {
+        canonical: 'https://emitra.dev/products',
+    },
+    openGraph: {
+        title: 'eMitra Products — GymMitra, FlatMitra & More',
+        description: 'SaaS products built by eMitra Technologies for Indian SMBs and institutions.',
+        url: 'https://emitra.dev/products',
+    },
 };
 
 export default function ProductsPage() {
@@ -47,6 +59,7 @@ export default function ProductsPage() {
 
     return (
         <>
+            <PageBreadcrumbJsonLd items={[{ name: 'Products', url: 'https://emitra.dev/products' }]} />
             <Header />
             <main className="relative pt-32 pb-20 bg-white min-h-screen">
                 <div className="max-w-7xl mx-auto px-6">

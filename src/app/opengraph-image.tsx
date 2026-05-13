@@ -102,7 +102,7 @@ export default async function Image() {
                 </div>
 
                 <div style={{ position: 'absolute', bottom: '40px', display: 'flex', alignItems: 'center', gap: '10px', opacity: 0.6 }}>
-                    <p style={{ color: '#bae6fd', fontSize: '20px', fontWeight: 600 }}>emitra.tech</p>
+                    <p style={{ color: '#bae6fd', fontSize: '20px', fontWeight: 600 }}>emitra.dev</p>
                 </div>
 
             </div>

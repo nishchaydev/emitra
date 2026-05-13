@@ -2,10 +2,22 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Code2, Globe, Cpu, Smartphone, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+import { PageBreadcrumbJsonLd } from '@/components/seo/JsonLd';
 
-export const metadata = {
-    title: 'Services | eMitra Technologies',
-    description: 'Government and enterprise software — custom development, SaaS consulting, and digital transformation.',
+export const metadata: Metadata = {
+    title: 'Software Development Services — eMitra Tech, Indore',
+    description:
+        'eMitra Technologies offers custom web development, mobile app development, enterprise SaaS, and government software solutions from Indore, India. Full-stack engineering with Next.js, React, Flutter.',
+    keywords: ['emitra services', 'software development indore', 'web development indore', 'emitra tech services', 'custom software india', 'SaaS development'],
+    alternates: {
+        canonical: 'https://emitra.dev/services',
+    },
+    openGraph: {
+        title: 'Software Development Services — eMitra Tech',
+        description: 'Custom web & mobile development, enterprise SaaS, and government software from eMitra Technologies, Indore.',
+        url: 'https://emitra.dev/services',
+    },
 };
 
 export default function ServicesPage() {
@@ -38,6 +50,7 @@ export default function ServicesPage() {
 
     return (
         <>
+            <PageBreadcrumbJsonLd items={[{ name: 'Services', url: 'https://emitra.dev/services' }]} />
             <Header />
             <main className="relative pt-32 pb-20 bg-white min-h-screen">
                 <div className="max-w-7xl mx-auto px-6">
