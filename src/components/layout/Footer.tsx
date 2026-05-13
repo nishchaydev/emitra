@@ -41,20 +41,20 @@ export function Footer() {
             
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 {/* Massive Brand Wordmark (Junction style) */}
-                <div className="py-20 md:py-32 border-y border-white/10 overflow-hidden relative">
+                <div className="pt-28 pb-16 md:py-32 border-y border-white/10 overflow-hidden relative flex items-center justify-center">
                     <motion.h2 
-                        className="text-[14vw] font-display font-black tracking-tighter text-white/5 leading-none text-center select-none"
+                        className="text-[16vw] md:text-[14vw] font-display font-black tracking-tighter text-white/10 md:text-white/5 leading-none text-center select-none"
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
                     >
-                        eMitra<span className="text-indigo-400/20">.</span>
+                        eMitra<span className="text-indigo-400/30 md:text-indigo-400/20">.</span>
                     </motion.h2>
                 </div>
 
                 {/* Footer Content Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mt-20 mb-24">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mt-16 md:mt-20 mb-24">
                     {/* Brand & Address */}
                     <div className="space-y-6">
                         <div className="flex items-center gap-2">
@@ -76,23 +76,25 @@ export function Footer() {
                         </div>
                     </div>
 
-                    {/* Navigation Columns */}
-                    <div>
-                        <h4 className="text-[10px] font-black text-white uppercase tracking-[0.2em] mb-8 opacity-50">Studio</h4>
-                        <ul className="space-y-4 text-sm font-bold text-slate-400">
-                            <li><Link href="/products" className="hover:text-white transition-colors">Products</Link></li>
-                            <li><Link href="/services" className="hover:text-white transition-colors">Services</Link></li>
-                            <li><Link href="/launchpad" className="hover:text-white transition-colors">Launchpad</Link></li>
-                        </ul>
-                    </div>
+                    {/* Navigation Columns - 2 columns side-by-side on mobile */}
+                    <div className="grid grid-cols-2 gap-8 md:col-span-2">
+                        <div>
+                            <h4 className="text-[10px] font-black text-white uppercase tracking-[0.2em] mb-8 opacity-50">Studio</h4>
+                            <ul className="space-y-4 text-sm font-bold text-slate-400">
+                                <li><Link href="/products" className="hover:text-white transition-colors">Products</Link></li>
+                                <li><Link href="/services" className="hover:text-white transition-colors">Services</Link></li>
+                                <li><Link href="/launchpad" className="hover:text-white transition-colors">Launchpad</Link></li>
+                            </ul>
+                        </div>
 
-                    <div>
-                        <h4 className="text-[10px] font-black text-white uppercase tracking-[0.2em] mb-8 opacity-50">Company</h4>
-                        <ul className="space-y-4 text-sm font-bold text-slate-400">
-                            <li><Link href="/team" className="hover:text-white transition-colors">Team</Link></li>
-                            <li><Link href="/contact" className="hover:text-white transition-colors">Work With Us</Link></li>
-                            <li><Link href="/terms-of-service" className="hover:text-white transition-colors">Legal</Link></li>
-                        </ul>
+                        <div>
+                            <h4 className="text-[10px] font-black text-white uppercase tracking-[0.2em] mb-8 opacity-50">Company</h4>
+                            <ul className="space-y-4 text-sm font-bold text-slate-400">
+                                <li><Link href="/team" className="hover:text-white transition-colors">Team</Link></li>
+                                <li><Link href="/contact" className="hover:text-white transition-colors">Work With Us</Link></li>
+                                <li><Link href="/terms-of-service" className="hover:text-white transition-colors">Legal</Link></li>
+                            </ul>
+                        </div>
                     </div>
 
                     {/* Newsletter (Compact) */}
