@@ -175,8 +175,8 @@ function DynamicVisual() {
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
                 className="absolute top-[12%] right-[5%] glass-card p-3 rounded-xl max-w-[140px]"
             >
-                <p className="text-[9px] font-black text-indigo-600 uppercase tracking-widest mb-0.5">Scale</p>
-                <p className="text-xs font-bold text-slate-800">10k+ Residents</p>
+                <p className="text-[9px] font-black text-indigo-600 uppercase tracking-widest mb-0.5">Studio</p>
+                <p className="text-xs font-bold text-slate-800">In-House Ventures</p>
             </motion.div>
 
             <motion.div
@@ -184,8 +184,8 @@ function DynamicVisual() {
                 transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
                 className="absolute bottom-[15%] left-[2%] glass-card p-3 rounded-xl max-w-[140px]"
             >
-                <p className="text-[9px] font-black text-teal-600 uppercase tracking-widest mb-0.5">Trust</p>
-                <p className="text-xs font-bold text-slate-800">50+ Partners</p>
+                <p className="text-[9px] font-black text-teal-600 uppercase tracking-widest mb-0.5">Agency</p>
+                <p className="text-xs font-bold text-slate-800">Custom Engineering</p>
             </motion.div>
 
             <motion.div
@@ -193,8 +193,8 @@ function DynamicVisual() {
                 transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 0.8 }}
                 className="absolute bottom-[30%] right-[0%] glass-card p-3 rounded-xl max-w-[140px]"
             >
-                <p className="text-[9px] font-black text-amber-600 uppercase tracking-widest mb-0.5">Uptime</p>
-                <p className="text-xs font-bold text-slate-800">99.9% SLA</p>
+                <p className="text-[9px] font-black text-amber-600 uppercase tracking-widest mb-0.5">Community</p>
+                <p className="text-xs font-bold text-slate-800">Student Labs</p>
             </motion.div>
         </div>
     );
