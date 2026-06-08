@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import { Database, Cog, BarChart3, Puzzle, Headphones, Shield, ArrowRight } from 'lucide-react';
@@ -88,3 +88,4 @@ export function ServicesGrid() {
         </section>
     );
 }
+

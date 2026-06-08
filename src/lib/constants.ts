@@ -1,4 +1,4 @@
-// Site Metadata
+﻿// Site Metadata
 export const SITE_CONFIG = {
     name: 'eMitra Technologies',
     description: 'Indian Product Studio & Student Innovation Hub based in Indore.',
@@ -13,6 +13,7 @@ export const NAV_LINKS = [
     { label: 'Launchpad', href: '/launchpad' },
     { label: 'Pathways', href: '/pathways' },
     { label: 'Team', href: '/team' },
+    { label: 'Blog', href: '/blog' },
     { label: 'Contact', href: '/contact' },
 ] as const;
 
@@ -32,6 +33,7 @@ export const FOOTER_LINKS = {
     company: [
         { label: 'About Us', href: '/team' },
         { label: 'Team', href: '/team' },
+        { label: 'Blog', href: '/blog' },
         { label: 'Contact', href: '/contact' },
     ],
     community: [
@@ -67,3 +69,4 @@ export const COLORS = {
         950: '#0a1929',
     },
 } as const;
+

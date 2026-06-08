@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowLeft, Send, Download } from 'lucide-react';
+﻿import { ArrowRight, ArrowLeft, Send, Download } from 'lucide-react';
 
 export function SolutionIntegration() {
     return (
@@ -51,3 +51,4 @@ export function SolutionIntegration() {
         </section>
     );
 }
+

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import { Rocket, Target, Users, Zap } from 'lucide-react';
@@ -90,3 +90,4 @@ export function OurStory() {
         </section>
     );
 }
+

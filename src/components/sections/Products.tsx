@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion, Variants } from 'framer-motion';
 import { Dumbbell, Building2, ArrowRight, Check, Sparkles } from 'lucide-react';
@@ -83,7 +83,7 @@ export function Products() {
                         Explore Our <span className="text-indigo-600">Products.</span>
                     </h2>
                     <p className="text-slate-500 text-base md:text-xl font-medium leading-relaxed">
-                        SaaS built for Indian SMBs and institutions — solving real operational pain points with premium software.
+                        SaaS built for Indian SMBs and institutions â€” solving real operational pain points with premium software.
                     </p>
                 </div>
 
@@ -148,3 +148,4 @@ export function Products() {
         </section>
     );
 }
+

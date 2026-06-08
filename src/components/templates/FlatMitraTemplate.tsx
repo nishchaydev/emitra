@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -39,19 +39,19 @@ export function FlatMitraTemplate() {
                             <div className="space-y-4">
                                 <div className="flex items-start gap-3">
                                     <div className="h-6 w-6 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-1">
-                                        <span className="text-red-600 font-bold text-xs">✕</span>
+                                        <span className="text-red-600 font-bold text-xs">âœ•</span>
                                     </div>
                                     <p className="text-slate-600">Late rent payments & awkward reminders</p>
                                 </div>
                                 <div className="flex items-start gap-3">
                                     <div className="h-6 w-6 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-1">
-                                        <span className="text-red-600 font-bold text-xs">✕</span>
+                                        <span className="text-red-600 font-bold text-xs">âœ•</span>
                                     </div>
                                     <p className="text-slate-600">Unknown tenants & security risks</p>
                                 </div>
                                 <div className="flex items-start gap-3">
                                     <div className="h-6 w-6 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-1">
-                                        <span className="text-red-600 font-bold text-xs">✕</span>
+                                        <span className="text-red-600 font-bold text-xs">âœ•</span>
                                     </div>
                                     <p className="text-slate-600">Lost keys & maintenance headaches</p>
                                 </div>
@@ -119,7 +119,7 @@ export function FlatMitraTemplate() {
                     tiers={[
                         {
                             name: "Solo",
-                            price: "₹15,000",
+                            price: "â‚¹15,000",
                             period: "/year",
                             highlight: false,
                             description: "1 property, up to 20 rooms",
@@ -135,7 +135,7 @@ export function FlatMitraTemplate() {
                         },
                         {
                             name: "Multi",
-                            price: "₹40,000",
+                            price: "â‚¹40,000",
                             period: "/year",
                             highlight: true,
                             description: "2-5 properties, up to 100 rooms",
@@ -152,7 +152,7 @@ export function FlatMitraTemplate() {
                         },
                         {
                             name: "Premium",
-                            price: "₹75,000",
+                            price: "â‚¹75,000",
                             period: "/year",
                             highlight: false,
                             description: "6+ properties, unlimited rooms",
@@ -191,3 +191,4 @@ export function FlatMitraTemplate() {
         </>
     );
 }
+

@@ -1,4 +1,4 @@
-import { z } from 'zod';
+﻿import { z } from 'zod';
 
 export const contactSchema = z.object({
     name: z
@@ -51,3 +51,4 @@ export const newsletterSchema = z.object({
 });
 
 export type NewsletterFormData = z.infer<typeof newsletterSchema>;
+

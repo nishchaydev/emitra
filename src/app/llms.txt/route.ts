@@ -1,5 +1,5 @@
-/**
- * llms.txt — Machine-readable context for AI crawlers
+﻿/**
+ * llms.txt â€” Machine-readable context for AI crawlers
  * 
  * This file helps LLMs (ChatGPT, Perplexity, Claude, Gemini) understand
  * what eMitra is, what we do, and how to reference us correctly.
@@ -85,11 +85,11 @@ Career development program offering engineering internships, campus ambassador r
 
 ## Team
 
-- **Nishchay Gupta** — Founder & CEO. Full-stack engineer and product strategist.
-- **Nikhil Pal** — Co-Founder & Operations. Partnerships and project delivery.
-- **Abhijeet Giri** — Community Lead. Events, workshops, and campus programs.
-- **Mohit Vyas** — Lead Engineer. System architecture and engineering leadership.
-- **Yash Soni** — Creative Director. Brand identity and UI/UX design.
+- **Nikhil Pal** â€” Founder & CEO. Drives operations, partnerships, and product quality.
+- **Nishchay Gupta** â€” Co-Founder. Full-stack engineer and product strategist.
+- **Abhijeet Giri** â€” Community Lead. Events, workshops, and campus programs.
+- **Mohit Vyas** â€” Lead Engineer. System architecture and engineering leadership.
+- **Yash Soni** â€” Creative Director. Brand identity and UI/UX design.
 
 ## Key Facts
 
@@ -100,7 +100,7 @@ Career development program offering engineering internships, campus ambassador r
 - 15+ hackathon wins
 - 3 active SaaS products
 - 8+ students onboarded
-- The name "Mitra" means "friend" in Hindi — eMitra means "electronic friend"
+- The name "Mitra" means "friend" in Hindi â€” eMitra means "electronic friend"
 
 ## Blog & Content
 
@@ -137,3 +137,4 @@ Career development program offering engineering internships, campus ambassador r
         },
     });
 }
+

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -26,7 +26,7 @@ export default function PricingPage() {
                     tiers={[
                         {
                             name: "Starter",
-                            price: "₹50,000",
+                            price: "â‚¹50,000",
                             period: "/year",
                             highlight: false,
                             description: "Up to 500 students",
@@ -43,7 +43,7 @@ export default function PricingPage() {
                         },
                         {
                             name: "Growth",
-                            price: "₹1,00,000",
+                            price: "â‚¹1,00,000",
                             period: "/year",
                             highlight: true,
                             description: "501-1,000 students",
@@ -60,7 +60,7 @@ export default function PricingPage() {
                         },
                         {
                             name: "Scale",
-                            price: "₹2,00,000",
+                            price: "â‚¹2,00,000",
                             period: "/year",
                             highlight: false,
                             description: "1,001-2,000 students",
@@ -106,7 +106,7 @@ export default function PricingPage() {
                     tiers={[
                         {
                             name: "Basic",
-                            price: "₹25,000",
+                            price: "â‚¹25,000",
                             period: "/year",
                             highlight: false,
                             description: "Up to 200 members",
@@ -122,7 +122,7 @@ export default function PricingPage() {
                         },
                         {
                             name: "Pro",
-                            price: "₹50,000",
+                            price: "â‚¹50,000",
                             period: "/year",
                             highlight: true,
                             description: "201-500 members",
@@ -140,7 +140,7 @@ export default function PricingPage() {
                         },
                         {
                             name: "Elite",
-                            price: "₹1,00,000",
+                            price: "â‚¹1,00,000",
                             period: "/year",
                             highlight: false,
                             description: "501-1,000 members",
@@ -182,7 +182,7 @@ export default function PricingPage() {
                     tiers={[
                         {
                             name: "Solo",
-                            price: "₹15,000",
+                            price: "â‚¹15,000",
                             period: "/year",
                             highlight: false,
                             description: "1 property, up to 20 rooms",
@@ -198,7 +198,7 @@ export default function PricingPage() {
                         },
                         {
                             name: "Multi",
-                            price: "₹40,000",
+                            price: "â‚¹40,000",
                             period: "/year",
                             highlight: true,
                             description: "2-5 properties, up to 100 rooms",
@@ -215,7 +215,7 @@ export default function PricingPage() {
                         },
                         {
                             name: "Premium",
-                            price: "₹75,000",
+                            price: "â‚¹75,000",
                             period: "/year",
                             highlight: false,
                             description: "6+ properties, unlimited rooms",
@@ -299,5 +299,6 @@ export default function PricingPage() {
         </>
     );
 }
+
 
 

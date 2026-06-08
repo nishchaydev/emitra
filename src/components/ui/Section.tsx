@@ -1,4 +1,4 @@
-import { HTMLAttributes, forwardRef } from 'react';
+﻿import { HTMLAttributes, forwardRef } from 'react';
 import { cn } from '@/lib/utils';
 
 export interface SectionProps extends HTMLAttributes<HTMLElement> {
@@ -42,3 +42,4 @@ const Section = forwardRef<HTMLElement, SectionProps>(
 Section.displayName = 'Section';
 
 export { Section };
+

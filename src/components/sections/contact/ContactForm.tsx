@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useActionState, useEffect, useState } from 'react'; // Updated import for Next.js 15+ (using useActionState if available or useFormState)
 // Note: In Next.js 15 (React 19), useFormState is deprecated in favor of useActionState. 
@@ -172,7 +172,7 @@ export function ContactForm() {
                     <motion.button
                         type="submit"
                         disabled={isPending}
-                        className="w-full bg-gradient-to-r from-primary to-blue-700 text-white py-4 rounded-xl font-bold transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/20 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="w-full bg-gradient-to-r from-primary to-indigo-700 text-white py-4 rounded-xl font-bold transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/20 disabled:opacity-50 disabled:cursor-not-allowed"
                         whileHover={{ scale: isPending ? 1 : 1.01 }}
                         whileTap={{ scale: isPending ? 1 : 0.99 }}
                     >
@@ -196,3 +196,5 @@ export function ContactForm() {
         </section>
     );
 }
+
+

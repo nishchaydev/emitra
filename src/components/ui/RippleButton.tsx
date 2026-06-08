@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useState, MouseEvent } from 'react';
 import { cn } from '@/lib/utils';
@@ -72,3 +72,4 @@ export function RippleButton({ children, className, as: Component = 'button', on
         </Component>
     );
 }
+

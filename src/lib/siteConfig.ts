@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Site-wide configuration
  * Single source of truth for base URL, brand name, etc.
  */
@@ -7,3 +7,4 @@ export const siteConfig = {
     name: 'eMitra Technologies',
     shortName: 'eMitra Tech',
 } as const;
+

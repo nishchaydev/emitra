@@ -1,4 +1,4 @@
-import { Header } from '@/components/layout/Header';
+﻿import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { SolutionsHero } from '@/components/sections/solutions/SolutionsHero';
 import { SolutionsByScale } from '@/components/sections/solutions/SolutionsByScale';
@@ -21,3 +21,4 @@ export default function SolutionsPage() {
         </>
     );
 }
+

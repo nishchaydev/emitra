@@ -21,9 +21,26 @@ export function Header() {
     return (
         <header className={cn(
             "fixed top-0 w-full z-50 transition-all duration-300",
-            scrolled ? "bg-white/80 backdrop-blur-xl border-b border-slate-200/50 py-3" : "bg-transparent py-5"
+            scrolled ? "bg-white/80 backdrop-blur-xl border-b border-slate-200/50" : "bg-transparent"
         )}>
-            <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            {/* Announcement Bar */}
+            <div className="bg-indigo-600 text-white px-4 py-2 md:py-1.5 text-center text-xs font-medium flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 transition-all">
+                <div className="flex items-center gap-2">
+                    <span className="flex h-2 w-2 relative">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                    </span>
+                    <span>🎉 Our team just published a new research paper on Multi-Agent Systems!</span>
+                </div>
+                <Link href="/blog/prompt-engineering-multi-agent-systems" className="font-bold underline underline-offset-2 hover:text-indigo-200 transition-colors inline-flex items-center gap-1">
+                    Read the Paper <ArrowRight className="h-3 w-3" />
+                </Link>
+            </div>
+
+            <div className={cn(
+                "max-w-7xl mx-auto px-6 flex items-center justify-between transition-all duration-300",
+                scrolled ? "py-3" : "py-5"
+            )}>
                 {/* Logo */}
                 <Link href="/" className="flex items-center group">
                     <span className="text-xl font-black tracking-tighter text-brand-navy group-hover:text-brand-ion transition-colors">
@@ -99,3 +116,4 @@ export function Header() {
         </header>
     );
 }
+

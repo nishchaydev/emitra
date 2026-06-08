@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import { Mail, Phone, MessageSquare, ArrowRight } from 'lucide-react';
@@ -9,21 +9,21 @@ const contactTypes = [
         title: 'General Inquiries',
         description: 'For demos, pricing, or partnership discussions.',
         email: 'info@emitra.dev',
-        gradient: 'from-primary to-blue-700',
+        gradient: 'from-primary to-indigo-700',
     },
     {
         icon: Phone,
         title: 'Sales Team',
         description: 'Speak directly with our enterprise sales team.',
         email: 'sales@emitra.dev',
-        gradient: 'from-blue-600 to-blue-800',
+        gradient: 'from-indigo-600 to-indigo-800',
     },
     {
         icon: MessageSquare,
         title: 'Technical Support',
         description: 'Existing clients seeking assistance.',
         email: 'support@emitra.dev',
-        gradient: 'from-blue-700 to-primary',
+        gradient: 'from-indigo-700 to-primary',
     },
 ];
 
@@ -75,3 +75,5 @@ export function ContactTypes() {
         </section>
     );
 }
+
+

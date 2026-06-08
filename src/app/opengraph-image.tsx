@@ -1,4 +1,4 @@
-import { ImageResponse } from 'next/og';
+﻿import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
 
@@ -112,3 +112,4 @@ export default async function Image() {
         }
     );
 }
+

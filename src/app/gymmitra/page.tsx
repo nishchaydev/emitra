@@ -1,4 +1,4 @@
-import { GymMitraTemplate } from '@/components/templates/GymMitraTemplate';
+﻿import { GymMitraTemplate } from '@/components/templates/GymMitraTemplate';
 
 export const metadata = {
     title: 'GymMitra | Intelligent Gym Management Software - eMitra Technologies',
@@ -8,3 +8,4 @@ export const metadata = {
 export default function GymMitraPage() {
     return <GymMitraTemplate />;
 }
+

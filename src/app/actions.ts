@@ -1,4 +1,4 @@
-'use server';
+﻿'use server';
 
 import { Resend } from 'resend';
 
@@ -79,3 +79,4 @@ export async function sendEmail(prevState: unknown, formData: FormData) {
         return { success: false, error: 'Failed to send email. Please try again later.' };
     }
 }
+

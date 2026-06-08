@@ -1,11 +1,11 @@
-import { Header } from '@/components/layout/Header';
+﻿import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { GraduationCap, Code2, Briefcase, Users, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'eMitra Pathways — Internships & Careers in Indore',
+    title: 'eMitra Pathways â€” Internships & Careers in Indore',
     description:
         'Start your tech career at eMitra Technologies, Indore. Engineering internships, campus ambassador roles, open-source contributions, and mentorship programs.',
     keywords: ['emitra internships', 'emitra careers', 'tech internship indore', 'emitra technologies careers', 'student jobs indore'],
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
         canonical: 'https://emitra.dev/pathways',
     },
     openGraph: {
-        title: 'eMitra Pathways — Internships & Careers',
+        title: 'eMitra Pathways â€” Internships & Careers',
         description: 'Start your tech career at eMitra Technologies, Indore. Real projects, real mentorship.',
         url: 'https://emitra.dev/pathways',
     },
@@ -30,7 +30,7 @@ export default function PathwaysPage() {
                         Pathways
                     </h1>
                     <p className="text-lg text-slate-500 font-medium max-w-2xl mb-16">
-                        We don&apos;t just hire — we grow people. Whether you&apos;re a student, a developer, or a dreamer, there&apos;s a place for you at eMitra.
+                        We don&apos;t just hire â€” we grow people. Whether you&apos;re a student, a developer, or a dreamer, there&apos;s a place for you at eMitra.
                     </p>
 
                     {/* Pathways Grid */}
@@ -39,7 +39,7 @@ export default function PathwaysPage() {
                             {
                                 icon: Code2,
                                 title: 'Engineering Internships',
-                                description: 'Work on real products used by real users. No dummy projects — you ship code from day one.',
+                                description: 'Work on real products used by real users. No dummy projects â€” you ship code from day one.',
                                 tag: 'Technical',
                                 tagColor: 'bg-indigo-50 text-indigo-600',
                             },
@@ -82,7 +82,7 @@ export default function PathwaysPage() {
                     <div className="bg-slate-950 rounded-3xl p-8 md:p-12 text-white mb-16">
                         <h2 className="text-2xl md:text-3xl font-black mb-3">Why eMitra?</h2>
                         <p className="text-slate-400 font-medium max-w-2xl mb-10 text-sm">
-                            We&apos;re not a corporate. We&apos;re a student-led product studio where you learn by doing, not by watching. Small numbers, big impact — and we&apos;re just getting started.
+                            We&apos;re not a corporate. We&apos;re a student-led product studio where you learn by doing, not by watching. Small numbers, big impact â€” and we&apos;re just getting started.
                         </p>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                             {[
@@ -113,3 +113,4 @@ export default function PathwaysPage() {
         </>
     );
 }
+

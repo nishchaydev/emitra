@@ -1,4 +1,4 @@
-import { SchoolMitraTemplate } from '@/components/templates/SchoolMitraTemplate';
+﻿import { SchoolMitraTemplate } from '@/components/templates/SchoolMitraTemplate';
 
 export const metadata = {
     title: 'SchoolMitra | Complete School Management System - eMitra Technologies',
@@ -8,3 +8,4 @@ export const metadata = {
 export default function SchoolMitraPage() {
     return <SchoolMitraTemplate />;
 }
+

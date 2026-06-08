@@ -1,4 +1,4 @@
-/**
+﻿/**
  * JSON-LD Structured Data for SEO
  * 
  * Injects Organization, WebSite (with SearchAction), and LocalBusiness (ITService)
@@ -11,7 +11,7 @@
 const SITE_URL = 'https://emitra.dev';
 const LOGO_URL = 'https://res.cloudinary.com/dkits80xk/image/upload/v1771839836/ChatGPT_Image_Feb_23_2026_03_13_03_PM_foi1so.png';
 
-// Organization — tells Google who you are
+// Organization â€” tells Google who you are
 const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -69,7 +69,7 @@ const organizationSchema = {
     ],
 };
 
-// WebSite — enables sitelinks searchbox in Google
+// WebSite â€” enables sitelinks searchbox in Google
 const webSiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
@@ -88,7 +88,7 @@ const webSiteSchema = {
     },
 };
 
-// LocalBusiness (ITService) — critical for "emitra indore" ranking
+// LocalBusiness (ITService) â€” critical for "emitra indore" ranking
 const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'ITService',
@@ -272,3 +272,4 @@ export function SoftwareAppJsonLd({
         />
     );
 }
+

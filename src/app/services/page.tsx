@@ -1,4 +1,4 @@
-import { Header } from '@/components/layout/Header';
+﻿import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Code2, Globe, Cpu, Smartphone, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 import { PageBreadcrumbJsonLd } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
-    title: 'Software Development Services — eMitra Tech, Indore',
+    title: 'Software Development Services â€” eMitra Tech, Indore',
     description:
         'eMitra Technologies offers custom web development, mobile app development, enterprise SaaS, and government software solutions from Indore, India. Full-stack engineering with Next.js, React, Flutter.',
     keywords: ['emitra services', 'software development indore', 'web development indore', 'emitra tech services', 'custom software india', 'SaaS development'],
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
         canonical: 'https://emitra.dev/services',
     },
     openGraph: {
-        title: 'Software Development Services — eMitra Tech',
+        title: 'Software Development Services â€” eMitra Tech',
         description: 'Custom web & mobile development, enterprise SaaS, and government software from eMitra Technologies, Indore.',
         url: 'https://emitra.dev/services',
     },
@@ -37,7 +37,7 @@ export default function ServicesPage() {
         {
             icon: Cpu,
             title: 'Enterprise SaaS',
-            description: 'Multi-tenant SaaS platforms for institutional operations — schools, societies, gyms, and more.',
+            description: 'Multi-tenant SaaS platforms for institutional operations â€” schools, societies, gyms, and more.',
             tags: ['SaaS', 'Multi-tenant', 'Cloud'],
         },
         {
@@ -59,7 +59,7 @@ export default function ServicesPage() {
                         Services
                     </h1>
                     <p className="text-lg text-slate-500 font-medium max-w-2xl mb-16">
-                        We build software that institutions rely on. From government deployments to startup MVPs — we engineer with precision.
+                        We build software that institutions rely on. From government deployments to startup MVPs â€” we engineer with precision.
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -98,3 +98,4 @@ export default function ServicesPage() {
         </>
     );
 }
+

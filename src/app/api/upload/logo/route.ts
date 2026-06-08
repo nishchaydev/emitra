@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+﻿import { NextRequest, NextResponse } from 'next/server';
 import cloudinary from '@/lib/cloudinary';
 
 export async function POST(req: NextRequest) {
@@ -38,3 +38,4 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ success: false, error: 'Failed to upload image' }, { status: 500 });
     }
 }
+

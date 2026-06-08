@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import { Layers, Shield, Cpu, Zap, ArrowUpRight } from 'lucide-react';
@@ -98,3 +98,4 @@ export function StudioPillars() {
         </section>
     );
 }
+

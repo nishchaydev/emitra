@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
@@ -46,7 +46,7 @@ export function LeadershipTeam() {
                             Built by experts. <br />Trusted by institutions.
                         </h2>
                         <p className="text-lg text-slate-600 mb-8">
-                            We&apos;re not just a software company—we&apos;re your long-term technology partner.
+                            We&apos;re not just a software companyâ€”we&apos;re your long-term technology partner.
                             Our team brings together the best of enterprise engineering and institutional domain expertise.
                         </p>
                         <Link href="/contact">
@@ -90,3 +90,4 @@ export function LeadershipTeam() {
         </section>
     );
 }
+

@@ -1,4 +1,4 @@
-import { Shield, CheckCircle, Clock, Award, Lock, Server } from 'lucide-react';
+﻿import { Shield, CheckCircle, Clock, Award, Lock, Server } from 'lucide-react';
 
 const securityFeatures = [
     { icon: Shield, label: 'Secure Access' },
@@ -47,3 +47,4 @@ export function SecurityCore() {
         </section>
     );
 }
+

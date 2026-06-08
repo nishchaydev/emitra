@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from 'next';
+﻿import type { Metadata, Viewport } from 'next';
 import { Inter, Outfit } from 'next/font/google';
 import { Analytics } from "@vercel/analytics/react"
 import { Providers } from './providers';
@@ -23,7 +23,7 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   metadataBase: new URL('https://emitra.dev'),
   title: {
-    default: 'eMitra Technologies — Software Product Studio in Indore | eMitra Tech',
+    default: 'eMitra Technologies â€” Software Product Studio in Indore | eMitra Tech',
     template: '%s | eMitra Technologies',
   },
   description:
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: 'https://emitra.dev',
     siteName: 'eMitra Technologies',
-    title: 'eMitra Technologies — Software Product Studio in Indore | eMitra Tech',
+    title: 'eMitra Technologies â€” Software Product Studio in Indore | eMitra Tech',
     description:
       'eMitra Tech is a product studio based in Indore, India. We build enterprise-grade SaaS, offer custom development, and run a student innovation community.',
     images: [
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
         url: '/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'eMitra Technologies — Software Product Studio in Indore',
+        alt: 'eMitra Technologies â€” Software Product Studio in Indore',
       },
     ],
   },
@@ -88,9 +88,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@emitratech',
     creator: '@emitratech',
-    title: 'eMitra Technologies — Software Product Studio in Indore',
+    title: 'eMitra Technologies â€” Software Product Studio in Indore',
     description:
-      'eMitra Tech builds enterprise-grade SaaS for gyms, housing, and education. Product studio + custom dev + student community — all from Indore, India.',
+      'eMitra Tech builds enterprise-grade SaaS for gyms, housing, and education. Product studio + custom dev + student community â€” all from Indore, India.',
   },
   robots: {
     index: true,
@@ -113,6 +113,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({
@@ -122,8 +123,8 @@ export default function RootLayout({
 }>) {
   // suppressHydrationWarning is added to prevent hydration mismatch errors from browser extensions injecting attributes
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <body className={`${inter.variable} ${outfit.variable} bg-white text-slate-900 font-sans antialiased`}>
+    <html lang="en" className="scroll-smooth overflow-x-hidden" suppressHydrationWarning>
+      <body className={`${inter.variable} ${outfit.variable} bg-white text-slate-900 font-sans antialiased overflow-x-hidden w-full`}>
         <JsonLd />
         <Preloader />
         <Providers>{children}</Providers>
@@ -133,3 +134,4 @@ export default function RootLayout({
     </html>
   );
 }
+

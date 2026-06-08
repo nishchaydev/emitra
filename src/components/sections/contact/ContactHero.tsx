@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import { Mail, MessageSquare, Phone } from 'lucide-react';
@@ -18,8 +18,8 @@ export function ContactHero() {
                     { top: '70%', left: '80%' }, // AU
                 ].map((pos, i) => (
                     <div key={i} className="absolute w-4 h-4" style={pos}>
-                        <div className="absolute inset-0 bg-blue-500 rounded-full animate-ping opacity-75" />
-                        <div className="relative w-3 h-3 bg-blue-600 rounded-full border-2 border-white" />
+                        <div className="absolute inset-0 bg-indigo-500 rounded-full animate-ping opacity-75" />
+                        <div className="relative w-3 h-3 bg-indigo-600 rounded-full border-2 border-white" />
                     </div>
                 ))}
             </div>
@@ -35,14 +35,14 @@ export function ContactHero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100 text-xs font-bold tracking-widest uppercase shadow-sm mx-auto lg:mx-0">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 text-indigo-600 border border-indigo-100 text-xs font-bold tracking-widest uppercase shadow-sm mx-auto lg:mx-0">
                         <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                         We're Online
                     </div>
 
                     <h1 className="text-3xl md:text-4xl lg:text-7xl font-display font-bold leading-[1.1] text-slate-900">
                         Let's start a <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-cyan-500">
                             conversation.
                         </span>
                     </h1>
@@ -54,11 +54,11 @@ export function ContactHero() {
                     <div className="flex flex-wrap justify-center lg:justify-start gap-6 pt-4">
                         <div className="flex items-center gap-3 text-slate-600">
                             <div className="h-10 w-10 rounded-full bg-white border border-slate-200 shadow-sm flex items-center justify-center">
-                                <Mail className="h-5 w-5 text-blue-600" />
+                                <Mail className="h-5 w-5 text-indigo-600" />
                             </div>
                             <div>
                                 <p className="text-xs text-slate-500 font-bold uppercase text-left">Email us</p>
-                                <a href="mailto:contact@emitra.dev" aria-label="Email contact@emitra.dev" className="font-medium text-slate-900 hover:text-blue-600 transition-colors">contact@emitra.dev</a>
+                                <a href="mailto:contact@emitra.dev" aria-label="Email contact@emitra.dev" className="font-medium text-slate-900 hover:text-indigo-600 transition-colors">contact@emitra.dev</a>
                             </div>
                         </div>
                         <div className="flex items-center gap-3 text-slate-600">
@@ -68,9 +68,9 @@ export function ContactHero() {
                             <div>
                                 <p className="text-xs text-slate-500 font-bold uppercase text-left">Call us</p>
                                 <p className="font-medium text-slate-900 group">
-                                    <a href="tel:+918602175892" className="hover:text-blue-600 transition-colors">+91 86021 75892</a>
+                                    <a href="tel:+918602175892" className="hover:text-indigo-600 transition-colors">+91 86021 75892</a>
                                     <span className="mx-2 text-slate-300">/</span>
-                                    <a href="tel:+916261854014" className="hover:text-blue-600 transition-colors">+91 62618 54014</a>
+                                    <a href="tel:+916261854014" className="hover:text-indigo-600 transition-colors">+91 62618 54014</a>
                                 </p>
                             </div>
                         </div>
@@ -91,7 +91,7 @@ export function ContactHero() {
                     >
                         {/* Abstract Header */}
                         <div className="space-y-4">
-                            <div className="h-16 w-16 bg-gradient-to-br from-[#0066FF] to-blue-700 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-500/20">
+                            <div className="h-16 w-16 bg-gradient-to-br from-indigo-600 to-indigo-700 rounded-2xl flex items-center justify-center shadow-lg shadow-indigo-500/20">
                                 <MessageSquare className="h-8 w-8 text-white" />
                             </div>
                             <h3 className="text-2xl font-bold text-slate-900">How can we help?</h3>
@@ -110,26 +110,26 @@ export function ContactHero() {
                                     <div className="h-2 w-3/4 bg-slate-200 rounded-full" />
                                 </div>
                             </div>
-                            <div className="p-4 rounded-xl bg-blue-50 border border-blue-100 flex items-center gap-4">
-                                <div className="h-10 w-10 rounded-full bg-blue-600 flex items-center justify-center text-white text-xs font-bold">
+                            <div className="p-4 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center gap-4">
+                                <div className="h-10 w-10 rounded-full bg-indigo-600 flex items-center justify-center text-white text-xs font-bold">
                                     AI
                                 </div>
                                 <div className="space-y-2 flex-1">
-                                    <div className="h-2 w-3/4 bg-blue-200 rounded-full" />
-                                    <div className="h-2 w-1/2 bg-blue-200 rounded-full" />
+                                    <div className="h-2 w-3/4 bg-indigo-200 rounded-full" />
+                                    <div className="h-2 w-1/2 bg-indigo-200 rounded-full" />
                                 </div>
                             </div>
                         </div>
 
                         {/* Send Button Sim */}
-                        <div className="h-12 w-full bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold shadow-lg hover:bg-blue-700 transition-colors">
+                        <div className="h-12 w-full bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold shadow-lg hover:bg-indigo-700 transition-colors">
                             Send Message
                         </div>
                     </motion.div>
 
                     {/* Decor Elements */}
                     <motion.div
-                        className="absolute -top-6 -right-6 h-24 w-24 bg-gradient-to-br from-[#0066FF] to-blue-400 rounded-2xl rotate-12 blur-xl opacity-20 -z-10"
+                        className="absolute -top-6 -right-6 h-24 w-24 bg-gradient-to-br from-indigo-600 to-indigo-400 rounded-2xl rotate-12 blur-xl opacity-20 -z-10"
                         animate={{ scale: [1, 1.2, 1], rotate: [12, 24, 12] }}
                         transition={{ duration: 4, repeat: Infinity }}
                     />
@@ -138,3 +138,5 @@ export function ContactHero() {
         </section>
     );
 }
+
+

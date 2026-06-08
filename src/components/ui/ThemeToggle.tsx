@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
@@ -51,3 +51,4 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
         </button>
     );
 }
+

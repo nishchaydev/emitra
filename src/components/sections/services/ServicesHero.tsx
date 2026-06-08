@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import { Wrench, Layers, Cpu, Settings, PenTool, ArrowRight } from 'lucide-react';
@@ -124,3 +124,4 @@ export function ServicesHero() {
         </section>
     );
 }
+

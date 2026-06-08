@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useRef } from 'react';
 import { Upload, X, Image as ImageIcon, Loader2 } from 'lucide-react';
@@ -117,3 +117,4 @@ export function LogoUpload({ onUploadSuccess, onUploadError }: LogoUploadProps) 
         </div>
     );
 }
+

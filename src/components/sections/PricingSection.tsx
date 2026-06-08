@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import { Check, Sparkles, ArrowRight } from 'lucide-react';
@@ -156,3 +156,4 @@ export function PricingSection({ title, subtitle, color, tiers, className = "bg-
         </section>
     );
 }
+

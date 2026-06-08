@@ -1,9 +1,10 @@
-'use client';
+﻿'use client';
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Home } from 'lucide-react';
+import { HeroVideo } from '@/components/ui/HeroVideo';
 
 export default function NotFound() {
     const [mounted, setMounted] = useState(false);
@@ -34,15 +35,7 @@ export default function NotFound() {
             
             {/* Cinematic Video Background */}
             <div className="absolute inset-0 z-0">
-                <video 
-                    autoPlay 
-                    loop 
-                    muted 
-                    playsInline 
-                    className="w-full h-full object-cover opacity-20 mix-blend-screen rotate-90 scale-[1.8]"
-                >
-                    <source src="https://res.cloudinary.com/dkits80xk/video/upload/v1778683152/hero-animation_gep3ir.mp4" type="video/mp4" />
-                </video>
+                <HeroVideo className="w-full h-full object-cover opacity-20 mix-blend-screen rotate-90 scale-[1.8]" />
                 {/* Gradient Masks */}
                 <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-transparent to-slate-950" />
                 <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-transparent to-slate-950" />
@@ -124,3 +117,4 @@ export default function NotFound() {
         </div>
     );
 }
+

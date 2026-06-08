@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -40,19 +40,19 @@ export function SchoolMitraTemplate() {
                             <div className="space-y-4">
                                 <div className="flex items-start gap-3">
                                     <div className="h-6 w-6 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-1">
-                                        <span className="text-red-600 font-bold text-xs">✕</span>
+                                        <span className="text-red-600 font-bold text-xs">âœ•</span>
                                     </div>
                                     <p className="text-slate-600">Lost fee receipts and revenue leakage</p>
                                 </div>
                                 <div className="flex items-start gap-3">
                                     <div className="h-6 w-6 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-1">
-                                        <span className="text-red-600 font-bold text-xs">✕</span>
+                                        <span className="text-red-600 font-bold text-xs">âœ•</span>
                                     </div>
                                     <p className="text-slate-600">Endless phone calls from parents</p>
                                 </div>
                                 <div className="flex items-start gap-3">
                                     <div className="h-6 w-6 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-1">
-                                        <span className="text-red-600 font-bold text-xs">✕</span>
+                                        <span className="text-red-600 font-bold text-xs">âœ•</span>
                                     </div>
                                     <p className="text-slate-600">Manual attendance tracking</p>
                                 </div>
@@ -120,7 +120,7 @@ export function SchoolMitraTemplate() {
                     tiers={[
                         {
                             name: "Starter",
-                            price: "₹50,000",
+                            price: "â‚¹50,000",
                             period: "/year",
                             highlight: false,
                             description: "Up to 500 students",
@@ -137,7 +137,7 @@ export function SchoolMitraTemplate() {
                         },
                         {
                             name: "Growth",
-                            price: "₹1,00,000",
+                            price: "â‚¹1,00,000",
                             period: "/year",
                             highlight: true,
                             description: "501-1,000 students",
@@ -154,7 +154,7 @@ export function SchoolMitraTemplate() {
                         },
                         {
                             name: "Scale",
-                            price: "₹2,00,000",
+                            price: "â‚¹2,00,000",
                             period: "/year",
                             highlight: false,
                             description: "1,001-2,000 students",
@@ -195,3 +195,4 @@ export function SchoolMitraTemplate() {
         </>
     );
 }
+

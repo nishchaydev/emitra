@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import { Check, Zap, Shield, Crown } from 'lucide-react';
@@ -78,3 +78,4 @@ export function PricingHero() {
         </section>
     );
 }
+

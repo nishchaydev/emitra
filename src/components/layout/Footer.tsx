@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Globe, Mail, Linkedin, Twitter, Instagram, ArrowRight, Shield, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { HeroVideo } from '@/components/ui/HeroVideo';
 
 export function Footer() {
     const [email, setEmail] = useState('');
@@ -22,15 +23,7 @@ export function Footer() {
         <footer className="bg-slate-950 pt-24 pb-12 relative overflow-hidden text-white" itemScope itemType="https://schema.org/Organization">
             {/* Cinematic Video Background */}
             <div className="absolute inset-0 z-0">
-                <video 
-                    autoPlay 
-                    loop 
-                    muted 
-                    playsInline 
-                    className="w-full h-full object-cover opacity-30 mix-blend-screen rotate-90 scale-[1.8]"
-                >
-                    <source src="https://res.cloudinary.com/dkits80xk/video/upload/v1778683152/hero-animation_gep3ir.mp4" type="video/mp4" />
-                </video>
+                <HeroVideo className="w-full h-full object-cover opacity-30 mix-blend-screen rotate-90 scale-[1.8]" />
                 {/* Gradient Masks */}
                 <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-transparent to-slate-950" />
                 <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-transparent to-slate-950" />
@@ -141,3 +134,4 @@ export function Footer() {
         </footer>
     );
 }
+

@@ -1,23 +1,16 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import { ArrowRight, Mail, Sparkles } from 'lucide-react';
 import Link from 'next/link';
+import { HeroVideo } from '@/components/ui/HeroVideo';
 
 export function CTA() {
     return (
         <section className="py-32 relative overflow-hidden bg-slate-950 text-white">
             {/* Cinematic Video Background */}
             <div className="absolute inset-0 z-0">
-                <video 
-                    autoPlay 
-                    loop 
-                    muted 
-                    playsInline 
-                    className="w-full h-full object-cover opacity-20 mix-blend-screen scale-110"
-                >
-                    <source src="https://res.cloudinary.com/dkits80xk/video/upload/v1778683152/hero-animation_gep3ir.mp4" type="video/mp4" />
-                </video>
+                <HeroVideo className="w-full h-full object-cover opacity-20 mix-blend-screen scale-110" />
                 {/* Gradient Masks */}
                 <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-slate-950" />
             </div>
@@ -72,3 +65,4 @@ export function CTA() {
         </section>
     );
 }
+

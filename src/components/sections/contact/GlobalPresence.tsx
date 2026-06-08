@@ -1,4 +1,4 @@
-import { MapPin } from 'lucide-react';
+﻿import { MapPin } from 'lucide-react';
 
 const locations = [
     { city: 'India', location: 'Mumbai, Maharashtra', color: 'bg-primary' },
@@ -37,3 +37,4 @@ export function GlobalPresence() {
         </section>
     );
 }
+

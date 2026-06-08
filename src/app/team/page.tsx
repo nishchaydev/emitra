@@ -1,6 +1,6 @@
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
-import { Mail, ArrowRight } from 'lucide-react';
+import { Mail, ArrowRight, Linkedin } from 'lucide-react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { PageBreadcrumbJsonLd } from '@/components/seo/JsonLd';
@@ -23,29 +23,39 @@ export const metadata: Metadata = {
 export default function TeamPage() {
     const team = [
         {
-            name: 'Nishchay Gupta',
+            name: 'Nikhil Pal',
             role: 'Founder & CEO',
-            bio: 'Full-stack engineer, product thinker, and startup mentor. Leads product strategy and engineering.',
+            bio: 'Drives operations, partnerships, and ensures every project ships on time with quality.',
         },
         {
-            name: 'Nikhil Pal',
-            role: 'Co-Founder & Operations',
-            bio: 'Drives operations, partnerships, and ensures every project ships on time with quality.',
+            name: 'Nishchay Gupta',
+            role: 'Co-Founder',
+            bio: 'Full-stack engineer, product thinker, and startup mentor. Leads product strategy and engineering.',
+            linkedin: 'https://www.linkedin.com/in/nishchaydev/',
         },
         {
             name: 'Abhijeet Giri',
             role: 'Community Lead',
             bio: 'Builds and nurtures the student community. Organizes events, workshops, and campus programs.',
+            linkedin: 'https://www.linkedin.com/in/abhijeetgoswamiofficial/',
         },
         {
             name: 'Mohit Vyas',
             role: 'Lead Engineer',
             bio: 'Architects scalable systems and leads the engineering team on all product builds.',
+            linkedin: 'https://www.linkedin.com/in/mohit-vyas-tech/',
         },
         {
             name: 'Yash Soni',
             role: 'Creative Director',
             bio: 'Drives brand identity, UI/UX design, and ensures every eMitra product looks world-class.',
+            linkedin: 'https://www.linkedin.com/in/yash-soni-bb42b3406/',
+        },
+        {
+            name: 'Samarth Shrivastava',
+            role: 'Ideation & Sustainability',
+            bio: 'Helps in ideations. Building in the Climate-Tech Space and AI-Driven Sustainability while pursuing MBA from IFM Bhopal.',
+            linkedin: 'https://www.linkedin.com/in/samarth-shrivastava-766485223/',
         },
     ];
 
@@ -92,13 +102,23 @@ export default function TeamPage() {
             <Header />
             <main className="relative pt-32 pb-20 bg-white min-h-screen">
                 <div className="max-w-7xl mx-auto px-6">
-                    <p className="text-[10px] font-black text-indigo-600 uppercase tracking-[0.2em] mb-4">Who We Are</p>
-                    <h1 className="text-4xl md:text-6xl font-display font-black tracking-tighter text-slate-900 mb-6">
-                        Our Team
+                    <p className="text-[10px] font-black text-indigo-600 uppercase tracking-[0.2em] mb-4">The eMitra Story</p>
+                    <h1 className="text-4xl md:text-6xl font-display font-black tracking-tighter text-slate-900 mb-8">
+                        Built in Indore.<br className="hidden md:block" /> Scaling Globally.
                     </h1>
-                    <p className="text-lg text-slate-500 font-medium max-w-2xl mb-16">
-                        A small, focused team of builders from Indore. We don&apos;t outsource — we build everything in-house with obsessive attention to quality.
-                    </p>
+                    <div className="prose prose-lg text-slate-500 mb-20 max-w-3xl leading-relaxed">
+                        <p className="font-bold text-xl text-slate-800 mb-6">
+                            eMitra Technologies is a premier AI Consultancy & Product Studio born in the heart of India. We aren't a traditional agency; we are product builders, researchers, and community leaders.
+                        </p>
+                        <p className="mb-6">
+                            We specialize in engineering robust, enterprise-grade systems with an obsessive attention to quality. From pioneering research in Multi-Agent AI systems to developing scalable, mobile-first SaaS platforms, our mission is to deliver Silicon Valley-level engineering—all built 100% in-house.
+                        </p>
+                        <p>
+                            Beyond shipping world-class code, we are deeply invested in our local ecosystem. Through our Launchpad and Pathways initiatives, we mentor the next generation of engineers, fund student innovation, and are actively transforming Indore into a powerhouse of technical excellence.
+                        </p>
+                    </div>
+
+                    <h2 className="text-2xl md:text-3xl font-display font-black tracking-tighter text-slate-900 mb-10">Meet the Builders</h2>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {team.map((member) => (
@@ -114,7 +134,12 @@ export default function TeamPage() {
                                 </div>
                                 <h2 className="text-xl font-black text-slate-900 mb-1">{member.name}</h2>
                                 <p className="text-xs font-bold text-indigo-600 uppercase tracking-wider mb-4">{member.role}</p>
-                                <p className="text-sm text-slate-500 leading-relaxed">{member.bio}</p>
+                                <p className="text-sm text-slate-500 leading-relaxed mb-6">{member.bio}</p>
+                                {member.linkedin && (
+                                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-bold text-slate-400 hover:text-[#0a66c2] transition-colors">
+                                        <Linkedin className="w-4 h-4" /> LinkedIn
+                                    </a>
+                                )}
                             </div>
                         ))}
                     </div>
@@ -154,3 +179,4 @@ export default function TeamPage() {
         </>
     );
 }
+

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import { Target, Users, Award, TrendingUp, Shield, Lightbulb, Clock, Globe } from 'lucide-react';
@@ -161,3 +161,4 @@ export function AboutHero() {
         </section>
     );
 }
+

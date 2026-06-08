@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { ReactNode } from 'react';
 import { ScrollProgress } from '@/components/ui/ScrollProgress';
@@ -17,3 +17,4 @@ export function Providers({ children }: { children: ReactNode }) {
         </>
     );
 }
+

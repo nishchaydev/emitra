@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import { Building2, GraduationCap, Landmark, ArrowRight, CheckCircle, Globe2 } from 'lucide-react';
@@ -154,3 +154,4 @@ export function SolutionsHero() {
         </section>
     );
 }
+

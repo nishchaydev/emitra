@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import Tilt from 'react-parallax-tilt';
@@ -85,3 +85,4 @@ export function DashboardMockup() {
         </Tilt>
     );
 }
+

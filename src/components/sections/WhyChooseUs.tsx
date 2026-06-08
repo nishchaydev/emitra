@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import { Bot, MapPin, Zap, Database, Sparkles } from 'lucide-react';
@@ -7,7 +7,7 @@ const reasons = [
     {
         icon: Bot,
         title: 'AI-First Intelligence',
-        description: 'Deeply integrated AI systems — from predictive analytics to automated engagement. We don\'t just build software; we build intelligent partners.',
+        description: 'Deeply integrated AI systems â€” from predictive analytics to automated engagement. We don\'t just build software; we build intelligent partners.',
         color: 'text-blue-600',
         bg: 'bg-blue-50'
     },
@@ -87,3 +87,4 @@ export function WhyChooseUs() {
         </section>
     );
 }
+

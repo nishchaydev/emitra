@@ -1,4 +1,4 @@
-import { FlatMitraTemplate } from '@/components/templates/FlatMitraTemplate';
+﻿import { FlatMitraTemplate } from '@/components/templates/FlatMitraTemplate';
 
 export const metadata = {
     title: 'FlatMitra | Student Housing & PG Management - eMitra Technologies',
@@ -8,3 +8,4 @@ export const metadata = {
 export default function FlatMitraPage() {
     return <FlatMitraTemplate />;
 }
+

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
@@ -157,3 +157,4 @@ export function ProductHero({ title, subtitle, badge, color, ctaPrimary, ctaSeco
         </section>
     );
 }
+
