@@ -13,15 +13,15 @@ import { siteConfig } from '@/lib/siteConfig';
 const pageUrl = `${siteConfig.baseUrl}/about`;
 
 export const metadata: Metadata = {
-    title: 'About eMitra Technologies â€” Product Studio in Indore, India',
+    title: 'About eMitra Technologies - Product Studio in Indore, India',
     description:
-        'Learn about eMitra Tech â€” an Indore-based software product studio, custom development firm, and student innovation community building enterprise-grade SaaS for Indian institutions.',
+        'Learn about eMitra Tech - an Indore-based software product studio, custom development firm, and student innovation community building enterprise-grade SaaS for Indian institutions.',
     keywords: ['about emitra', 'emitra technologies', 'emitra indore', 'emitra tech about', 'software studio indore', 'tech company indore india'],
     alternates: {
         canonical: pageUrl,
     },
     openGraph: {
-        title: 'About eMitra Technologies â€” Product Studio in Indore',
+        title: 'About eMitra Technologies - Product Studio in Indore',
         description: 'eMitra Tech is a product studio, custom development firm, and student innovation hub based in Indore, India.',
         url: pageUrl,
     },

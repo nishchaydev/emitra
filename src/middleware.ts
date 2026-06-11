@@ -5,7 +5,7 @@ import type { NextRequest } from 'next/server';
  * Middleware: www â†’ apex 301 redirect
  * 
  * Prevents signal splitting between www.emitra.dev and emitra.dev.
- * Google treats these as separate URLs â€” without a hard redirect,
+ * Google treats these as separate URLs - without a hard redirect,
  * backlinks and ranking signals get split across both.
  */
 export function middleware(request: NextRequest) {

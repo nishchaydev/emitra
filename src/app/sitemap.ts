@@ -4,7 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://emitra.dev';
 
     return [
-        // Core pages â€” highest priority
+        // Core pages - highest priority
         {
             url: baseUrl,
             lastModified: new Date(),
@@ -42,7 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.8,
         },
 
-        // Products â€” individual product pages
+        // Products - individual product pages
         {
             url: `${baseUrl}/flatmitra`,
             lastModified: new Date(),
@@ -120,14 +120,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.5,
         },
 
-        // Content â€” Blog hub and articles
+        // Content - Blog hub and articles
         {
             url: `${baseUrl}/blog`,
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.7,
         },
-        // Pillar article â€” critical for "what is emitra" ranking
+        // Pillar article - critical for "what is emitra" ranking
         {
             url: `${baseUrl}/blog/what-is-emitra`,
             lastModified: new Date(),

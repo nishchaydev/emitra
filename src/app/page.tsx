@@ -17,7 +17,7 @@ export default function Home() {
         
         <StudioPillars />
         
-        {/* TrustedBy with cinematic video edges â€” left & right */}
+        {/* TrustedBy with cinematic video edges - left & right */}
         <section className="relative overflow-hidden bg-white">
             <div className="flex items-stretch">
                 {/* Left Video Edge */}
@@ -26,7 +26,7 @@ export default function Home() {
                     <div className="absolute inset-0 z-10" style={{ background: 'linear-gradient(to right, transparent 0%, rgba(255,255,255,0.3) 40%, rgba(255,255,255,0.7) 70%, white 100%)' }} />
                 </div>
 
-                {/* Center â€” White Band with Logos */}
+                {/* Center - White Band with Logos */}
                 <div className="flex-1 min-w-0 bg-white relative z-10 overflow-hidden">
                     <TrustedBy />
                 </div>

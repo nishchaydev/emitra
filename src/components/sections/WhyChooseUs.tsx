@@ -7,7 +7,7 @@ const reasons = [
     {
         icon: Bot,
         title: 'AI-First Intelligence',
-        description: 'Deeply integrated AI systems â€” from predictive analytics to automated engagement. We don\'t just build software; we build intelligent partners.',
+        description: 'Deeply integrated AI systems - from predictive analytics to automated engagement. We don\'t just build software; we build intelligent partners.',
         color: 'text-blue-600',
         bg: 'bg-blue-50'
     },

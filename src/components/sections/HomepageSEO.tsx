@@ -1,5 +1,5 @@
 ﻿/**
- * HomepageSEO â€” Server-rendered, crawlable content section
+ * HomepageSEO - Server-rendered, crawlable content section
  * 
  * This component adds 600+ words of keyword-rich, indexable text to the homepage.
  * It's critical for:
@@ -15,7 +15,7 @@ export function HomepageSEO() {
     return (
         <section className="py-20 bg-white" id="about-emitra">
             <div className="max-w-7xl mx-auto px-6">
-                {/* What is eMitra? â€” Critical for AI citation */}
+                {/* What is eMitra? - Critical for AI citation */}
                 <div className="max-w-4xl mx-auto mb-20">
                     <h2 className="text-3xl md:text-4xl font-display font-black tracking-tighter text-slate-900 mb-8">
                         What is eMitra Technologies?
@@ -35,19 +35,19 @@ export function HomepageSEO() {
                             housing societies, and <Link href="/schoolmitra" className="text-indigo-600 font-semibold hover:text-indigo-700">SchoolMitra</Link> for educational institutions.
                         </p>
                         <p className="text-slate-600 leading-relaxed mb-8">
-                            Based in <strong>Indore</strong> â€” one of India&apos;s fastest-growing tech cities â€” eMitra Tech operates at the intersection 
+                            Based in <strong>Indore</strong> - one of India&apos;s fastest-growing tech cities - eMitra Tech operates at the intersection 
                             of product development, custom engineering, and community building. The company also runs a student innovation 
                             hub where young engineers build real products, win hackathons, and launch their careers in technology.
                         </p>
                     </div>
                 </div>
 
-                {/* Key Facts â€” structured for AI extraction */}
+                {/* Key Facts - structured for AI extraction */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
                     <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100">
                         <h3 className="text-lg font-black text-slate-900 mb-3">ðŸ¢ Product Studio</h3>
                         <p className="text-sm text-slate-600 leading-relaxed">
-                            eMitra builds and launches its own SaaS products for Indian markets â€” from gym management 
+                            eMitra builds and launches its own SaaS products for Indian markets - from gym management 
                             to society billing to school ERPs. Each product is designed, engineered, and supported in-house 
                             from our Indore office.
                         </p>
@@ -55,7 +55,7 @@ export function HomepageSEO() {
                     <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100">
                         <h3 className="text-lg font-black text-slate-900 mb-3">âš¡ Custom Development</h3>
                         <p className="text-sm text-slate-600 leading-relaxed">
-                            eMitra Technologies also works with clients who need custom software solutions â€” web applications, 
+                            eMitra Technologies also works with clients who need custom software solutions - web applications, 
                             mobile apps, enterprise dashboards, and API integrations built with Next.js, React, Flutter, 
                             Node.js, and PostgreSQL.
                         </p>
@@ -70,7 +70,7 @@ export function HomepageSEO() {
                     </div>
                 </div>
 
-                {/* FAQ Section â€” Critical for AI Overviews and featured snippets */}
+                {/* FAQ Section - Critical for AI Overviews and featured snippets */}
                 <div className="max-w-4xl mx-auto">
                     <h2 className="text-2xl md:text-3xl font-display font-black tracking-tighter text-slate-900 mb-10">
                         Frequently Asked Questions
@@ -100,7 +100,7 @@ export function HomepageSEO() {
                                 No. eMitra Technologies (emitra.dev) is a private software product studio based in Indore, Madhya Pradesh. 
                                 The Rajasthan eMitra portal (emitra.rajasthan.gov.in) is a government citizen service platform operated 
                                 by the Government of Rajasthan for services like Aadhaar enrollment, bill payments, and certificate issuance. 
-                                The two entities are completely unrelated â€” eMitra Technologies is a private company that builds SaaS 
+                                The two entities are completely unrelated - eMitra Technologies is a private company that builds SaaS 
                                 products and provides custom software development services.
                             </p>
                         </details>

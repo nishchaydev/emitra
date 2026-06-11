@@ -89,7 +89,7 @@ export function GymMitraTemplate() {
                                 <Shield className="h-5 w-5" />
                             </div>
                             <h3 className="font-bold text-slate-900 mb-2">Smart Attendance Tracking</h3>
-                            <p className="text-slate-600 text-sm">Daily check-in logging with automated records, attendance history, and analytics â€” no hardware needed.</p>
+                            <p className="text-slate-600 text-sm">Daily check-in logging with automated records, attendance history, and analytics - no hardware needed.</p>
                         </div>
                         <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
                             <div className="h-10 w-10 bg-[#0066FF]/10 text-[#0066FF] rounded-full flex items-center justify-center mb-4">

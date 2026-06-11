@@ -1,7 +1,7 @@
 ﻿import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Blog â€” eMitra Technologies',
+    title: 'Blog - eMitra Technologies',
     description:
         'Expert insights on digital transformation, institutional technology, SaaS product development, and the future of management systems from eMitra Tech, Indore.',
     keywords: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         canonical: 'https://emitra.dev/blog',
     },
     openGraph: {
-        title: 'Blog â€” eMitra Technologies',
+        title: 'Blog - eMitra Technologies',
         description:
             'Expert perspectives on digital transformation, institutional tech, and SaaS from eMitra Technologies, Indore.',
         url: 'https://emitra.dev/blog',

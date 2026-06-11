@@ -6,7 +6,7 @@ import { PageBreadcrumbJsonLd } from '@/components/seo/JsonLd';
 import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'What is eMitra? eMitra Technologies vs Government eMitra Portal â€” Complete Guide',
+    title: 'What is eMitra? eMitra Technologies vs Government eMitra Portal - Complete Guide',
     description:
         'Confused between eMitra Technologies and the Rajasthan eMitra portal? This guide explains the difference between eMitra Tech (private software studio in Indore) and eMitra Rajasthan (government citizen services).',
     keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     },
     openGraph: {
         type: 'article',
-        title: 'What is eMitra? Technology Studio vs Government Portal â€” Complete Guide',
+        title: 'What is eMitra? Technology Studio vs Government Portal - Complete Guide',
         description:
             'Confused between eMitra Technologies and the Rajasthan eMitra portal? Read the definitive guide.',
         url: 'https://emitra.dev/blog/what-is-emitra',
@@ -103,7 +103,7 @@ export default function WhatIsEmitraPage() {
                         </div>
 
                         <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-black tracking-tighter text-slate-900 leading-tight mb-6">
-                            What is eMitra? Technology Studio vs Government Portal â€” Complete Guide
+                            What is eMitra? Technology Studio vs Government Portal - Complete Guide
                         </h1>
 
                         <p className="text-lg text-slate-500 leading-relaxed mb-8">
@@ -131,7 +131,7 @@ export default function WhatIsEmitraPage() {
                 <article className="pb-20">
                     <div className="max-w-3xl mx-auto px-6 prose prose-slate prose-lg">
 
-                        <h2>TL;DR â€” The Quick Answer</h2>
+                        <h2>TL;DR - The Quick Answer</h2>
                         <p>
                             <strong>eMitra Technologies</strong> (emitra.dev) is a <strong>private software product studio</strong> based
                             in <strong>Indore, Madhya Pradesh</strong>. We build SaaS products like GymMitra, FlatMitra, and SchoolMitra
@@ -150,31 +150,31 @@ export default function WhatIsEmitraPage() {
 
                         <h2>What is eMitra Technologies?</h2>
                         <p>
-                            eMitra Technologies â€” commonly referred to as <strong>eMitra Tech</strong> â€” is a software product studio founded
+                            eMitra Technologies - commonly referred to as <strong>eMitra Tech</strong> - is a software product studio founded
                             in 2024. Headquartered in <strong>Indore, Madhya Pradesh, India</strong>, the company operates across three pillars:
                         </p>
 
-                        <h3>1. Product Studio â€” SaaS for Indian SMBs</h3>
+                        <h3>1. Product Studio - SaaS for Indian SMBs</h3>
                         <p>
                             eMitra builds and launches its own SaaS products under the &quot;Mitra&quot; ecosystem. Each product solves a specific
                             operational pain point for Indian small-to-medium businesses:
                         </p>
                         <ul>
                             <li>
-                                <strong><Link href="/gymmitra">GymMitra</Link></strong> â€” Gym and fitness center management. Member tracking,
+                                <strong><Link href="/gymmitra">GymMitra</Link></strong> - Gym and fitness center management. Member tracking,
                                 billing cycles, trainer assignments, attendance, and performance analytics.
                             </li>
                             <li>
-                                <strong><Link href="/flatmitra">FlatMitra</Link></strong> â€” Housing society management. Monthly billing,
+                                <strong><Link href="/flatmitra">FlatMitra</Link></strong> - Housing society management. Monthly billing,
                                 complaint tracking, visitor logs, maintenance scheduling, and community communication.
                             </li>
                             <li>
-                                <strong>SchoolMitra</strong> â€” Education ERP for schools. Fee management, attendance tracking, parent
+                                <strong>SchoolMitra</strong> - Education ERP for schools. Fee management, attendance tracking, parent
                                 communication, exam scheduling, and report card generation.
                             </li>
                         </ul>
 
-                        <h3>2. Custom Engineering â€” Agency Services</h3>
+                        <h3>2. Custom Engineering - Agency Services</h3>
                         <p>
                             Beyond its own products, eMitra Technologies offers custom software development services for clients who need
                             bespoke solutions. The tech stack includes <strong>Next.js, React, Flutter, Node.js, PostgreSQL, Firebase,
@@ -193,7 +193,7 @@ export default function WhatIsEmitraPage() {
                             eMitra also operates a student innovation hub where aspiring engineers from Indore&apos;s colleges gain real-world
                             product development experience. Community members participate in hackathons (15+ wins and counting), build
                             projects that ship to production, and transition into professional engineering roles. It&apos;s an apprenticeship
-                            model â€” students don&apos;t just learn theory, they build real products.
+                            model - students don&apos;t just learn theory, they build real products.
                         </p>
 
                         <hr />
@@ -275,12 +275,12 @@ export default function WhatIsEmitraPage() {
                         <p>
                             &quot;Mitra&quot; means &quot;friend&quot; in Hindi and Sanskrit. eMitra Technologies chose the name to reflect
                             its mission: building technology that acts as a <strong>trusted friend</strong> for businesses and institutions.
-                            Every product in the ecosystem carries the &quot;Mitra&quot; suffix â€” GymMitra, FlatMitra, SchoolMitra â€” to
+                            Every product in the ecosystem carries the &quot;Mitra&quot; suffix - GymMitra, FlatMitra, SchoolMitra - to
                             reinforce this philosophy.
                         </p>
                         <p>
                             The &quot;e&quot; prefix represents the digital, electronic nature of the company&apos;s solutions. Together,
-                            &quot;eMitra&quot; means &quot;electronic friend&quot; â€” software that simplifies complex operations for the
+                            &quot;eMitra&quot; means &quot;electronic friend&quot; - software that simplifies complex operations for the
                             people who use it daily.
                         </p>
 
@@ -339,7 +339,7 @@ export default function WhatIsEmitraPage() {
                         <h3>Does eMitra Technologies operate eMitra kiosks?</h3>
                         <p>
                             No. eMitra kiosks are operated by the Government of Rajasthan. eMitra Technologies builds SaaS products
-                            for businesses and institutions â€” it does not operate any government service kiosks.
+                            for businesses and institutions - it does not operate any government service kiosks.
                         </p>
 
                         <h3>What technologies does eMitra Tech use?</h3>
@@ -358,7 +358,7 @@ export default function WhatIsEmitraPage() {
                             Ready to Build With eMitra?
                         </h2>
                         <p className="text-slate-500 mb-8 max-w-lg mx-auto">
-                            Whether you need a SaaS product, custom software, or want to join our community â€”
+                            Whether you need a SaaS product, custom software, or want to join our community -
                             we&apos;d love to hear from you.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

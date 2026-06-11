@@ -5,7 +5,7 @@ import { Quote } from 'lucide-react';
 
 const testimonials = [
     {
-        quote: "eMitra didn't just build software for us â€” they understood our operations and delivered a system that actually works on the ground.",
+        quote: "eMitra didn't just build software for us - they understood our operations and delivered a system that actually works on the ground.",
         name: 'Municipal Officer',
         role: 'City Administration, Madhya Pradesh',
     },
@@ -31,7 +31,7 @@ export function CustomSolutions() {
                         Voices from the <span className="text-indigo-600">Ground.</span>
                     </h2>
                     <p className="text-slate-500 text-base md:text-lg font-medium leading-relaxed">
-                        From government officers to student founders â€” hear from the people who work with us.
+                        From government officers to student founders - hear from the people who work with us.
                     </p>
                 </div>
 

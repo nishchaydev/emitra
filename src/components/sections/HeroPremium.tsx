@@ -216,7 +216,7 @@ export function HeroPremium() {
 
             <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
                 <div className="relative min-h-[500px] lg:min-h-[600px] flex items-center">
-                    {/* Animated visual â€” absolute positioned, right side, behind text */}
+                    {/* Animated visual - absolute positioned, right side, behind text */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.85 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -226,7 +226,7 @@ export function HeroPremium() {
                         <DynamicVisual />
                     </motion.div>
 
-                    {/* Text layer â€” on top, left-aligned */}
+                    {/* Text layer - on top, left-aligned */}
                     <div className="relative z-20 max-w-3xl">
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
@@ -235,7 +235,7 @@ export function HeroPremium() {
                             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-600 text-[10px] font-black uppercase tracking-[0.2em] mb-8"
                         >
                             <Sparkles className="h-3 w-3" />
-                            Product Studio â€¢ Indore, India
+                            Product Studio · Indore, India
                         </motion.div>
 
                         <motion.h1

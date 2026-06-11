@@ -5,15 +5,15 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'eMitra Launchpad â€” Startup Studio for Student Founders, Indore',
+    title: 'eMitra Launchpad - Startup Studio for Student Founders, Indore',
     description:
-        'eMitra Launchpad helps student founders validate, build, and launch real startups. Mentorship, tech infrastructure, and community â€” all from eMitra Tech, Indore.',
+        'eMitra Launchpad helps student founders validate, build, and launch real startups. Mentorship, tech infrastructure, and community - all from eMitra Tech, Indore.',
     keywords: ['emitra launchpad', 'startup studio indore', 'student startup india', 'emitra tech launchpad', 'student founders indore'],
     alternates: {
         canonical: 'https://emitra.dev/launchpad',
     },
     openGraph: {
-        title: 'eMitra Launchpad â€” Startup Studio for Student Founders',
+        title: 'eMitra Launchpad - Startup Studio for Student Founders',
         description: 'Pitch your idea and we\'ll help you build, launch, and scale it. eMitra Technologies, Indore.',
         url: 'https://emitra.dev/launchpad',
     },
@@ -37,7 +37,7 @@ export default function LaunchpadPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
                         {[
                             { icon: Lightbulb, step: '01', title: 'Ideate', description: 'We help you refine your idea and validate market demand.' },
-                            { icon: Users, step: '02', title: 'Build', description: 'Our team builds the MVP with you â€” design, code, and deploy.' },
+                            { icon: Users, step: '02', title: 'Build', description: 'Our team builds the MVP with you - design, code, and deploy.' },
                             { icon: Rocket, step: '03', title: 'Launch', description: 'Go live with real users. We handle infra, domains, and hosting.' },
                             { icon: Trophy, step: '04', title: 'Scale', description: 'Win hackathons, get users, raise if needed. We stay involved.' },
                         ].map((item) => (
@@ -54,7 +54,7 @@ export default function LaunchpadPage() {
                     <div className="bg-slate-950 rounded-3xl p-8 md:p-12 text-white">
                         <h2 className="text-2xl md:text-3xl font-black mb-3">Track Record</h2>
                         <p className="text-slate-400 text-sm font-medium mb-10 max-w-xl">
-                            We&apos;re a young studio â€” and proud of it. Every number here represents real work, not vanity metrics. The best is yet to come.
+                            We&apos;re a young studio - and proud of it. Every number here represents real work, not vanity metrics. The best is yet to come.
                         </p>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                             {[

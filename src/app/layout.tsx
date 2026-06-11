@@ -23,7 +23,7 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   metadataBase: new URL('https://emitra.dev'),
   title: {
-    default: 'eMitra Technologies â€” Software Product Studio in Indore | eMitra Tech',
+    default: 'eMitra Technologies - Software Product Studio in Indore | eMitra Tech',
     template: '%s | eMitra Technologies',
   },
   description:
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: 'https://emitra.dev',
     siteName: 'eMitra Technologies',
-    title: 'eMitra Technologies â€” Software Product Studio in Indore | eMitra Tech',
+    title: 'eMitra Technologies - Software Product Studio in Indore | eMitra Tech',
     description:
       'eMitra Tech is a product studio based in Indore, India. We build enterprise-grade SaaS, offer custom development, and run a student innovation community.',
     images: [
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
         url: '/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'eMitra Technologies â€” Software Product Studio in Indore',
+        alt: 'eMitra Technologies - Software Product Studio in Indore',
       },
     ],
   },
@@ -88,9 +88,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@emitratech',
     creator: '@emitratech',
-    title: 'eMitra Technologies â€” Software Product Studio in Indore',
+    title: 'eMitra Technologies - Software Product Studio in Indore',
     description:
-      'eMitra Tech builds enterprise-grade SaaS for gyms, housing, and education. Product studio + custom dev + student community â€” all from Indore, India.',
+      'eMitra Tech builds enterprise-grade SaaS for gyms, housing, and education. Product studio + custom dev + student community - all from Indore, India.',
   },
   robots: {
     index: true,

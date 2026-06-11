@@ -6,15 +6,15 @@ import type { Metadata } from 'next';
 import { PageBreadcrumbJsonLd } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
-    title: 'Our Products â€” GymMitra, FlatMitra & More | eMitra Tech',
+    title: 'Our Products - GymMitra, FlatMitra & More | eMitra Tech',
     description:
-        'Explore eMitra Technologies\' product ecosystem â€” SaaS built for Indian SMBs. GymMitra for gyms, FlatMitra for housing societies, SchoolMitra for schools. Built in Indore, India.',
+        'Explore eMitra Technologies\' product ecosystem - SaaS built for Indian SMBs. GymMitra for gyms, FlatMitra for housing societies, SchoolMitra for schools. Built in Indore, India.',
     keywords: ['emitra products', 'GymMitra', 'FlatMitra', 'SchoolMitra', 'SaaS india', 'emitra tech products', 'gym management software', 'society management app'],
     alternates: {
         canonical: 'https://emitra.dev/products',
     },
     openGraph: {
-        title: 'eMitra Products â€” GymMitra, FlatMitra & More',
+        title: 'eMitra Products - GymMitra, FlatMitra & More',
         description: 'SaaS products built by eMitra Technologies for Indian SMBs and institutions.',
         url: 'https://emitra.dev/products',
     },
@@ -33,7 +33,7 @@ export default function ProductsPage() {
         {
             name: 'FlatMitra',
             tagline: 'The smartest property management tool for India',
-            description: 'Complete society and flat management â€” billing, complaints, visitor logs, and community engagement.',
+            description: 'Complete society and flat management - billing, complaints, visitor logs, and community engagement.',
             href: 'https://flat.emitra.dev',
             icon: Building2,
             status: 'Under Build',
@@ -50,7 +50,7 @@ export default function ProductsPage() {
         },
         {
             title: 'Launchpad',
-            description: 'Student founders â€” pitch your idea and we\'ll help you build, launch, and scale it.',
+            description: 'Student founders - pitch your idea and we\'ll help you build, launch, and scale it.',
             href: '/launchpad',
             icon: Rocket,
             color: 'amber',
